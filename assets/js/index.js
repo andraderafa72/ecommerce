@@ -7,6 +7,7 @@ var swiper = new Swiper(".hero-slider .swiper", {
     nextEl: '.swiper-button-next-hero',
     prevEl: '.swiper-button-prev-hero',
   },
+  spaceBetween: 30,
 });
 
 var topProducts = new Swiper('.selected-products .swiper', {
@@ -26,7 +27,32 @@ var categories = new Swiper('.categories .swiper', {
     nextEl: '.swiper-button-next-categories',
     prevEl: '.swiper-button-prev-categories',
   },
-  slidesPerView: 7,
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+    },
+    480: {
+      slidesPerView: 1,
+    },
+    // when window width is >= 480px
+    520: {
+      slidesPerView: 2,
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 3,
+    },
+    1080: {
+      slidesPerView: 4,
+    },
+    1200: {
+      slidesPerView: 5,
+    },
+    1900: {
+      slidesPerView: 7,
+    }
+  }
 });
 
 var saleItems = new Swiper('.sale-items .swiper', {
@@ -38,8 +64,31 @@ var saleItems = new Swiper('.sale-items .swiper', {
     nextEl: '.swiper-button-next-sale',
     prevEl: '.swiper-button-prev-sale',
   },
-  slidesPerView: 4,
-  spaceBetween: 10,
+  spaceBetween: 30,    
+  breakpoints: {
+    480: {
+      slidesPerView: 1,
+    },
+    // when window width is >= 480px
+    520: {
+      slidesPerView: 2,
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 2,
+    },
+    1080: {
+      slidesPerView: 3,
+    },
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 10,    
+    },
+    1900: {
+      slidesPerView: 4,
+      spaceBetween: 10,    
+    }
+  }
 })
 
 // COUNTDOWN
@@ -78,9 +127,9 @@ setInterval(() => {
     timerValue.segundos -= 1
   }
 
-  hours.innerHTML = timerValue.horas
-  minutes.innerHTML = timerValue.minutos
-  seconds.innerHTML = timerValue.segundos
+  hours.innerHTML = String(timerValue.horas).padStart(2, '0')
+  minutes.innerHTML = String(timerValue.minutos).padStart(2, '0')
+  seconds.innerHTML = String(timerValue.segundos).padStart(2, '0')
 
   console.log(timerValue)
 }, 1000)
