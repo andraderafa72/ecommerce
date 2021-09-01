@@ -55,8 +55,8 @@ var seconds = document.querySelector('.product-expiration .seconds span');
 
 var timerValue = {
   horas: 32,
-  minutos: 27,
-  segundos: 54,
+  minutos: 0,
+  segundos: 10,
 }
 
 setInterval(() => {
@@ -65,7 +65,12 @@ setInterval(() => {
     
     if(timerValue.minutos - 1 < 0) {
       timerValue.minutos = 59
-
+      
+      if(timerValue.horas - 1 < 0) {
+        document.clearInterval()
+      } else {
+        timerValue.horas -= 1; 
+      }
     } else {
       timerValue.minutos -= 1;
     }
