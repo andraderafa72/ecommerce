@@ -44,9 +44,9 @@ var saleItems = new Swiper('.sale-items .swiper', {
 
 // COUNTDOWN
 
-var timer = new Timer();
-timer.start();
+// var timer = new Timer();
+// timer.start();
 
-timer.addEventListener('secondsUpdated', function (e) {
-    $('#basicUsage').html(timer.getTimeValues().toString());
-});
+// timer.addEventListener('secondsUpdated', function (e) {
+//     $('#basicUsage').html(timer.getTimeValues().toString());
+// });
