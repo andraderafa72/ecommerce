@@ -228,18 +228,18 @@
   margin-top: 0;
 }
 
-.sale-items .product-card {
+.sale-items .product-card, .related-products .product-card {
   background: #fff;
   border-radius: 1rem;
   color: #000;
   padding: 2rem 1rem;
 }
 
-.sale-items .product-card:hover {
+.sale-items .product-card:hover, .related-products .product-card:hover {
   cursor: pointer;
 }
 
-.sale-items .product-card header {
+.sale-items .product-card header, .related-products .product-card header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -259,7 +259,7 @@
   margin-bottom: 3rem;
 }
 
-.sale-items .product-card header span {
+.sale-items .product-card header span, .related-products .product-card header span {
   color: #fff;
   font-weight: bold;
   background: #CC000B;
@@ -267,7 +267,7 @@
   border-radius: .5rem;
 }
 
-.sale-items .product-card main {
+.sale-items .product-card main, .related-products .product-card main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -277,36 +277,36 @@
           flex-direction: column;
 }
 
-.sale-items .product-card main p {
+.sale-items .product-card main p, .related-products .product-card main p {
   margin-bottom: 1rem;
 }
 
-.sale-items .product-card main span {
+.sale-items .product-card main span, .related-products .product-card main span {
   font-size: .8rem;
   font-weight: bold;
 }
 
-.sale-items .product-card main span.price {
+.sale-items .product-card main span.price, .related-products .product-card main span.price {
   color: #CC000B;
   font-weight: bold;
   font-size: 2rem;
   line-height: 2rem;
 }
 
-.sale-items .product-card main .right {
+.sale-items .product-card main .right, .related-products .product-card main .right {
   margin-top: 0.5rem;
 }
 
-.sale-items .product-card main .left h4 {
+.sale-items .product-card main .left h4, .related-products .product-card main .left h4 {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
 }
 
-.sale-items .product-card main .left span {
+.sale-items .product-card main .left span, .related-products .product-card main .left span {
   margin-top: .5rem;
 }
 
-.sale-items .product-card main .left span + span {
+.sale-items .product-card main .left span + span, .related-products .product-card main .left span + span {
   margin-top: 0;
 }
 
