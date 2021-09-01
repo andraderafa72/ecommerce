@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -8,12 +9,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SmartWatch iwo W46 Series 6</title>
-  
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700;900&display=swap"
-  rel="stylesheet">
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
   <link rel="stylesheet" href="assets/css/styles.css">
 
 </head>
+
 <body>
   <header>
     <section class="header-top">
@@ -45,10 +50,11 @@
       </nav>
     </section>
   </header>
-  
+
   <main>
     <section class="navigation">
-      <p>Você está em <span>Relógios</span> > <span>smart</span> > <span class="product">Código: 18561</span></p>
+      <p>Você está em: <a href="#">Relógios</a> > <a href="#">smart</a> > <span class="product-code">Código:
+          18561</span></p>
     </section>
 
     <section class="product">
@@ -73,16 +79,16 @@
             <div class="swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <img src="" alt="">
+                  <img src="assets/img/watch.png" alt="">
                 </div>
                 <div class="swiper-slide">
-                  <img src="" alt="">
+                  <img src="assets/img/watch.png" alt="">
                 </div>
                 <div class="swiper-slide">
-                  <img src="" alt="">
+                  <img src="assets/img/watch.png" alt="">
                 </div>
                 <div class="swiper-slide">
-                  <img src="" alt="">
+                  <img src="assets/img/watch.png" alt="">
                 </div>
               </div>
             </div>
@@ -91,18 +97,22 @@
 
         <footer>
           <section class="slide-preview">
-            <div class="preview">
-              <img src="" alt="">
-            </div>
-            <div class="preview">
-              <img src="" alt="">
-            </div>
-            <div class="preview">
-              <img src="" alt="">
-            </div>
-            <div class="preview">
-              <img src="" alt="">
-            </div>
+            <!-- <div class="swiper-thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="assets/img/watch.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/watch.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/watch.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/watch.png" alt="">
+                </div>
+              </div>
+            </div> -->
           </section>
         </footer>
       </div>
@@ -110,9 +120,29 @@
       <div class="product-info">
         <header>
           <div class="product-timer">
-            
+            <h4>Compre antes que encerre a promoção</h4>
+            <section class="product-expiration">
+              <div class="hours">
+                <span>00</span>
+                <p>Horas</p>
+              </div>
+
+              <strong>:</strong>
+
+              <div class="minutes">
+                <span>00</span>
+                <p>Minutos</p>
+              </div>
+
+              <strong>:</strong>
+
+              <div class="seconds">
+                <span>00</span>
+                <p>Segundos</p>
+              </div>
+            </section>
           </div>
-          <h3>Watch 13 Max Séries 5 de 44mm</h3>
+          <h2>Watch 13 Max Séries 5 de 44mm</h2>
           <p>Vendido e enviado por: <span>Orbiecom</span> | <span>Em estoque</span></p>
         </header>
 
@@ -120,19 +150,23 @@
           <section class="product-main-info">
             <p class="line-price">R$329,39</p>
             <p class="current-price">R$279,90</p>
-            <span>À vista no PIX com até 10% OFF</span>
-            <span>Ver mais opções de pagamento</span>
-            
-            <form action="/" method="post">
+            <span>À vista no PIX com até 10% OFF</span><br />
+            <a href="#">Ver mais opções de pagamento</a>
+
+            <form action="/" method="post" class="product-form">
               <div class="variant-input-group">
-                <label for="variants">Cor: <strong>preto</strong></label>
-                <input type="checkbox" name="variantA" id="variantA">
-                <input type="checkbox" name="variantB" id="variantB">
+                <span>Cor: <strong>preto</strong></span> <br /><br />
+
+                <label for="variantA">44mm</label>
+                <input type="radio" name="variant" id="variantA">
+
+                <label for="variantB">46mm</label>
+                <input type="radio" name="variant" id="variantB">
               </div>
 
               <div class="quantity">
-                <label for="quantity">Quantidade</label>
-                <input type="number" name="quantity" min="0" id="quantity">
+                <label for="quantity">Quantidade</label> <br />
+                <input type="number" name="quantity" min="0" max="99" id="quantity">
                 <button class="plus" type="button">+</button>
                 <button class="minus" type="button">-</button>
               </div>
@@ -142,33 +176,16 @@
               <div class="time">
                 <img src="" alt="">
                 <span>Prazo de entrega</span>
-                <p><span>Chega até dia 12 de agosto</span> ao escolher a opção de entrega Expressa para a cidade de <span>Palmas - TO</span></p>
+                <p><span>Chega até dia 12 de agosto</span> ao escolher a opção de entrega Expressa para a cidade de
+                  <span>Palmas - TO</span>
+                </p>
               </div>
             </div>
           </section>
         </main>
 
         <aside>
-          <section class="product-expiration">
-            <div class="hours">
-              <span>00</span>
-              <p>Horas</p>
-            </div>
 
-            <strong>:</strong>
-
-            <div class="minutes">
-              <span>00</span>
-              <p>Minutos</p>
-            </div>
-
-            <strong>:</strong>
-
-            <div class="seconds">
-              <span>00</span>
-              <p>Segundos</p>
-            </div>
-          </section>
 
           <section class="remaining-items">
             <p>Restam <span>20</span> unidades</p>
@@ -182,11 +199,11 @@
               <img src="" alt="">
               Comprar agora
             </a>
-            
+
             <a href="">
               <img src="" alt="">
               Adicionar ao carrinho
-            </a>         
+            </a>
           </section>
 
           <section class="fire">
@@ -202,7 +219,9 @@
         <p>Descrição do produto</p>
       </div>
       <div class="wrapper">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos dolorum nemo, doloremque maiores pariatur dicta fuga. Possimus accusantium a repellendus neque, sunt omnis, libero quis rerum, numquam illo doloremque soluta?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos dolorum nemo, doloremque maiores pariatur
+          dicta fuga. Possimus accusantium a repellendus neque, sunt omnis, libero quis rerum, numquam illo doloremque
+          soluta?</p>
       </div>
     </section>
 
@@ -211,7 +230,9 @@
         <p>Descrição do produto</p>
       </div>
       <div class="wrapper">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos dolorum nemo, doloremque maiores pariatur dicta fuga. Possimus accusantium a repellendus neque, sunt omnis, libero quis rerum, numquam illo doloremque soluta?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos dolorum nemo, doloremque maiores pariatur
+          dicta fuga. Possimus accusantium a repellendus neque, sunt omnis, libero quis rerum, numquam illo doloremque
+          soluta?</p>
       </div>
     </section>
 
@@ -310,5 +331,10 @@
     </section>
   </footer>
 
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script src="assets/js/produto.js"></script>
+  <script src="assets/js/timer.js"></script>
 </body>
+
 </html>

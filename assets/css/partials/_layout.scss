@@ -86,7 +86,7 @@ body > footer {
 }
 
 .header-bottom {
-  background-color: $white;
+  background-color: #2E2E2E;
   padding: 1rem 4.5rem;
 
   nav {
@@ -96,7 +96,7 @@ body > footer {
 
     li a {
       font-family: "Poppins", "Open Sans", "Roboto", sans-serif;
-      color: $black;
+      color: $white;
     }
   }
 }
@@ -681,6 +681,250 @@ section.social-media {
     display: none;
   }
 }
+
+// PÁGINA DE PRODUTO
+.navigation {
+  width: 100%;
+  padding: 0;
+  color: $black;
+
+  p{
+    padding: 1rem 0;
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 1px solid #e2e2e2;
+    font-weight: bold;
+
+    a{
+      font-weight: normal;
+      color: $black;
+
+    }
+    span.product-code{
+      color: $red;
+      font-weight: bold;
+    }
+  }
+}
+
+section.product{
+  width: 100%;
+  padding: 1rem 5%;
+  display: flex;
+  color: $black;
+
+}
+
+.product-images{
+  width: 50%;
+  padding: 1rem;
+
+  header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    span{
+      color: $white;
+      background: $red;
+      border-radius: 1rem;
+      padding: .5rem 1rem;
+      font-weight: bold;
+    }
+
+    .icons{
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      img{
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+
+  main{
+    margin-top: 3rem;
+    width: 100%;
+
+    .product-swiper{
+      width: 100%;
+    }
+  }
+}
+
+.product-info{
+  max-width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+
+
+  > main, > aside{
+    width: 50%;
+  }
+  > header{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+
+    .product-timer{
+      width: 100%;
+      background-color: $red-dark;
+      height: 5rem;
+      // margin-bottom: 1rem;
+      border-radius: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      h4{
+        font-size: 1.5rem;
+        max-width: 40%;
+        color:$white;
+      }
+
+      .product-expiration{
+        strong{
+          color:$white;
+        }
+        > div {
+          &:last-child{
+            transform: translateX(-5px);
+          }
+          span, p{
+            color: $white;
+          }
+          span{
+            background: transparent;
+            font-weight: bold;
+            padding: 0;
+          }
+        }
+      }
+    }
+
+    h2 {
+      width: 100%;
+      text-align: left;
+      margin-top: 1rem;
+      font-weight: normal;
+      font-family: "Poppins", "Roboto", sans-serif;
+      font-size: 2rem;
+    }
+    p{
+      margin-top: .5rem;
+      color: #454545;
+      font-size: 1rem;
+
+      span{
+        color: $black;
+
+        & + span{
+          color: green;
+        }
+      }
+    }
+  }
+
+  main{
+    margin-top: 1rem;
+    .product-main-info{
+      p.line-price{
+        text-decoration: line-through;
+        color: #454545;
+        font-size: 1.5rem;
+        margin-bottom: .25rem;
+      }
+
+      p.current-price{
+        font-size: 2.5rem;
+        color: $red;
+        font-weight: bold;
+      }
+
+      span, a{
+        color: #454545;
+        font-size: .8rem;
+      }
+
+      a{
+        font-weight: bold;
+        transition: .2s;
+        &:hover{
+          color: $black;
+        }
+      }
+    }
+  }
+}
+
+.product-form{
+  margin-top: 1.5rem;
+
+  .variant-input-group{
+    margin-bottom: 1rem;
+    span{
+      font-size: 1rem!important;
+    }
+    label{
+      padding: .5rem 1rem;
+      background:#eee;
+      transition: .2s;
+      &.active{
+        background:#ccc;
+      }
+    }
+    input[type="radio"]{
+      opacity: 0;
+    }
+  }
+
+  .quantity{
+    max-width: 7rem;
+    position: relative;
+
+    input{
+      width: 7rem;
+      padding: .275rem 0 .275rem 3rem;
+      margin-top: 1rem;
+    }
+
+    button{
+      cursor: pointer;
+      font-family: 'Roboto';
+      position: absolute;
+      bottom: 0;
+      width: 2rem;
+      height: 2rem;
+      font-weight: bold;
+      border: 1px solid #ccc;
+      background: #eee;
+      font-size: 1rem;
+
+      &.plus{
+        right: 0;
+      }
+      &.minus{
+        left: 0;
+      }
+    }
+  }
+
+  .shipping-info{
+    .time{
+      display: flex;
+      flex-wrap: wrap;
+
+      p, span{
+        width: 100%;
+        font-size: .9rem;
+      }
+    }
+  }
+}
+
+
 
 @media (max-width: 1080px) {
   // RESPONSIVIDADE
