@@ -1,4 +1,5 @@
 .selected-products .product-card{
+  max-width: 400px; 
   &:hover{
     cursor: pointer;
   }
@@ -58,4 +59,8 @@
       }
     }
   }
+}
+
+@media (max-width: 1080px){
+
 }

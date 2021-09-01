@@ -1,7 +1,7 @@
 .slide{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: 100%;
   min-height: 500px;
   width: 100%;
@@ -23,22 +23,22 @@
     }
 
     .slide-buttons{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 1rem;
       margin-top: 3rem;
       button{
+        width: 100%;
         cursor: pointer;
         height: 3.5rem;
-        width: 180px;
         border: none;
         color: white;
         border-radius: .5rem;
         font-weight: bold;
         font-size: 1rem;
         transition: .2s;
-
-        & + button{
-          margin-left: 1.5rem;
-        }
-
+        max-width: 300px;
         &.slide-primary-button{
           background: $red;
           box-shadow: 0 12px 32px 10px $red-shadow;
@@ -63,7 +63,41 @@
   
   .right{
     img{
+      max-width: 600px;
+      width: 100%;
       margin-right: 5rem;
+    }
+  }
+}
+
+      
+@media (max-width: 1080px) {
+  .slide{
+    flex-direction: column-reverse;
+    .left, .right{
+      align-items: center;
+      text-align: left;
+      width: 100%;
+    }
+
+    .left{
+      h1, p, .slide-buttons{
+        width:80%;
+      }
+
+      .slide-buttons{
+        button{
+          max-width: 50%;
+        }
+      }
+    }
+
+    .right{
+      display: flex;
+      justify-content: center;
+      img{
+        margin-right: 0;
+      }
     }
   }
 }

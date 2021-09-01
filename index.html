@@ -9,8 +9,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ecommerce</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700;900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/flipdown.min.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -47,32 +51,158 @@
 
   <main>
     <section class="hero-slider">
-      <a href="" class="arrow-left"><img src="" alt=""></a>
-      <a href="" class="arrow-right"><img src="" alt=""></a>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="slide">
+              <section class="left">
+                <h1>Black</h1>
+                <p>As melhores ferramentas, com o melhor custo-benefício <br> que você poderá encontrar.</p>
 
-      <div class="slider">
+                <div class="slide-buttons">
+                  <button class="slide-primary-button">Comprar agora</button>
+                  <button class="slide-secondary-button">Testar</button>
+                </div>
+              </section>
 
-        <div class="slide">
-          <section class="left">
-            <h1>Black Friday</h1>
-            <p>As melhores ferramentas, com o melhor custo-benefício <br> que você poderá encontrar.</p>
-
-            <div class="slide-buttons">
-              <button class="slide-primary-button">Comprar agora</button>
-              <button class="slide-secondary-button">Testar</button>
+              <section class="right">
+                <img src="assets/img/watch.png" alt="Relógio">
+              </section>
             </div>
-          </section>
 
-          <section class="right">
-            <img src="assets/img/watch.png" alt="Relógio">
-          </section>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide">
+              <section class="left">
+                <h1>Black Friday</h1>
+                <p>As melhores ferramentas, com o melhor custo-benefício <br> que você poderá encontrar.</p>
+
+                <div class="slide-buttons">
+                  <button class="slide-primary-button">Comprar agora</button>
+                  <button class="slide-secondary-button">Testar</button>
+                </div>
+              </section>
+
+              <section class="right">
+                <img src="assets/img/watch.png" alt="Relógio">
+              </section>
+            </div>
+
+          </div>
+          <div class="swiper-slide">
+            <div class="slide">
+              <section class="left">
+                <h1>Friday</h1>
+                <p>As melhores ferramentas, com o melhor custo-benefício <br> que você poderá encontrar.</p>
+
+                <div class="slide-buttons">
+                  <button class="slide-primary-button">Comprar agora</button>
+                  <button class="slide-secondary-button">Testar</button>
+                </div>
+              </section>
+
+              <section class="right">
+                <img src="assets/img/watch.png" alt="Relógio">
+              </section>
+            </div>
+
+          </div>
         </div>
 
+        <div class="swiper-pagination"></div>
+        <div class="arrow-left swiper-button-prev swiper-button-prev-hero"><img src="" alt=""></div>
+        <div class="arrow-right swiper-button-next swiper-button-next-hero"><img src="" alt=""></div>
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
       </div>
     </section>
 
+<!-- 
     <section class="selected-products">
 
+      <div class="swiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="product-card">
+              <header>
+                <img src="assets/img/smartwatch.png" alt="">
+                <span>Black Friday</span>
+              </header>
+
+              <main>
+                <section class="left">
+                  <h4>SmartWatch iwo W26</h4>
+                  <span>Series 6</span>
+                  <span>SKU: JHON796</span>
+                </section>
+
+                <section class="right">
+                  <span>por apenas</span>
+                  <span class="price">R$279,90</span>
+                  <span>ou em até 6x de R$49,90</span>
+                </section>
+              </main>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="product-card">
+              <header>
+                <img src="assets/img/smartwatch.png" alt="">
+                <span>Black Friday</span>
+              </header>
+
+              <main>
+                <section class="left">
+                  <h4>SmartWatch iwo W26</h4>
+                  <span>Series 6</span>
+                  <span>SKU: JHON796</span>
+                </section>
+
+                <section class="right">
+                  <span>por apenas</span>
+                  <span class="price">R$279,90</span>
+                  <span>ou em até 6x de R$49,90</span>
+                </section>
+              </main>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="product-card">
+              <header>
+                <img src="assets/img/smartwatch.png" alt="">
+                <span>Black Friday</span>
+              </header>
+
+              <main>
+                <section class="left">
+                  <h4>SmartWatch iwo W26</h4>
+                  <span>Series 6</span>
+                  <span>SKU: JHON796</span>
+                </section>
+
+                <section class="right">
+                  <span>por apenas</span>
+                  <span class="price">R$279,90</span>
+                  <span>ou em até 6x de R$49,90</span>
+                </section>
+              </main>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="swiper-pagination-top"></div>
+      <div class="arrow-left swiper-button-prev-top"><img src="" alt=""></div>
+      <div class="arrow-right swiper-button-next-top"><img src="" alt=""></div>
+
+    </section> -->
+
+    
+    <section class="selected-products" style="display: flex; width: 100%; justify-content: space-between;">
       <div class="product-card">
         <header>
           <img src="assets/img/smartwatch.png" alt="">
@@ -93,7 +223,6 @@
           </section>
         </main>
       </div>
-
       <div class="product-card">
         <header>
           <img src="assets/img/smartwatch.png" alt="">
@@ -114,7 +243,6 @@
           </section>
         </main>
       </div>
-
       <div class="product-card">
         <header>
           <img src="assets/img/smartwatch.png" alt="">
@@ -135,120 +263,146 @@
           </section>
         </main>
       </div>
-
     </section>
 
+
     <section class="categories">
-      <a href="" class="arrow-left"><img src="" alt=""></a>
-      <a href="" class="arrow-right"><img src="" alt=""></a>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="circle">
+              <img src="" alt="">
+            </div>
 
-      <ul class="categories-list">
-        <li>
-          <div class="circle"></div>
+            <a href="">Relógios</a>
+          </div>
+          <div class="swiper-slide">
+            <div class="circle">
+              <img src="" alt="">
+            </div>
 
-          <!-- <img src="" alt=""> -->
-          <a href="">Relógios</a>
-        </li>
-        <li>          
-          <div class="circle"></div>
-          <!-- <img src="" alt=""> -->
-          <a href="">Relógios</a>
-        </li>
-        <li>
-          <div class="circle"></div>
+            <a href="">Relógios</a>
+          </div>
+          <div class="swiper-slide">
+            <div class="circle">
+              <img src="" alt="">
+            </div>
 
-          <!-- <img src="" alt=""> -->
-          <a href="">Relógios</a>
-        </li>
-        <li>
-          <div class="circle"></div>
+            <a href="">Relógios</a>
+          </div>
+          <div class="swiper-slide">
+            <div class="circle">
+              <img src="" alt="">
+            </div>
 
-          <!-- <img src="" alt=""> -->
-          <a href="">Relógios</a>
-        </li>
-        <li>
-          <div class="circle"></div>
+            <a href="">Relógios</a>
+          </div>
+          <div class="swiper-slide">
+            <div class="circle">
+              <img src="" alt="">
+            </div>
 
-          <!-- <img src="" alt=""> -->
-          <a href="">Relógios</a>
-        </li>
-        <li>
-          <div class="circle"></div>
-          <!-- <img src="" alt=""> -->
-          <a href="">Relógios</a>
-        </li>
-      </ul>
+            <a href="">Relógios</a>
+          </div>
+          <div class="swiper-slide">
+            <div class="circle">
+              <img src="" alt="">
+            </div>
+
+            <a href="">Relógios</a>
+          </div>
+          <div class="swiper-slide">
+            <div class="circle">
+              <img src="" alt="">
+            </div>
+
+            <a href="">Relógios</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="arrow-left swiper-button-prev-categories"><img src="" alt=""></div>
+      <div class="arrow-right swiper-button-next-categories"><img src="" alt=""></div>
     </section>
 
     <section class="sale-items">
-      <a href="" class="arrow-left"><img src="" alt=""></a>
-      <a href="" class="arrow-right"><img src="" alt=""></a>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          
+          <div class="swiper-slide">
+            <div class="product-card">
+              <header>
+                <img src="" alt="">
+                <span>34% de desconto</span>
+              </header>
+      
+              <main>
+                <p>Promoção imperdivel SmartWatch iwo W46 Series 6</p>
+      
+                <span>por apenas</span>
+                <span class="price">R$279,90</span>
+                <span>ou em até 6x de R$49,90</span>
+              </main>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product-card">
+              <header>
+                <img src="" alt="">
+                <span>34% de desconto</span>
+              </header>
+      
+              <main>
+                <p>Promoção imperdivel SmartWatch iwo W46 Series 6</p>
+      
+                <span>por apenas</span>
+                <span class="price">R$279,90</span>
+                <span>ou em até 6x de R$49,90</span>
+              </main>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product-card">
+              <header>
+                <img src="" alt="">
+                <span>34% de desconto</span>
+              </header>
+      
+              <main>
+                <p>Promoção imperdivel SmartWatch iwo W46 Series 6</p>
+      
+                <span>por apenas</span>
+                <span class="price">R$279,90</span>
+                <span>ou em até 6x de R$49,90</span>
+              </main>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product-card">
+              <header>
+                <img src="" alt="">
+                <span>34% de desconto</span>
+              </header>
+      
+              <main>
+                <p>Promoção imperdivel SmartWatch iwo W46 Series 6</p>
+      
+                <span>por apenas</span>
+                <span class="price">R$279,90</span>
+                <span>ou em até 6x de R$49,90</span>
+              </main>
+            </div>
+          </div>
 
-      <div class="slide-page">
-        <div class="circle current-page"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
+        </div>
       </div>
 
-      <div class="product-card">
-        <header>
-          <img src="" alt="">
-          <span>34% de desconto</span>
-        </header>
+      <a href="" class="arrow-left swiper-button-next-sale"><img src="" alt=""></a>
+      <a href="" class="arrow-right swiper-button-next-sale"><img src="" alt=""></a>
 
-        <main>
-          <p>Promoção imperdivel SmartWatch iwo W46 Series 6</p>
-
-          <span>por apenas</span>
-          <span class="price">R$279,90</span>
-          <span>ou em até 6x de R$49,90</span>
-        </main>
+      <div class="swiper-pagination">
       </div>
 
-      <div class="product-card">
-        <header>
-          <img src="" alt="">
-          <span>34% de desconto</span>
-        </header>
-
-        <main>
-          <p>Promoção imperdivel SmartWatch iwo W46 Series 6</p>
-
-          <span>por apenas</span>
-          <span class="price">R$279,90</span>
-          <span>ou em até 6x de R$49,90</span>
-        </main>
-      </div>
-
-      <div class="product-card">
-        <header>
-          <img src="" alt="">
-          <span>34% de desconto</span>
-        </header>
-
-        <main>
-          <p>Promoção imperdivel SmartWatch iwo W46 Series 6</p>
-
-          <span>por apenas</span>
-          <span class="price">R$279,90</span>
-          <span>ou em até 6x de R$49,90</span>
-        </main>
-      </div>
-
-      <div class="product-card">
-        <header>
-          <img src="" alt="">
-          <span>34% de desconto</span>
-        </header>
-
-        <main>
-          <p>Promoção imperdivel SmartWatch iwo W46 Series 6</p>
-
-          <span>por apenas</span>
-          <span class="price">R$279,90</span>
-          <span>ou em até 6x de R$49,90</span>
-        </main>
-      </div>
     </section>
 
     <section class="two-empty-cards">
@@ -261,9 +415,9 @@
       </div>
     </section>
 
-    <!-- <section class="hot-product">
+    <section class="hot-product">
       <div class="left">
-        <img src="" alt="">
+        <!-- <img src="assets/img/watch.png" alt=""> -->
       </div>
 
       <div class="right">
@@ -275,12 +429,12 @@
 
           <span>FRETE GRÁTIS</span>
 
-          <h2>Promoção imperdivel SmartWatch iwo W46 Series 6</h2>
+          <h2>Promoção imperdivel SmartWatch <br/> iwo W46 Series 6</h2>
         </header>
 
         <main>
-          <span class="sliced-price">R$329,90</span>
-          <span class="price">R$279,90</span>
+          <span class="sliced-price">R$329,90</span><br>
+          <span class="price">R$279,90</span><br>
           <span class="small-text">À vista no PIX com até 10% OFF</span>
         </main>
 
@@ -326,7 +480,7 @@
           </div>
         </footer>
       </div>
-    </section> -->
+    </section>
 
     <section class="social-media">
       <h2>Acompanhe-nos nas <span>redes sociais</span></h2>
@@ -360,7 +514,7 @@
           <input type="text">
           <a href="">Receber novidades</a>
         </div>
-        
+
         <div class="right">
           <a href="#"><img src="" alt=""></a>
           <a href="#"><img src="" alt=""></a>
@@ -388,14 +542,14 @@
 
         <div class="contact-method">
           <img src="" alt="Telefone">
-          <p>Atendimento via WhatsApp <br/>
+          <p>Atendimento via WhatsApp <br />
             <span>63 9 9202-9347</span>
           </p>
         </div>
 
         <div class="contact-method">
           <img src="" alt="Email">
-          <p>Email <br/>
+          <p>Email <br />
             <span>contato@orbiecom.com</span>
           </p>
         </div>
@@ -407,5 +561,11 @@
       </div>
     </section>
   </footer>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+ <script src="assets/js/flipdown.min.js"></script>
+ <script src="assets/js/index.js"></script>
 </body>
-</html>
+
+</html>   
