@@ -197,6 +197,22 @@ body > footer {
         border-radius: 1rem;
       }
 
+      &.octagon{
+        clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+      }
+
+      &.ellipse{
+        clip-path: ellipse(40% 50% at 50% 50%);
+      }
+
+      &.losango{
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+      }
+
+      &.nonagon{
+        clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+      }
+
       img {
         object-fit: center;
         transform: translate3d(-1px, -1px, 0);
@@ -366,7 +382,7 @@ section.social-media {
   display: flex;
   align-items: center;
 
-  .left {
+  > .left {
     width: calc(50% - 1rem);
     display: flex;
     justify-content: center;
@@ -443,7 +459,7 @@ section.social-media {
         flex-direction: column;
         align-items: flex-start;
         height: 100%;
-        max-width: 280px;
+        min-width: 280px;
       }
 
       .right {
@@ -456,7 +472,7 @@ section.social-media {
           align-items: center;
           justify-content: center;
           width: 100%;
-          max-width: 250px;
+          max-width: 280px;
           height: 4rem;
           color: $white;
           background: red;

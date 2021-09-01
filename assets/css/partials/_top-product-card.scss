@@ -1,9 +1,10 @@
 .selected-products .product-card {
   max-width: 800px;
+  width: 30%;
   transition: .4s;
   
   &:hover{
-    transform: scale(1.1)
+    transform: scale(1.02) translate3d(1px, 5px, 0);
   }
 
   a {
@@ -42,23 +43,24 @@
 
       span {
         color: lightgray;
-        font-size: 0.8rem;
+        font-size: 1rem;
 
         &.price {
           color: $red;
           font-weight: bold;
-          font-size: 1.75rem;
-          line-height: 2rem;
+          font-size: 2.5rem;
+          line-height: 3rem;
         }
       }
     }
     .right {
       margin-top: 0.5rem;
+      align-items: flex-end;
     }
 
     .left {
       h4 {
-        font-size: 1.25rem;
+        font-size: 2rem;
         margin-bottom: 0.5rem;
       }
 
