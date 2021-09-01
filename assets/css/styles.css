@@ -637,6 +637,9 @@ section.social-media ul.social-media {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 2rem;
@@ -926,7 +929,7 @@ section.social-media .social-media-footer .register a {
 }
 
 .product-expiration > div p {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-size: 0.9rem;
   color: #777;
   font-weight: 500;
@@ -1104,10 +1107,10 @@ section.social-media .social-media-footer .register a {
     gap: 6rem;
   }
   .arrow-left {
-    left: .5rem;
+    left: 0.5rem;
   }
   .arrow-right {
-    right: .5rem;
+    right: 0.5rem;
   }
   .two-empty-cards {
     gap: 2rem;
@@ -1122,7 +1125,8 @@ section.social-media .social-media-footer .register a {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .hot-product .left, .hot-product .right {
+  .hot-product .left,
+  .hot-product .right {
     width: 100%;
   }
   .hot-product .left {
@@ -1132,17 +1136,23 @@ section.social-media .social-media-footer .register a {
     text-align: center;
     margin-bottom: 0.25rem;
   }
-  .hot-product .right footer .left, .hot-product .right footer .right {
+  .hot-product .right footer .left,
+  .hot-product .right footer .right {
     max-width: 100%;
     width: 100%;
+  }
+  .hot-product .right footer .left {
+    padding: 0;
   }
   .hot-product .right footer .right a {
     max-width: 100%;
   }
-  .remaining-items, .product-expiration {
+  .remaining-items,
+  .product-expiration {
     min-width: 100%;
   }
-  .remaining-items .progress-bar, .product-expiration .progress-bar {
+  .remaining-items .progress-bar,
+  .product-expiration .progress-bar {
     width: 100%;
   }
   .product-expiration {
@@ -1156,13 +1166,20 @@ section.social-media .social-media-footer .register a {
   .product-expiration > div span {
     font-size: 2rem;
   }
-  .social-media .social-media-footer {
+  section.social-media ul.social-media {
+    width: 100%;
+  }
+  section.social-media ul.social-media li {
+    width: calc(50% - 1rem);
+  }
+  section.social-media .social-media-footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .brands, .links {
+  .brands,
+  .links {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
