@@ -61,7 +61,7 @@ var timerValue = {
 
 setInterval(() => {
   if(timerValue.segundos - 1 < 0) {
-    timerValue.segundos === 59
+    timerValue.segundos = 59
     
     if(timerValue.minutos - 1 < 0) {
       timerValue.minutos = 59
