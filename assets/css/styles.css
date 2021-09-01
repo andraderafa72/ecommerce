@@ -289,14 +289,12 @@ body > header {
 }
 
 body > header,
-body > main,
-body > footer {
+body > main {
   width: 100%;
 }
 
 body > header > section,
-body > main > section,
-body > footer > section {
+body > main > section {
   max-width: 100%;
   padding-left: 10%;
   padding-right: 10%;
@@ -304,6 +302,7 @@ body > footer > section {
 }
 
 body > footer {
+  padding: 4rem 4rem 6rem;
   background: #FF0513;
 }
 
@@ -777,7 +776,7 @@ section.social-media .social-media-footer .register a {
 .hot-product {
   background: #fff;
   color: #000;
-  padding: 4rem 10%;
+  padding: 6rem 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -817,6 +816,7 @@ section.social-media .social-media-footer .register a {
   margin-top: 1rem;
   font-weight: normal;
   font-family: 'Poppins', 'Roboto', sans-serif;
+  font-size: 2rem;
 }
 
 .hot-product .right header span {
@@ -856,15 +856,22 @@ section.social-media .social-media-footer .register a {
 }
 
 .hot-product .right footer {
+  margin-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.hot-product .right footer p {
+  width: 100%;
 }
 
 .hot-product .right footer .left {
@@ -878,10 +885,57 @@ section.social-media .social-media-footer .register a {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  height: 100%;
+  max-width: 280px;
+}
+
+.hot-product .right footer .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.hot-product .right footer .right a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  max-width: 250px;
+  height: 4rem;
+  color: #fff;
+  background: red;
+  border-radius: 1rem;
+  -webkit-transition: .2s;
+  transition: .2s;
+  font-weight: bold;
+}
+
+.hot-product .right footer .right a + a {
+  background: transparent;
+  border: 1px solid red;
+  color: #CC000B;
+}
+
+.hot-product .right footer .right a + a:hover {
+  background-color: red;
+  color: #fff;
+  -webkit-filter: none;
+          filter: none;
 }
 
 .remaining-items {
-  margin-top: .75rem;
+  margin-top: 2rem;
   width: 100%;
   max-width: 240px;
 }
@@ -910,7 +964,6 @@ section.social-media .social-media-footer .register a {
 }
 
 .product-expiration {
-  margin-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -925,6 +978,7 @@ section.social-media .social-media-footer .register a {
   -webkit-transform: translateY(-25%);
           transform: translateY(-25%);
   font-size: 2rem;
+  color: #454545;
 }
 
 .product-expiration > div {
@@ -950,6 +1004,114 @@ section.social-media .social-media-footer .register a {
 
 .product-expiration > div p {
   font-size: .9rem;
+}
+
+.brands {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.brands .methods {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 0 1rem;
+}
+
+.brands .methods img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.brands > div p {
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.brands .security img {
+  width: 8rem;
+}
+
+.links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5rem;
+  gap: 5rem;
+}
+
+.links .contact h3 {
+  font-size: 2.75rem;
+}
+
+.links .contact .contact-method {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: .75rem;
+}
+
+.links .contact .contact-method + .contact-method {
+  margin-top: 3rem;
+}
+
+.links .contact .contact-method img {
+  width: 3rem;
+  height: 3rem;
+  background: #ccc;
+  border-radius: 100%;
+}
+
+.links .contact .contact-method p span {
+  font-size: 1.5rem;
+}
+
+.links .community {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.links .community h3 {
+  width: 100%;
+  font-size: 2.75rem;
+  margin-bottom: 1rem;
+}
+
+.links .community a {
+  padding-left: .5rem;
+  display: inline-block;
+  color: #fff;
+  width: 100%;
+  font-size: 1.15rem;
+  height: 2rem;
+}
+
+.links .community a + a {
+  margin-top: 1rem;
 }
 
 * {

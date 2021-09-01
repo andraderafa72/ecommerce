@@ -44,9 +44,38 @@ var saleItems = new Swiper('.sale-items .swiper', {
 
 // COUNTDOWN
 
-// var timer = new Timer();
-// timer.start();
+var SEGUNDO = 1000
+var MINUTO = SEGUNDO * 60
+var HORA = MINUTO * 60
+var DIA = HORA * 24
 
-// timer.addEventListener('secondsUpdated', function (e) {
-//     $('#basicUsage').html(timer.getTimeValues().toString());
-// });
+var hours = document.querySelector('.product-expiration .hours span');
+var minutes = document.querySelector('.product-expiration .minutes span');
+var seconds = document.querySelector('.product-expiration .seconds span');
+
+var timerValue = {
+  horas: 32,
+  minutos: 27,
+  segundos: 54,
+}
+
+setInterval(() => {
+  if(timerValue.segundos - 1 < 0) {
+    timerValue.segundos === 59
+    
+    if(timerValue.minutos - 1 < 0) {
+      timerValue.minutos = 59
+
+    } else {
+      timerValue.minutos -= 1;
+    }
+  } else {
+    timerValue.segundos -= 1
+  }
+
+  hours.innerHTML = timerValue.horas
+  minutes.innerHTML = timerValue.minutos
+  seconds.innerHTML = timerValue.segundos
+
+  console.log(timerValue)
+}, 1000)
