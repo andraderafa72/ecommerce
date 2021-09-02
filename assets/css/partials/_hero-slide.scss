@@ -29,7 +29,10 @@
       justify-content: flex-start;
       gap: 1rem;
       margin-top: 3rem;
-      button{
+      a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
         cursor: pointer;
         height: 3.5rem;

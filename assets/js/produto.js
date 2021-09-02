@@ -17,11 +17,46 @@ var productSwiper = new Swiper(".product-swiper .swiper", {
   },
 });
 
-const variants = document.querySelectorAll('input[name="variant"]');
+var relatedProducts = new Swiper(".related-products .swiper", {
+  loop: true,
+  spaceBetween: 30,    
+  breakpoints: {
+    480: {
+      slidesPerView: 1,
+    },
+    // when window width is >= 480px
+    520: {
+      slidesPerView: 2,
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 2,
+    },
+    1080: {
+      slidesPerView: 3,
+    },
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 10,    
+    },
+    1900: {
+      slidesPerView: 4,
+      spaceBetween: 10,    
+    }
+  },
+  navigation: {
+    nextEl: ".swiper-button-next-related",
+    prevEl: ".swiper-button-prev-related",
+  },
+  pagination: {
+    el: ".swiper-related-pagination",
+  },
+});
 
-const plusButton = document.querySelector(".plus");
-const minusButton = document.querySelector(".minus");
-const quantityInput = document.querySelector("#quantity");
+var variants = document.querySelectorAll('input[name="variant"]');
+var plusButton = document.querySelector(".plus");
+var minusButton = document.querySelector(".minus");
+var quantityInput = document.querySelector("#quantity");
 
 plusButton.addEventListener("click", (e) => {
   quantityInput.value = Number(quantityInput.value) + 1;
@@ -38,16 +73,40 @@ variants.forEach((el) => {
 
     variants.forEach((variant) => {
       variant.checked = false;
-      const variantLabel = document.querySelector(
+      var variantLabel = document.querySelector(
         `label[for=${variant.attributes.id.nodeValue}]`
       );
       variantLabel.classList.remove("active");
     });
 
-    const label = document.querySelector(
+    var label = document.querySelector(
       `label[for=${el.attributes.id.nodeValue}]`
     );
 
     label.classList.add("active");
   });
 });
+
+
+var toggleProductDescription = document.querySelector('.toggle-product-description-visibility');
+var productDescriptionWrapper = document.querySelector('.product-description .wrapper');
+var toggleProductInfo = document.querySelector('.toggle-product-info-visibility');
+var productInfoWrapper = document.querySelector('.product-info .wrapper');
+
+
+toggleProductDescription.addEventListener("click", (e) => {
+  if(productDescriptionWrapper.classList.contains('visible')){
+    productDescriptionWrapper.classList.remove('visible')
+  } else {
+    productDescriptionWrapper.classList.add('visible')
+  }
+});
+
+toggleProductInfo.addEventListener("click", (e) => {
+  if(productInfoWrapper.classList.contains('visible')){
+    productInfoWrapper.classList.remove('visible')
+  } else {
+    productInfoWrapper.classList.add('visible')
+  }
+});
+

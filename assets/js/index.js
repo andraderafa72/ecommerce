@@ -7,7 +7,7 @@ var swiper = new Swiper(".hero-slider .swiper", {
     nextEl: '.swiper-button-next-hero',
     prevEl: '.swiper-button-prev-hero',
   },
-  spaceBetween: 30,
+  spaceBetween: 60,
 });
 
 var topProducts = new Swiper('.selected-products .swiper', {
