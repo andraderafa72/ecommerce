@@ -33,12 +33,15 @@ body > footer {
   justify-content: space-around;
   align-items: center;
 
-  .menu{
-    visibility: hidden;
-  }
+  // .menu{
+  //   visibility: hidden;
+  // }
 
   .logo {
     max-width: 150px;
+    img{
+      object-fit: cover;
+    }
   }
 
   .search {
@@ -64,7 +67,6 @@ body > footer {
       height: 24px;
       position: absolute;
       display: block;
-      background-color: #ccc;
       right: 0.5rem;
       bottom: 0.45rem;
     }
@@ -82,13 +84,32 @@ body > footer {
       margin-left: 1rem;
     }
   }
+  .cart-wrapper{
+    position: relative;
+    .cart {
+      width: 32px;
+      height: 32px;
+      display: block;
+      filter: invert(100%);
+    }
+  
+    .items-on-cart{
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background: $red;
+      color: $white;
+      font-size: .8rem;
+      font-weight: bold;
+      padding: .1rem 0.35rem;
+      border-radius: 100%;
+    }
 
-  .cart {
-    width: 32px;
-    height: 32px;
-    display: block;
-    background-color: #ccc;
+    &:hover{
+      filter: brightness(1.15);
+    }
   }
+
 }
 
 .header-bottom {
@@ -122,6 +143,12 @@ body > footer {
     width: 100%;
     min-height: calc(75vh - 9.2rem);
     padding: 2rem 3rem;
+
+    .swiper-slide{
+      img{
+        object-fit: cover;
+      }
+    }
   }
 }
 
@@ -816,7 +843,7 @@ section.product {
     width: 100%;
     display: flex;
     flex-direction: column;
-
+    margin-bottom: 4.5rem;
     .product-timer {
       width: 100%;
       background-color: $red-dark;
@@ -942,21 +969,29 @@ section.product {
       margin-top: 1rem;
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
       width: 100%;
       padding-bottom: 0.5rem;
 
       a {
+        height: 4rem;
         padding: 1.5rem 1rem;
         color: $white;
         background: $red-dark;
         border-radius: 1rem;
         transition: 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         & + a {
           border: 1px solid $red-dark;
           background: transparent;
           color: $red;
+          padding: 1.5rem .5rem;
+          margin-top: .5rem;
+          img{
+            margin-right: .5rem;
+          }
 
           &:hover {
             background: $red-dark;
@@ -996,6 +1031,7 @@ section.product {
       padding: 0.5rem 1rem;
       background: #eee;
       transition: 0.2s;
+      border-radius: .5rem;
 
       &.active {
         background: #ccc;
@@ -1010,15 +1046,18 @@ section.product {
   .quantity {
     max-width: 7rem;
     position: relative;
-
+    
     input {
       width: 7rem;
       height: 2.5rem;
-      padding: 0.275rem 0 0.275rem 3rem;
+      padding: 0.275rem 0 0.275rem 3.25rem;
       margin-top: 1rem;
+      border-radius: .5rem;
+      border: 1px solid #ccc;
     }
 
     button {
+      border-radius: .5rem;
       cursor: pointer;
       font-family: "Roboto";
       position: absolute;
@@ -1081,20 +1120,34 @@ p.shipping-info-text span {
   color: $black;
   width: 100%;
   padding: 1rem 4rem;
-
-  // display: flex;
+  
   .toggle-product-description-visibility,
   .toggle-product-info-visibility {
     width: 100%;
     padding: 1rem 2rem;
     border-radius: 1rem;
-    background: #cecece;
+    background: #eee;
     cursor: pointer;
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     p {
       font-size: 1.5rem;
       font-weight: bold;
     }
+    img{
+      width: 1.5rem;
+      height: 1.5rem;
+      transform: rotate(90deg);
+      transition: .4s;
+    }
+    
+    &.open{
+      img{
+        transform: rotate(0deg);
+      }
+    }
+
   }
 
   .wrapper {

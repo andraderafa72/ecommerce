@@ -97,7 +97,9 @@ var productInfoWrapper = document.querySelector('.product-info .wrapper');
 toggleProductDescription.addEventListener("click", (e) => {
   if(productDescriptionWrapper.classList.contains('visible')){
     productDescriptionWrapper.classList.remove('visible')
+    toggleProductDescription.classList.remove('open')
   } else {
+    toggleProductDescription.classList.add('open')
     productDescriptionWrapper.classList.add('visible')
   }
 });
@@ -105,8 +107,10 @@ toggleProductDescription.addEventListener("click", (e) => {
 toggleProductInfo.addEventListener("click", (e) => {
   if(productInfoWrapper.classList.contains('visible')){
     productInfoWrapper.classList.remove('visible')
+    toggleProductInfo.classList.remove('open')
   } else {
     productInfoWrapper.classList.add('visible')
+    toggleProductInfo.classList.add('open')
   }
 });
 

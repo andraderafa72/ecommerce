@@ -445,7 +445,7 @@
 }
 
 .hamburger-box {
-  width: 40px;
+  width: 32px;
   height: 24px;
   display: inline-block;
   position: relative;
@@ -460,7 +460,7 @@
 .hamburger-inner,
 .hamburger-inner::before,
 .hamburger-inner::after {
-  width: 40px;
+  width: 32px;
   height: 4px;
   background-color: #fff;
   border-radius: 4px;
@@ -540,7 +540,7 @@
 }
 
 .burger-menu {
-  width: 100vw;
+  width: 70vw;
   height: 100vh;
   margin-left: -100vw;
   position: fixed;
@@ -636,12 +636,13 @@ body > footer {
           align-items: center;
 }
 
-.header-top .menu {
-  visibility: hidden;
-}
-
 .header-top .logo {
   max-width: 150px;
+}
+
+.header-top .logo img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .header-top .search {
@@ -668,7 +669,6 @@ body > footer {
   height: 24px;
   position: absolute;
   display: block;
-  background-color: #ccc;
   right: 0.5rem;
   bottom: 0.45rem;
 }
@@ -690,11 +690,33 @@ body > footer {
   margin-left: 1rem;
 }
 
-.header-top .cart {
+.header-top .cart-wrapper {
+  position: relative;
+}
+
+.header-top .cart-wrapper .cart {
   width: 32px;
   height: 32px;
   display: block;
-  background-color: #ccc;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+.header-top .cart-wrapper .items-on-cart {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #CC000B;
+  color: #fff;
+  font-size: .8rem;
+  font-weight: bold;
+  padding: .1rem 0.35rem;
+  border-radius: 100%;
+}
+
+.header-top .cart-wrapper:hover {
+  -webkit-filter: brightness(1.15);
+          filter: brightness(1.15);
 }
 
 .header-bottom {
@@ -734,6 +756,11 @@ body > footer {
   width: 100%;
   min-height: calc(75vh - 9.2rem);
   padding: 2rem 3rem;
+}
+
+.hero-slider .swiper .swiper-slide img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .selected-products {
@@ -1574,6 +1601,7 @@ section.product {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 4.5rem;
 }
 
 .product-info > header .product-timer {
@@ -1708,24 +1736,39 @@ section.product {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 0.5rem;
   width: 100%;
   padding-bottom: 0.5rem;
 }
 
 .product-info > aside .buttons a {
+  height: 4rem;
   padding: 1.5rem 1rem;
   color: #fff;
   background: #FF0513;
   border-radius: 1rem;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .product-info > aside .buttons a + a {
   border: 1px solid #FF0513;
   background: transparent;
   color: #CC000B;
+  padding: 1.5rem .5rem;
+  margin-top: .5rem;
+}
+
+.product-info > aside .buttons a + a img {
+  margin-right: .5rem;
 }
 
 .product-info > aside .buttons a + a:hover {
@@ -1769,6 +1812,7 @@ section.product {
   background: #eee;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  border-radius: .5rem;
 }
 
 .product-form .variant-input-group label.active {
@@ -1787,11 +1831,14 @@ section.product {
 .product-form .quantity input {
   width: 7rem;
   height: 2.5rem;
-  padding: 0.275rem 0 0.275rem 3rem;
+  padding: 0.275rem 0 0.275rem 3.25rem;
   margin-top: 1rem;
+  border-radius: .5rem;
+  border: 1px solid #ccc;
 }
 
 .product-form .quantity button {
+  border-radius: .5rem;
   cursor: pointer;
   font-family: "Roboto";
   position: absolute;
@@ -1864,8 +1911,17 @@ p.shipping-info-text span {
   width: 100%;
   padding: 1rem 2rem;
   border-radius: 1rem;
-  background: #cecece;
+  background: #eee;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .product-description .toggle-product-description-visibility p,
@@ -1874,6 +1930,26 @@ p.shipping-info-text span {
 .product-info .toggle-product-info-visibility p {
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+.product-description .toggle-product-description-visibility img,
+.product-description .toggle-product-info-visibility img,
+.product-info .toggle-product-description-visibility img,
+.product-info .toggle-product-info-visibility img {
+  width: 1.5rem;
+  height: 1.5rem;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.product-description .toggle-product-description-visibility.open img,
+.product-description .toggle-product-info-visibility.open img,
+.product-info .toggle-product-description-visibility.open img,
+.product-info .toggle-product-info-visibility.open img {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 
 .product-description .wrapper,
@@ -2280,80 +2356,6 @@ p.shipping-info-text span {
           filter: brightness(0.9);
 }
 
-.fixed-banner .parcelamento {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.fixed-banner .parcelamento p {
-  font-size: .9rem;
-  margin-bottom: 0.5rem;
-}
-
-.fixed-banner .parcelamento p span {
-  color: #FF0513;
-  font-weight: 500;
-}
-
-.fixed-banner .parcelamento select {
-  width: 100%;
-  padding: .5rem 1rem;
-  border-radius: .5rem;
-  border: none;
-}
-
-.fixed-banner .product-timer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: .35rem;
-}
-
-.fixed-banner .product-timer > p {
-  color: #FF0513;
-  font-size: 1.2rem;
-}
-
-.fixed-banner .product-expiration > div {
-  color: #fff;
-}
-
-.fixed-banner .product-expiration > div span, .fixed-banner .product-expiration > div p, .fixed-banner .product-expiration > div strong {
-  background: transparent;
-  color: #fff !important;
-}
-
-.fixed-banner .product-expiration > div span {
-  padding: 0;
-}
-
-.fixed-banner span.lined-price {
-  text-decoration: line-through;
-  color: #eee;
-  font-size: 1.125rem;
-}
-
-.fixed-banner p.price {
-  color: #FF0513;
-  font-size: 2rem;
-  font-weight: bold;
-}
-
 .fixed-banner.fixed {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2363,46 +2365,44 @@ p.shipping-info-text span {
   opacity: 1;
 }
 
-@-webkit-keyframes gainVisibility {
-  to {
-    opacity: 1;
-  }
+.fixed-banner .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-@keyframes gainVisibility {
-  to {
-    opacity: 1;
-  }
+.fixed-banner .fixed-product-info h3 {
+  color: #fff;
+  font-size: 1.75rem;
+  font-weight: normal;
 }
 
-@media (max-width: 767px) {
-  .fixed-banner .product-expiration {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
+.fixed-banner .fixed-product-info p.price {
+  color: #FF0513;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-@media (max-width: 580px) {
-  .fixed-banner {
-    padding: 1rem;
-  }
-  .fixed-banner .product-timer p {
-    font-size: .9rem;
-  }
-  .fixed-banner .product-expiration {
-    -webkit-transform: scale(0.75);
-            transform: scale(0.75);
-  }
+.fixed-banner .fixed-product-info p.lined {
+  color: #ccc;
+  font-size: .8rem;
+  text-decoration: line-through;
 }
 
-@media (max-width: 340px) {
-  .fixed-banner {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: 10rem;
-  }
+.fixed-banner .fixed-product-image {
+  margin-right: 1rem;
+  background: #fff;
+  border-radius: .5rem;
+  padding: .5rem;
+  width: 5rem;
+  height: 5rem;
+}
+
+.fixed-banner .fixed-product-image img {
+  width: 4rem;
+  height: 4rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 * {
