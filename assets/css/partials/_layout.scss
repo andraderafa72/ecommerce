@@ -750,6 +750,26 @@ section.product{
 
     .product-swiper{
       width: 100%;
+
+      .swiper-slide{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  footer{
+    margin-top: 2rem;
+    .swiper-thumbs{
+      overflow: hidden;
+      justify-content: flex-start!important;
+
+      .swiper-slide{
+        width: 100px!important;
+        border: 1px solid #eee;
+        border-radius: 1rem;
+      }
     }
   }
 }
@@ -771,22 +791,25 @@ section.product{
     .product-timer{
       width: 100%;
       background-color: $red-dark;
-      height: 5rem;
+      // height: 5rem;
+      padding: 1rem 3rem;
       // margin-bottom: 1rem;
       border-radius: 1rem;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
 
       h4{
         font-size: 1.5rem;
-        max-width: 40%;
+        max-width: 60%;
         color:$white;
       }
 
       .product-expiration{
         strong{
           color:$white;
+          transform: translateY(-50%);
+          font-size: 1.5rem!important;
         }
         > div {
           &:last-child{
@@ -799,12 +822,16 @@ section.product{
             background: transparent;
             font-weight: bold;
             padding: 0;
+            font-size: 1.75rem!important;
+          }
+          p{
+            font-size: .9rem!important;
           }
         }
       }
     }
 
-    h2 {
+     >h2 {
       width: 100%;
       text-align: left;
       margin-top: 1rem;
@@ -812,7 +839,7 @@ section.product{
       font-family: "Poppins", "Roboto", sans-serif;
       font-size: 2rem;
     }
-    p{
+    > p{
       margin-top: .5rem;
       color: #454545;
       font-size: 1rem;
@@ -827,7 +854,7 @@ section.product{
     }
   }
 
-  main{
+  > main{
     margin-top: 1rem;
     .product-main-info{
       p.line-price{
@@ -886,6 +913,7 @@ section.product{
 
     input{
       width: 7rem;
+      height: 2.5rem;
       padding: .275rem 0 .275rem 3rem;
       margin-top: 1rem;
     }
@@ -896,7 +924,7 @@ section.product{
       position: absolute;
       bottom: 0;
       width: 2rem;
-      height: 2rem;
+      height: 2.5rem;
       font-weight: bold;
       border: 1px solid #ccc;
       background: #eee;
@@ -917,8 +945,7 @@ section.product{
       flex-wrap: wrap;
 
       p, span{
-        width: 100%;
-        font-size: .9rem;
+        font-size: .9rem!important;
       }
     }
   }

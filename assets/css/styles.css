@@ -1187,6 +1187,35 @@ section.product {
   width: 100%;
 }
 
+.product-images main .product-swiper .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.product-images footer {
+  margin-top: 2rem;
+}
+
+.product-images footer .swiper-thumbs {
+  overflow: hidden;
+  -webkit-box-pack: start !important;
+      -ms-flex-pack: start !important;
+          justify-content: flex-start !important;
+}
+
+.product-images footer .swiper-thumbs .swiper-slide {
+  width: 100px !important;
+  border: 1px solid #eee;
+  border-radius: 1rem;
+}
+
 .product-info {
   max-width: 50%;
   display: -webkit-box;
@@ -1214,7 +1243,7 @@ section.product {
 .product-info > header .product-timer {
   width: 100%;
   background-color: #FF0513;
-  height: 5rem;
+  padding: 1rem 3rem;
   border-radius: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1222,19 +1251,22 @@ section.product {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .product-info > header .product-timer h4 {
   font-size: 1.5rem;
-  max-width: 40%;
+  max-width: 60%;
   color: #fff;
 }
 
 .product-info > header .product-timer .product-expiration strong {
   color: #fff;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 1.5rem !important;
 }
 
 .product-info > header .product-timer .product-expiration > div:last-child {
@@ -1250,9 +1282,14 @@ section.product {
   background: transparent;
   font-weight: bold;
   padding: 0;
+  font-size: 1.75rem !important;
 }
 
-.product-info > header h2 {
+.product-info > header .product-timer .product-expiration > div p {
+  font-size: 0.9rem !important;
+}
+
+.product-info > header > h2 {
   width: 100%;
   text-align: left;
   margin-top: 1rem;
@@ -1261,49 +1298,49 @@ section.product {
   font-size: 2rem;
 }
 
-.product-info > header p {
+.product-info > header > p {
   margin-top: .5rem;
   color: #454545;
   font-size: 1rem;
 }
 
-.product-info > header p span {
+.product-info > header > p span {
   color: #111;
 }
 
-.product-info > header p span + span {
+.product-info > header > p span + span {
   color: green;
 }
 
-.product-info main {
+.product-info > main {
   margin-top: 1rem;
 }
 
-.product-info main .product-main-info p.line-price {
+.product-info > main .product-main-info p.line-price {
   text-decoration: line-through;
   color: #454545;
   font-size: 1.5rem;
   margin-bottom: .25rem;
 }
 
-.product-info main .product-main-info p.current-price {
+.product-info > main .product-main-info p.current-price {
   font-size: 2.5rem;
   color: #CC000B;
   font-weight: bold;
 }
 
-.product-info main .product-main-info span, .product-info main .product-main-info a {
+.product-info > main .product-main-info span, .product-info > main .product-main-info a {
   color: #454545;
   font-size: .8rem;
 }
 
-.product-info main .product-main-info a {
+.product-info > main .product-main-info a {
   font-weight: bold;
   -webkit-transition: .2s;
   transition: .2s;
 }
 
-.product-info main .product-main-info a:hover {
+.product-info > main .product-main-info a:hover {
   color: #111;
 }
 
@@ -1341,6 +1378,7 @@ section.product {
 
 .product-form .quantity input {
   width: 7rem;
+  height: 2.5rem;
   padding: .275rem 0 .275rem 3rem;
   margin-top: 1rem;
 }
@@ -1351,7 +1389,7 @@ section.product {
   position: absolute;
   bottom: 0;
   width: 2rem;
-  height: 2rem;
+  height: 2.5rem;
   font-weight: bold;
   border: 1px solid #ccc;
   background: #eee;
@@ -1375,8 +1413,7 @@ section.product {
 }
 
 .product-form .shipping-info .time p, .product-form .shipping-info .time span {
-  width: 100%;
-  font-size: .9rem;
+  font-size: 0.9rem !important;
 }
 
 @media (max-width: 1080px) {
