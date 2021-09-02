@@ -1,0 +1,138 @@
+.fixed-banner{
+  width: 100vw;
+  // height: 6rem; --- PREÇO
+  height: 8rem; // TIMER
+  display: none;
+  padding: 2rem;
+  background: #2e2e2e;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 9;
+
+  justify-content: space-between;
+  align-items: center;
+
+  a{
+    padding: 1rem 1.5rem;
+    border-radius: .5rem;
+    background: $red-dark;
+    color: $white;
+    transition: .2s;
+
+    &:hover{
+      filter: brightness(.9);
+    }
+  }
+
+  // PARCELAMENTO
+  .parcelamento{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p{
+      font-size: .9rem;
+      margin-bottom: 0.5rem;  
+      span{
+        color: $red-dark;
+        font-weight: 500;
+      }
+    }
+    select{
+      width: 100%;
+      padding: .5rem 1rem;
+      border-radius: .5rem;
+      border: none;
+
+    }
+  }  
+
+
+  // TIMER
+
+  .product-timer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .35rem;
+
+    > p{
+      color: $red-dark;
+      // font-weight: bold; 
+      font-size: 1.2rem;
+    }
+  }
+
+  .product-expiration{
+    // margin-left: 1.5rem;
+    > div{
+      color: $white;
+
+      span, p, strong{
+        background: transparent;
+        color: $white!important;
+      }
+
+      span{
+        padding:0;
+      }
+    }
+  }
+
+  // PREÇO
+
+  span.lined-price{
+    text-decoration: line-through;
+    color: #eee;
+    font-size: 1.125rem;
+  }
+
+  p.price{
+    color: $red-dark;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  &.fixed{
+    display: flex;
+    animation: gainVisibility .2s ease;
+    opacity: 1;
+  }
+}
+
+@keyframes gainVisibility {
+  to{
+    opacity: 1;
+  }
+}
+
+// TIMER
+
+@media(max-width: 767px){
+  .fixed-banner {
+    .product-expiration{
+      transform: scale(.9);
+    }
+  }
+}
+
+@media(max-width: 580px){
+  .fixed-banner {
+    padding: 1rem;
+    .product-timer p{
+      font-size: .9rem;
+    }
+    .product-expiration{
+      // margin-left: 0;
+      transform: scale(.75);
+    }
+  }
+}
+
+@media(max-width: 340px){
+  .fixed-banner {
+    flex-direction: column;
+    height: 10rem;
+  }
+}
