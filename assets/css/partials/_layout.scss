@@ -287,6 +287,7 @@ body > footer {
 
   .swiper-pagination {
     bottom: 0rem !important;
+    z-index: 3;
 
     .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
       background: $blue !important;
@@ -717,7 +718,7 @@ section.social-media {
   border-radius: 100%;
   transition: 0.2s;
   // border: 2px solid $red;
-  z-index: 5;
+  z-index: 3;
   filter: brightness(1.25);
 
   svg{
@@ -788,6 +789,16 @@ section.product {
   justify-content: space-between;
 }
 
+.triangle{
+  clip-path: polygon(50% 50%, 0 0, 100% 0);
+  width: 1.35rem;
+  height: 1.35rem;
+  display: block;
+  background-color: #fff;
+  margin-left: .5rem;
+  transform: translateY(25%);
+}
+
 .product-images {
   width: calc(45% - 1rem);
   padding: 1rem;
@@ -804,6 +815,9 @@ section.product {
       border-radius: 1rem;
       padding: 0.5rem 1rem;
       font-weight: bold;
+
+      display: flex;
+      align-items: center;
     }
 
     .icons {
@@ -879,7 +893,7 @@ section.product {
     margin-bottom: 4.5rem;
     .product-timer {
       width: 100%;
-      background-color: $red-dark;
+      background-color: #f2f2f2;
       // height: 5rem;
       padding: 1rem 3rem;
       // margin-bottom: 1rem;
@@ -891,12 +905,12 @@ section.product {
       h4 {
         font-size: 1.5rem;
         max-width: 60%;
-        color: $white;
+        color: $black;
       }
 
       .product-expiration {
         strong {
-          color: $white;
+          color: $red;
           transform: translateY(-50%);
           font-size: 1.5rem !important;
         }
@@ -908,7 +922,7 @@ section.product {
 
           span,
           p {
-            color: $white;
+            color: $red;
           }
 
           span {
@@ -1037,10 +1051,10 @@ section.product {
     .fire {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
 
       p {
-        font-size: 0.8rem !important;
+        margin-left: 0.5rem;
+        font-size: 0.9rem !important;
         span {
           color: $red;
           font-weight: bold;
@@ -1172,7 +1186,7 @@ p.shipping-info-text span {
       width: 1.5rem;
       height: 1.5rem;
       transform: rotate(90deg);
-      transition: .4s;
+      transition: .2s;
     }
     
     &.open{
@@ -1317,6 +1331,14 @@ p.shipping-info-text span {
   .hero-slider {
     .swiper-slide{
       padding-bottom: 3rem;
+
+      .slide{
+        .left{
+          :not(.buttons){
+            display: none;
+          }
+        }
+      }
     }
     .slide-buttons {
       flex-direction: column;
@@ -1337,8 +1359,10 @@ p.shipping-info-text span {
   .header-bottom {
     nav {
       li{
+        &.toggle-categories-menu{
+          padding: 1rem 1rem;
+        }
         &:not(.toggle-categories-menu){
-
           display: none;
         }
       }
@@ -1503,6 +1527,7 @@ p.shipping-info-text span {
     // gap: 2rem;
 
     .community{
+      margin-left: 0;
       h3{
         font-size: 2.25rem;
       }
@@ -1513,9 +1538,17 @@ p.shipping-info-text span {
     }
   }
 
+  .navigation{
+    margin-top: 9.25rem;
+  }
+
   section.product {
     flex-direction: column;
     padding: 1rem 2rem;
+
+    header{
+      margin-bottom: 0rem;
+    }
 
     .product-images,
     .product-info {
@@ -1537,13 +1570,30 @@ p.shipping-info-text span {
 
     .product-info {
       padding: 1rem 0;
-      flex-direction: column;
+      // flex-direction: column;
 
       .product-timer{
-        padding: 1.5rem .5rem;
-
+        padding: 1.5rem 1rem 1.5rem 2rem;
+        flex-direction: row;
         h4{
-          max-width: 100%;
+          // font-weight: normal;
+          // opacity: .8;
+          width: 80%;
+          font-size: 1.125rem;
+        }
+        .product-expiration{
+          transform: scale(.75);
+
+          strong{
+            transform: translateY(-10%);
+
+          }
+          .seconds{
+            margin-left: 0.25rem;
+          }
+          p{
+            display: none;
+          }
         }
       }
 

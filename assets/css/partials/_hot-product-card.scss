@@ -10,7 +10,7 @@
 
   header {
     display: flex;
-    // border: 2px dashed #454545;
+    padding-top: 1rem;
     z-index: 1;
     border-radius: 1rem;
     height: 15rem;
@@ -22,10 +22,18 @@
     span{
       color: $white;
       font-weight: bold;
-
       background: $red;
-      padding: .25rem 1rem;
+      padding: .35rem 1rem;
       border-radius: .5rem;
+
+      display: flex;
+      align-items: center;
+
+      img{
+        margin-left: 0.5rem;
+        width: 1.25rem;
+        height: 1.25rem;
+      }
     }
 
     img{
