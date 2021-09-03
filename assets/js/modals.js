@@ -1,8 +1,7 @@
 const fixedBanner = document.querySelector('.fixed-banner')
 
 window.addEventListener('scroll', e => {
-  console.log(window.pageYOffset)
-  if(window.pageYOffset >= 500){ 
+  if(window.pageYOffset >= 700){ 
     fixedBanner.classList.add('fixed')
   } else {
     fixedBanner.classList.remove('fixed')

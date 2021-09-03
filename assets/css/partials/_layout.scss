@@ -458,6 +458,8 @@ section.social-media {
         color: white;
         font-weight: bold;
         border-radius: 1rem;
+        display: flex;
+        align-items: center;
 
         & + span {
           margin-left: 0.5rem;

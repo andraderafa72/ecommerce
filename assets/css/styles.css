@@ -1193,6 +1193,12 @@ section.social-media .social-media-footer .register a {
   color: white;
   font-weight: bold;
   border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .hot-product .right header span + span {
