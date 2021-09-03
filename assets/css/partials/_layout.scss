@@ -108,6 +108,11 @@ body>footer {
     }
 }
 
+.categories-header-menu ul.header-categories p {
+    color: $red;
+    font-weight: bold;
+}
+
 .header-bottom {
     background-color: #2e2e2e;
     padding: 0 4.5rem;
@@ -127,7 +132,7 @@ body>footer {
                 }
             }
         }
-        li a {
+        >li a {
             font-family: "Poppins", "Open Sans", "Roboto", sans-serif;
             color: $white;
             transition: 0.2s;
@@ -1215,7 +1220,7 @@ p.shipping-info-text span {
     }
     .header-bottom {
         nav {
-            li {
+            >li {
                 &.toggle-categories-menu {
                     padding: 1rem 1rem;
                 }
