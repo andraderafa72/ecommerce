@@ -803,11 +803,14 @@ body > footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 2rem;
 }
 
 .header-bottom > nav li {
   padding: .5rem;
+}
+
+.header-bottom > nav li + li {
+  margin-left: 2rem;
 }
 
 .header-bottom > nav li.toggle-categories-menu:hover .categories-header-menu {
@@ -879,7 +882,6 @@ body > footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 2rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -898,34 +900,11 @@ body > footer {
   width: 200px;
   height: 200px;
   overflow: hidden;
+  margin-bottom: 1.5em;
 }
 
 .categories .swiper-slide div.circle {
   border-radius: 100%;
-}
-
-.categories .swiper-slide div.rectangle {
-  border-radius: 1rem;
-}
-
-.categories .swiper-slide div.octagon {
-  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-          clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-}
-
-.categories .swiper-slide div.ellipse {
-  -webkit-clip-path: ellipse(40% 50% at 50% 50%);
-          clip-path: ellipse(40% 50% at 50% 50%);
-}
-
-.categories .swiper-slide div.losango {
-  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-}
-
-.categories .swiper-slide div.nonagon {
-  -webkit-clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
-          clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
 }
 
 .categories .swiper-slide div img {
@@ -950,7 +929,6 @@ body > footer {
           flex-direction: column;
   font-size: 1.15rem;
   color: #fff;
-  gap: 1.5rem;
 }
 
 .sale-items {
@@ -963,7 +941,6 @@ body > footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 1rem;
 }
 
 .sale-items .swiper-pagination {
@@ -1271,7 +1248,6 @@ section.social-media .social-media-footer .register a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 1rem;
 }
 
 .hot-product .right footer .right a {
@@ -1299,6 +1275,7 @@ section.social-media .social-media-footer .register a {
   background: transparent;
   border: 1px solid red;
   color: #CC000B;
+  margin-top: 1rem;
 }
 
 .hot-product .right footer .right a + a:hover {
@@ -1344,7 +1321,6 @@ section.social-media .social-media-footer .register a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 0.5rem;
   max-width: 220px;
 }
 
@@ -1353,6 +1329,7 @@ section.social-media .social-media-footer .register a {
           transform: translateY(-25%);
   font-size: 2rem;
   color: #454545;
+  margin: 0 .5rem;
 }
 
 .product-expiration > div {
@@ -1374,6 +1351,10 @@ section.social-media .social-media-footer .register a {
   background-color: #cecece;
   color: #454545;
   border-radius: 0.5rem;
+}
+
+.product-expiration > div span + span {
+  margin-left: 0.5rem;
 }
 
 .product-expiration > div p {
@@ -1643,7 +1624,10 @@ section.product {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 1rem;
+}
+
+.product-images header .icons a + a {
+  margin-left: 1rem;
 }
 
 .product-images header .icons img {
@@ -2128,12 +2112,12 @@ p.shipping-info-text span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
   width: 50%;
 }
 
 .subscription .subscription-input input {
   height: 3rem;
+  margin-right: 1rem;
   width: 100%;
   font-size: 1.125rem;
   border-radius: 0.5rem;
@@ -2162,11 +2146,18 @@ p.shipping-info-text span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   width: 25%;
+}
+
+.subscription .social-media img {
+  width: 2rem;
+  height: 2rem;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  margin-left: 1.5rem;
 }
 
 .subscription p {
@@ -2509,7 +2500,6 @@ p.shipping-info-text span {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 1rem;
   }
 }
 
