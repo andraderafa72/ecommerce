@@ -805,15 +805,15 @@ body > footer {
           align-items: center;
 }
 
-.header-bottom > nav li {
+.header-bottom > nav > li {
   padding: .5rem;
 }
 
-.header-bottom > nav li + li {
+.header-bottom > nav > li + li {
   margin-left: 2rem;
 }
 
-.header-bottom > nav li.toggle-categories-menu:hover .categories-header-menu {
+.header-bottom > nav > li.toggle-categories-menu:hover .categories-header-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

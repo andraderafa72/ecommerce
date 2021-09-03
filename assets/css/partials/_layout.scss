@@ -134,7 +134,7 @@ body > footer {
     display: flex;
     align-items: center;
 
-    li{
+    > li{
       padding: .5rem;
 
       & + li{
