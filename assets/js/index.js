@@ -63,13 +63,15 @@ var saleItems = new Swiper('.sale-items .swiper', {
     nextEl: '.swiper-button-next-sale',
     prevEl: '.swiper-button-prev-sale',
   },
-  spaceBetween: 20,
+  freeMode: true,
   breakpoints: {
     640: {
       slidesPerView: 2,
+      spaceBetween: 10,
     },
     1080: {
       slidesPerView: 4,
+      spaceBetween: 20,
     },
   }
 })

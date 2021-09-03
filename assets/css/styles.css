@@ -2276,6 +2276,9 @@ p.shipping-info-text span {
   .sale-items .arrow-right {
     right: 0.5rem !important;
   }
+  .sale-items .swiper-slide {
+    padding: 1rem;
+  }
   .two-empty-cards {
     padding: 4rem 2rem;
   }
