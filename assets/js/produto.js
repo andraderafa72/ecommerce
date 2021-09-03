@@ -21,9 +21,6 @@ var relatedProducts = new Swiper(".related-products .swiper", {
   loop: true,
   spaceBetween: 30,    
   breakpoints: {
-    480: {
-      slidesPerView: 1,
-    },
     // when window width is >= 480px
     520: {
       slidesPerView: 2,
@@ -50,6 +47,7 @@ var relatedProducts = new Swiper(".related-products .swiper", {
   },
   pagination: {
     el: ".swiper-related-pagination",
+    clickable: true,
   },
 });
 

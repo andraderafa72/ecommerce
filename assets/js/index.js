@@ -1,7 +1,9 @@
 var swiper = new Swiper(".hero-slider .swiper", {
   loop: true,
+  autoplay: true,
   pagination: {
     el: ".swiper-pagination",
+    clickable: true,
   },
   navigation: {
     nextEl: '.swiper-button-next-hero',
@@ -22,27 +24,18 @@ var topProducts = new Swiper('.selected-products .swiper', {
 
 var categories = new Swiper('.categories .swiper', {
   loop: true,
-
-  navigation: {
-    nextEl: '.swiper-button-next-categories',
-    prevEl: '.swiper-button-prev-categories',
+  freeMode: true,
+  pagination: {
+    el: ".swiper-pagination-categories",
+    clickable: true,
   },
   breakpoints: {
-    // when window width is >= 320px
-    320: {
-      slidesPerView: 1,
-    },
-    480: {
-      slidesPerView: 1,
-    },
     // when window width is >= 480px
     520: {
-      slidesPerView: 2,
+      slidesPerView: 3,
+      spaceBetween: 20,
     },
     // when window width is >= 640px
-    640: {
-      slidesPerView: 3,
-    },
     1080: {
       slidesPerView: 4,
     },
@@ -59,16 +52,15 @@ var saleItems = new Swiper('.sale-items .swiper', {
   loop: true,
   pagination: {
     el: ".sale-items .swiper-pagination",
+    clickable: true,
   },
   navigation: {
     nextEl: '.swiper-button-next-sale',
     prevEl: '.swiper-button-prev-sale',
   },
+  freeMode: true,
   spaceBetween: 30,    
   breakpoints: {
-    480: {
-      slidesPerView: 1,
-    },
     // when window width is >= 480px
     520: {
       slidesPerView: 2,

@@ -5,7 +5,11 @@
 @import './_burger';
 
 body > header {
-  height: 9.25rem;
+  height: 8.15rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
 }
 
 body > header,
@@ -39,6 +43,7 @@ body > footer {
 
   .logo {
     max-width: 150px;
+    margin-left: 4rem;
     img{
       object-fit: cover;
     }
@@ -48,6 +53,7 @@ body > footer {
     position: relative;
     max-width: 600px;
     width: 100%;
+    margin-left: 2rem;
 
     input {
       width: 100%;
@@ -75,6 +81,7 @@ body > footer {
   nav {
     display: flex;
     align-items: center;
+    margin-left: 2rem;
 
     li a {
       color: $white;
@@ -86,6 +93,7 @@ body > footer {
   }
   .cart-wrapper{
     position: relative;
+    margin-left: auto;
     .cart {
       width: 32px;
       height: 32px;
@@ -114,14 +122,18 @@ body > footer {
 
 .header-bottom {
   background-color: #2e2e2e;
-  padding: 1.05rem 4.5rem;
-  // border-bottom: 3px solid #2E2E2E;
+  padding: 0 4.5rem;
+  border-bottom: 1px solid #000;
+  transform: translateY(-1px);
 
   nav {
     display: flex;
     align-items: center;
     gap: 2rem;
 
+    li{
+      padding: .5rem;
+    }
     li a {
       font-family: "Poppins", "Open Sans", "Roboto", sans-serif;
       color: $white;
@@ -136,8 +148,9 @@ body > footer {
 .hero-slider {
   position: relative;
   background: $black;
-  min-height: calc(75vh - 9.25rem);
+  min-height: calc(75vh - 8.15rem);
   padding: 0;
+  margin-top: 8.15rem;
 
   .swiper {
     width: 100%;
@@ -169,6 +182,10 @@ body > footer {
   position: relative;
   padding: 4rem;
   background: $blue;
+
+  .swiper-pagination-categories{
+    text-align: center;
+  }
 
   .swiper-slide {
     padding: 0 2rem 2rem;
@@ -246,31 +263,6 @@ body > footer {
     }
   }
 
-  .arrow-left,
-  .arrow-right {
-    position: absolute;
-    top: calc(40% - 1rem);
-    display: block;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 100%;
-    transition: 0.2s;
-    border: 2px solid $red;
-    z-index: 999;
-    filter: brightness(1.25);
-
-    &:hover {
-      background-color: $red;
-    }
-  }
-
-  .arrow-left {
-    left: 2rem;
-  }
-
-  .arrow-right {
-    right: 2rem;
-  }
 }
 
 .sale-items {
@@ -727,6 +719,8 @@ section.social-media {
   width: 100%;
   padding: 0;
   color: $black;
+    margin-top: 8.15rem;
+
 
   p {
     padding: 1rem 0;
@@ -1319,6 +1313,17 @@ p.shipping-info-text span {
     }
   }
 
+  .categories {
+    padding: 4rem 0 4rem .5rem;
+    .swiper-slide{
+      max-width: 130px;
+      .circle{
+        width: 120px;
+        height: 120px;
+      }
+    }
+  }
+
   .arrow-left {
     left: 0.5rem;
   }
@@ -1412,7 +1417,6 @@ p.shipping-info-text span {
 
       .register {
         min-width: 300px;
-        min-width: 600px;
         width: 100%;
         margin: 0 auto;
         flex-direction: column;

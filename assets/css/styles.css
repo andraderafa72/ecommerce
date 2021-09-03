@@ -330,7 +330,7 @@
 .categories-header-menu {
   position: absolute;
   width: 300px;
-  top: 9.2rem;
+  top: 8.15rem;
   left: 4em;
   z-index: 9999999;
   background: #111;
@@ -566,6 +566,16 @@
   transition: all 0.4s;
 }
 
+.burger-menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .burger-menu ul li a {
   display: inline-block;
   padding: 1rem 2rem;
@@ -581,14 +591,24 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-transition: .2s;
   transition: .2s;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
 }
 
 .burger-menu > .social-media a:hover {
   -webkit-filter: brightness(0.8);
           filter: brightness(0.8);
+}
+
+.burger-menu > .social-media a + a {
+  margin-top: 1rem;
 }
 
 .burger-menu > .social-media img {
@@ -602,7 +622,11 @@
 }
 
 body > header {
-  height: 9.25rem;
+  height: 8.15rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
 }
 
 body > header,
@@ -638,6 +662,7 @@ body > footer {
 
 .header-top .logo {
   max-width: 150px;
+  margin-left: 4rem;
 }
 
 .header-top .logo img {
@@ -649,6 +674,7 @@ body > footer {
   position: relative;
   max-width: 600px;
   width: 100%;
+  margin-left: 2rem;
 }
 
 .header-top .search input {
@@ -680,6 +706,7 @@ body > footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-left: 2rem;
 }
 
 .header-top nav li a {
@@ -692,6 +719,7 @@ body > footer {
 
 .header-top .cart-wrapper {
   position: relative;
+  margin-left: auto;
 }
 
 .header-top .cart-wrapper .cart {
@@ -721,7 +749,10 @@ body > footer {
 
 .header-bottom {
   background-color: #2e2e2e;
-  padding: 1.05rem 4.5rem;
+  padding: 0 4.5rem;
+  border-bottom: 1px solid #000;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
 }
 
 .header-bottom nav {
@@ -732,6 +763,10 @@ body > footer {
       -ms-flex-align: center;
           align-items: center;
   gap: 2rem;
+}
+
+.header-bottom nav li {
+  padding: .5rem;
 }
 
 .header-bottom nav li a {
@@ -748,8 +783,9 @@ body > footer {
 .hero-slider {
   position: relative;
   background: #000;
-  min-height: calc(75vh - 9.25rem);
+  min-height: calc(75vh - 8.15rem);
   padding: 0;
+  margin-top: 8.15rem;
 }
 
 .hero-slider .swiper {
@@ -784,6 +820,10 @@ body > footer {
   position: relative;
   padding: 4rem;
   background: #010417;
+}
+
+.categories .swiper-pagination-categories {
+  text-align: center;
 }
 
 .categories .swiper-slide {
@@ -863,35 +903,6 @@ body > footer {
   font-size: 1.15rem;
   color: #fff;
   gap: 1.5rem;
-}
-
-.categories .arrow-left,
-.categories .arrow-right {
-  position: absolute;
-  top: calc(40% - 1rem);
-  display: block;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 100%;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  border: 2px solid #CC000B;
-  z-index: 999;
-  -webkit-filter: brightness(1.25);
-          filter: brightness(1.25);
-}
-
-.categories .arrow-left:hover,
-.categories .arrow-right:hover {
-  background-color: #CC000B;
-}
-
-.categories .arrow-left {
-  left: 2rem;
-}
-
-.categories .arrow-right {
-  right: 2rem;
 }
 
 .sale-items {
@@ -1452,6 +1463,7 @@ section.social-media .social-media-footer .register a {
   width: 100%;
   padding: 0;
   color: #000;
+  margin-top: 8.15rem;
 }
 
 .navigation p {
@@ -2126,6 +2138,16 @@ p.shipping-info-text span {
   .selected-products .product-card {
     width: 100%;
   }
+  .categories {
+    padding: 4rem 0 4rem .5rem;
+  }
+  .categories .swiper-slide {
+    max-width: 130px;
+  }
+  .categories .swiper-slide .circle {
+    width: 120px;
+    height: 120px;
+  }
   .arrow-left {
     left: 0.5rem;
   }
@@ -2207,7 +2229,6 @@ p.shipping-info-text span {
   }
   section.social-media .social-media-footer .register {
     min-width: 300px;
-    min-width: 600px;
     width: 100%;
     margin: 0 auto;
     -webkit-box-orient: vertical;
