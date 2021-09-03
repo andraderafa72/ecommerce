@@ -1559,6 +1559,7 @@ p.shipping-info-text span {
   }
 
   section.product {
+    margin-top: 0;
     flex-direction: column;
     padding: 1rem 2rem;
 
@@ -1572,6 +1573,10 @@ p.shipping-info-text span {
     }
 
     .product-images {
+      main{
+        margin-top: 1rem;
+      }      
+
       .slide-preview {
         .swiper-slide{
           width: 70px!important;

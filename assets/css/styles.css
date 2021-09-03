@@ -2403,6 +2403,7 @@ p.shipping-info-text span {
     margin-top: 9.25rem;
   }
   section.product {
+    margin-top: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2415,6 +2416,9 @@ p.shipping-info-text span {
   section.product .product-images,
   section.product .product-info {
     width: 100%;
+  }
+  section.product .product-images main {
+    margin-top: 1rem;
   }
   section.product .product-images .slide-preview .swiper-slide {
     width: 70px !important;
