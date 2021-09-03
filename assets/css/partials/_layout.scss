@@ -138,8 +138,8 @@ body > footer {
     li{
       padding: .5rem;
 
-      &:hover{
-        .categories-header-menu{
+      &.toggle-categories-menu:hover {
+        .categories-header-menu {
           display: flex;
         }
       }
