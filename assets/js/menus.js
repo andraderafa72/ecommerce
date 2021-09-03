@@ -1,5 +1,6 @@
 const categoriesMenu = document.querySelector(".categories-header-menu");
 const toggleCategoriesMenu = document.querySelector(".toggle-categories-menu");
+
 const burgerCollapse = document.querySelector(".hamburger--collapse");
 const burgerMenu = document.querySelector(".burger-menu");
 
@@ -10,6 +11,7 @@ toggleCategoriesMenu.addEventListener("click", (e) => {
     categoriesMenu.classList.add("open");
   }
 });
+
 burgerCollapse.addEventListener("click", (e) => {
   if (burgerCollapse.classList.contains("is-active")) {
     burgerMenu.classList.remove('visible')

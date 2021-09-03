@@ -10,7 +10,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ecommerce</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;500;700;900&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;500;700;900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 
@@ -28,21 +29,24 @@
     </ul>
 
     <div class="social-media">
-      <a href=""><img src="" alt=""></a>
-      <a href=""><img src="" alt=""></a>
-      <a href=""><img src="" alt=""></a>
+      <a href="">
+        <img src="assets/img/socialmedia/facebook.svg" alt="">
+      </a>
+      <a href="">
+        <img src="assets/img/socialmedia/instagram.svg" alt="">
+      </a>
     </div>
   </div>
 
+  <div class="menu">
+    <button class="hamburger hamburger--collapse" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+  </div>
   <header>
     <section class="header-top">
-      <div class="menu">
-        <button class="hamburger hamburger--collapse" type="button">
-          <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-          </span>
-        </button>
-      </div>
 
       <img class="logo" src="assets/img/logo.png" alt="Orbi Ecom">
 
@@ -75,27 +79,30 @@
         <li><a href="">Cases</a></li>
         <li><a href="">Blog</a></li>
         <li><a href="">Contato</a></li>
+        
+        <div class="categories-header-menu">
+          <ul class="header-categories">
+            <p>Grupo 1</p>
+            <li><a href="#">Relógios</a></li>
+            <li><a href="#">Relógios</a></li>
+            <li><a href="#">Relógios</a></li>
+            <li><a href="#">Relógios</a></li>
+            <li><a href="#">Relógios</a></li>
+            <li><a href="#">Relógios</a></li>
+          </ul>
+          <ul class="header-categories">
+            <p>Grupo 2</p>
+            <li><a href="#">Relógios</a></li>
+            <li><a href="#">Relógios</a></li>
+            <li><a href="#">Relógios</a></li>
+            <li><a href="#">Relógios</a></li>
+            <li><a href="#">Relógios</a></li>
+            <li><a href="#">Relógios</a></li>
+          </ul>
+          <div class="underlay"></div>
+        </div>
       </nav>
 
-      <div class="categories-header-menu">
-        <ul class="header-categories">
-          <li><a href="#">Relógios</a></li>
-          <li><a href="#">Relógios</a></li>
-          <li><a href="#">Relógios</a></li>
-          <li><a href="#">Relógios</a></li>
-          <li><a href="#">Relógios</a></li>
-          <li><a href="#">Relógios</a></li>
-        </ul>
-        <ul class="header-categories">
-          <li><a href="#">Relógios</a></li>
-          <li><a href="#">Relógios</a></li>
-          <li><a href="#">Relógios</a></li>
-          <li><a href="#">Relógios</a></li>
-          <li><a href="#">Relógios</a></li>
-          <li><a href="#">Relógios</a></li>
-        </ul>
-        <div class="underlay"></div>
-      </div>
     </section>
   </header>
 
@@ -160,8 +167,24 @@
         </div>
 
         <div class="swiper-pagination"></div>
-        <div class="arrow-left swiper-button-prev swiper-button-prev-hero"><img src="" alt=""></div>
-        <div class="arrow-right swiper-button-next swiper-button-next-hero"><img src="" alt=""></div>
+        <div class="arrow-left swiper-button-prev swiper-button-prev-hero">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="chevron-left">
+              <g id="arrow-down">
+                <path id="Path 3" d="M14 6L8 12L14 18" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="arrow-right swiper-button-next swiper-button-next-hero">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="chevron-right">
+              <g id="arrow-down">
+                <path id="Path 3" d="M10 18L16 12L10 6" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+              </g>
+            </g>
+          </svg>
+        </div>
         <!-- <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div> -->
       </div>
@@ -242,7 +265,8 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <a href="">
-              <div class="circle"> <!-- FORMAS: 'circle', 'rectangle', 'octagon', 'ellipse', 'losango', 'nonagon' -->
+              <div class="circle">
+                <!-- FORMAS: 'circle', 'rectangle', 'octagon', 'ellipse', 'losango', 'nonagon' -->
                 <!-- <img src="" alt=""> -->
               </div>
 
@@ -253,6 +277,33 @@
             <a href="">
               <div class="circle">
                 <!-- <img src="" alt=""> -->
+              </div>
+
+              Relógios
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="">
+              <div class="circle">
+                <img src="" alt="">
+              </div>
+
+              Relógios
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="">
+              <div class="circle">
+                <img src="" alt="">
+              </div>
+
+              Relógios
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="">
+              <div class="circle">
+                <img src="" alt="">
               </div>
 
               Relógios
@@ -316,7 +367,7 @@
           <div class="swiper-slide">
             <div class="product-card">
               <header>
-                <img src="" alt="">
+                <img src="assets/img/watch.png" alt="">
                 <span>34% de desconto</span>
               </header>
 
@@ -332,7 +383,7 @@
           <div class="swiper-slide">
             <div class="product-card">
               <header>
-                <img src="" alt="">
+                <img src="assets/img/watch.png" alt="">
                 <span>34% de desconto</span>
               </header>
 
@@ -348,7 +399,7 @@
           <div class="swiper-slide">
             <div class="product-card">
               <header>
-                <img src="" alt="">
+                <img src="assets/img/watch.png" alt="">
                 <span>34% de desconto</span>
               </header>
 
@@ -364,7 +415,7 @@
           <div class="swiper-slide">
             <div class="product-card">
               <header>
-                <img src="" alt="">
+                <img src="assets/img/watch.png" alt="">
                 <span>34% de desconto</span>
               </header>
 
@@ -381,8 +432,24 @@
         </div>
       </div>
 
-      <a href="" class="arrow-left swiper-button-next-sale"><img src="" alt=""></a>
-      <a href="" class="arrow-right swiper-button-next-sale"><img src="" alt=""></a>
+      <a href="" class="arrow-left swiper-button-prev-sale">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g id="chevron-left">
+            <g id="arrow-down">
+              <path id="Path 3" d="M14 6L8 12L14 18" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+            </g>
+          </g>
+        </svg>
+      </a>
+      <a href="" class="arrow-right swiper-button-next-sale">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g id="chevron-right">
+            <g id="arrow-down">
+              <path id="Path 3" d="M10 18L16 12L10 6" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+            </g>
+          </g>
+        </svg>
+      </a>
 
       <div class="swiper-pagination">
       </div>
@@ -473,22 +540,22 @@
       <ul class="social-media">
         <li>
           <a href="#">
-            <!-- <img src="" alt="Instagram"> -->
+            <img src="assets/img/socialmedia/instagram.svg" alt="Instagram">
           </a>
         </li>
         <li>
           <a href="#">
-            <!-- <img src="" alt="Instagram"> -->
+            <img src="assets/img/socialmedia/facebook.svg" alt="Instagram">
           </a>
         </li>
         <li>
           <a href="#">
-            <!-- <img src="" alt="Instagram"> -->
+            <img src="assets/img/socialmedia/instagram.svg" alt="Instagram">
           </a>
         </li>
         <li>
           <a href="#">
-            <!-- <img src="" alt="Instagram"> -->
+            <img src="assets/img/socialmedia/facebook.svg" alt="Instagram">
           </a>
         </li>
 
@@ -529,7 +596,7 @@
 
       <div class="security">
         <p>Segurança</p>
-        <img src="assets/img/icons/google-safe-browsing.png" alt="">
+        <img src="assets/img/security/google-safe-browsing.png" alt="">
       </div>
     </section>
 
@@ -538,14 +605,14 @@
         <h3>Fale conosco</h3>
 
         <div class="contact-method">
-          <img src="" alt="">
+          <img src="assets/img/icons/phone.svg" alt="">
           <p>Atendimento via WhatsApp <br />
             <span>63 9 9202-9347</span>
           </p>
         </div>
 
         <div class="contact-method">
-          <img src="" alt="">
+          <img src="assets/img/icons/email.svg" alt="">
           <p>Email <br />
             <span>contato@orbiecom.com</span>
           </p>

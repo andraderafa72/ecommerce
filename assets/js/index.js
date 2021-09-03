@@ -23,21 +23,26 @@ var topProducts = new Swiper('.selected-products .swiper', {
 });
 
 var categories = new Swiper('.categories .swiper', {
-  loop: true,
   freeMode: true,
+  loop: true,
   pagination: {
     el: ".swiper-pagination-categories",
     clickable: true,
+
   },
+  slidesPerView: 2,
+  watchOverflow: true,
   breakpoints: {
     // when window width is >= 480px
     520: {
-      slidesPerView: 3,
-      spaceBetween: 20,
+    },
+    620: {
+      slidesPerView: 5,
     },
     // when window width is >= 640px
     1080: {
-      slidesPerView: 4,
+      spaceBetween: 20,
+      slidesPerView: 6,
     },
     1200: {
       slidesPerView: 5,
@@ -58,27 +63,15 @@ var saleItems = new Swiper('.sale-items .swiper', {
     nextEl: '.swiper-button-next-sale',
     prevEl: '.swiper-button-prev-sale',
   },
-  freeMode: true,
-  spaceBetween: 30,    
+  spaceBetween: 20,
   breakpoints: {
-    // when window width is >= 480px
-    520: {
-      slidesPerView: 2,
-    },
-    // when window width is >= 640px
     640: {
       slidesPerView: 2,
     },
     1080: {
-      slidesPerView: 3,
-    },
-    1200: {
       slidesPerView: 4,
-      spaceBetween: 10,    
     },
-    1900: {
-      slidesPerView: 4,
-      spaceBetween: 10,    
-    }
   }
 })
+
+saleItems.updateContainerSize();

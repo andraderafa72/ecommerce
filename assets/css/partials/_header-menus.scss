@@ -1,8 +1,8 @@
 .categories-header-menu{
   position: absolute;
-  width: 300px;
-  top: 8.15rem;
-  left: 4em;
+  // width: 300px;
+  top: 100%;
+  left: 4rem;
   z-index: 9999999;
   background: #111;
   display: none;
@@ -14,6 +14,7 @@
     justify-content:space-between;
     flex-direction: column;
     width: 50%;
+    padding: 1rem 0;
 
     &+ ul.header-categories{
       margin-left: 1rem;
@@ -27,18 +28,15 @@
 
     li {
       width: 100%;
+      padding: 0;
       a{
         display: inline-block;
         width: 100%;
-        padding: .75rem 1rem;
+        padding: .5rem 1rem;
         color: $white;
         font-weight: normal;
         font-family: 'Poppins';
         font-size: .9rem;
-
-        &:hover{
-          background: #000;
-        }
       }
     }
   }

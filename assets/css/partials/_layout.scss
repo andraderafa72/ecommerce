@@ -9,7 +9,7 @@ body > header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999999;
+  z-index: 4;
 }
 
 body > header,
@@ -37,9 +37,13 @@ body > footer {
   justify-content: space-around;
   align-items: center;
 
-  // .menu{
-  //   visibility: hidden;
-  // }
+  .menu{
+    position: fixed;
+    top: 1.675rem;
+    left: 2rem;
+    z-index: 9999;
+
+  }
 
   .logo {
     max-width: 150px;
@@ -126,13 +130,19 @@ body > footer {
   border-bottom: 1px solid #000;
   transform: translateY(-1px);
 
-  nav {
+  > nav {
     display: flex;
     align-items: center;
     gap: 2rem;
 
     li{
       padding: .5rem;
+
+      &:hover{
+        .categories-header-menu{
+          display: flex;
+        }
+      }
     }
     li a {
       font-family: "Poppins", "Open Sans", "Roboto", sans-serif;
@@ -150,7 +160,7 @@ body > footer {
   background: $black;
   min-height: calc(75vh - 8.15rem);
   padding: 0;
-  margin-top: 8.15rem;
+  margin-top: 8.025rem;
 
   .swiper {
     width: 100%;
@@ -159,6 +169,7 @@ body > footer {
 
     .swiper-slide{
       img{
+        max-width: 600px;
         object-fit: cover;
       }
     }
@@ -278,17 +289,18 @@ body > footer {
     bottom: 0rem !important;
 
     .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
-      background: $red !important;
-      width: 1rem !important;
-      height: 1rem !important;
+      background: $blue !important;
+      width: 1.25rem !important;
+      height: 1.25rem !important;
+      border: 3px solid $red;
     }
 
     .swiper-pagination-bullet-active {
-      background: $black !important;
+      background: $blue !important;
       width: 1.35rem !important;
       height: 1.35rem !important;
-      border: 2px solid $red;
-      transform: translate3d(0, 0.175rem, 0);
+      border: .45rem solid $red;
+      transform: translate3d(0, 0.035rem, 0);
     }
   }
 }
@@ -335,22 +347,29 @@ section.social-media {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 2rem;
 
     li {
       width: 10rem;
       height: 8rem;
-      background-color: $white;
+      background-color: $black;
       border-radius: 1rem;
+      margin-top: 2rem;
 
       a {
-        display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content:center;  
         width: 100%;
         height: 100%;
         transition: 0.2s;
 
+        img{
+          width: 4rem;
+          height: 4rem;
+        }
+
         &:hover {
-          filter: brightness(0.9);
+          filter: brightness(1.5);
         }
       }
     }
@@ -412,6 +431,7 @@ section.social-media {
 
     img {
       width: 100%;
+      object-fit: cover;
     }
   }
 
@@ -585,7 +605,7 @@ section.social-media {
   }
 }
 
-.brands {
+.brands { // FOOTER
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -594,13 +614,15 @@ section.social-media {
   .methods {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
     background: rgba(255, 255, 255, 0.5);
     padding: 0 1rem;
+    margin-bottom: 1rem;
 
     img {
       width: 3rem;
       height: 3rem;
+
+      & + img { margin-left: 1rem;}
     }
   }
 
@@ -621,12 +643,13 @@ section.social-media {
   }
 }
 
-.links {
+.links { // FOOTER
   display: flex;
   margin-top: 5rem;
-  gap: 5rem;
+  // gap: 5rem;
 
   .contact {
+    margin-bottom: 5rem;
     h3 {
       font-size: 2.75rem;
     }
@@ -634,7 +657,7 @@ section.social-media {
     .contact-method {
       margin-top: 1rem;
       display: flex;
-      gap: 0.75rem;
+      
 
       & + .contact-method {
         margin-top: 3rem;
@@ -644,7 +667,9 @@ section.social-media {
         width: 3rem;
         height: 3rem;
         background: #ccc;
+        padding:.35rem;
         border-radius: 100%;
+        margin-right: 0.75rem;
       }
 
       p {
@@ -658,6 +683,8 @@ section.social-media {
   .community {
     display: flex;
     flex-direction: column;
+    margin-bottom: 3rem;
+    margin-left: 5rem;
 
     h3 {
       width: 100%;
@@ -685,16 +712,28 @@ section.social-media {
   position: absolute;
   top: calc(50% - 1rem);
   display: block;
-  width: 2rem !important;
-  height: 2rem !important;
+  width: 3rem !important;
+  height: 3rem !important;
   border-radius: 100%;
   transition: 0.2s;
-  border: 2px solid $red;
+  // border: 2px solid $red;
   z-index: 5;
   filter: brightness(1.25);
 
+  svg{
+    height: 3rem;
+    width: 3rem;
+    path{
+      stroke: $red;
+    }
+  }
+
   &:hover {
     background-color: $red;
+
+    svg path{
+      stroke: $white;
+    }
   }
 }
 
@@ -1267,7 +1306,7 @@ p.shipping-info-text span {
 
   .header-top {
     justify-content: center;
-    .search, nav, .cart{
+    .search, nav{
       display: none;
     }
     .menu{
@@ -1276,6 +1315,9 @@ p.shipping-info-text span {
   }
 
   .hero-slider {
+    .swiper-slide{
+      padding-bottom: 3rem;
+    }
     .slide-buttons {
       flex-direction: column;
 
@@ -1307,16 +1349,19 @@ p.shipping-info-text span {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 6rem;
     .product-card {
       width: 100%;
+
+      & + .product-card  {
+        margin-top: 7rem;
+      }
     }
   }
 
   .categories {
     padding: 4rem 0 4rem .5rem;
     .swiper-slide{
-      max-width: 130px;
+      // max-width: 130px;
       .circle{
         width: 120px;
         height: 120px;
@@ -1332,11 +1377,24 @@ p.shipping-info-text span {
     right: 0.5rem;
   }
 
-  .two-empty-cards {
-    gap: 2rem;
+  .sale-items{
+    padding: 4rem 2.5rem;
+    .arrow-left{
+      left: .5rem!important;
+    }
+    .arrow-right{
+      right: .5rem!important;
+    }
+  }
 
+  .two-empty-cards {
+    padding: 4rem 2rem;
     .empty-card {
       width: 100%;
+
+      & + .empty-card{
+        margin-top: 2rem;
+      }
     }
   }
 
@@ -1400,6 +1458,9 @@ p.shipping-info-text span {
     ul.social-media {
       width: 100%;
 
+      h2,span{
+        font-size: 1.5rem;
+      }
       li {
         width: calc(50% - 1rem);
       }
@@ -1439,7 +1500,17 @@ p.shipping-info-text span {
   .links {
     flex-direction: column;
     align-items: flex-start;
-    gap: 2rem;
+    // gap: 2rem;
+
+    .community{
+      h3{
+        font-size: 2.25rem;
+      }
+
+      a{
+        font-size: 1.25rem;
+      }
+    }
   }
 
   section.product {
