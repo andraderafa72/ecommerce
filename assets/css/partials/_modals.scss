@@ -185,6 +185,49 @@
   }
 }
 
+.cupoms{
+  min-width: 300px;
+  position: fixed;
+  bottom:.5rem;
+  right:.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 99;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: $white;
+  box-shadow: 0 12px 24px 0px rgba(0, 0, 0, .32); 
+
+  > *{
+    width: 100%;
+    color: $black;
+  }
+  span{
+    color: $red;
+    font-weight: bold;
+  }
+
+  input{
+    padding: .75rem .75rem;
+    font-size: 1rem;
+    border-radius: .5rem;
+    border: 1px solid #ccc;
+    margin-top: 0.5rem;
+  }
+
+  a{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    padding: .75rem 1rem;
+    background: $red;
+    color: $white;
+    font-weight: bold;
+    border-radius: .5rem;
+    margin-top: 0.5rem;
+  }
+}
 // @keyframes gainVisibility {
 //   to{
 //     opacity: 1;
