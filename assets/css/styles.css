@@ -2486,11 +2486,26 @@ p.shipping-info-text span {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .subscription p {
     width: 100%;
     text-align: center;
     margin-bottom: 0.5rem;
+  }
+  .subscription .social-media {
+    margin-top: 2rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .subscription .social-media a img {
+    margin-left: 0;
+  }
+  .subscription .social-media a + a {
+    margin-left: 1rem;
   }
   .subscription .subscription-input {
     -webkit-box-orient: vertical;
@@ -2498,6 +2513,9 @@ p.shipping-info-text span {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 100%;
+  }
+  .subscription .subscription-input a {
+    margin-top: .5rem;
   }
 }
 
