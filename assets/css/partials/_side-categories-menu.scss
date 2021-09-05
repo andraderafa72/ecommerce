@@ -1,0 +1,39 @@
+.side-categories-menu-toggle{
+  font-size: 1.5rem;
+  position: relative;
+  margin-bottom: 7.5rem;
+
+  &:hover{
+    .side-categories-menu{
+      display: flex;
+    }
+  }
+
+  .side-categories-menu{
+    background: $white;
+    position: absolute;
+    top: 100%;
+    left: -25%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    a{
+      color: $black;
+      display: flex;
+      align-items: center; 
+      font-size: 1.25rem;
+
+      
+    }
+
+    .dropdown{
+      color: $red;
+      &:hover{
+        > .sub-categories-menu{
+          display: flex;
+        }
+      }
+    }
+  }
+}

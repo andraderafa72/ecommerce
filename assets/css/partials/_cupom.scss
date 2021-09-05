@@ -1,0 +1,89 @@
+.cupom-popup-wrapper{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.699);
+
+  &.hidden{
+    animation: hidePopup .5s ease-out;
+    opacity: 0;
+  }
+  
+  &.negative-index{
+    z-index: -10;
+  }
+}
+
+.cupoms{
+  min-width: 300px;
+  width: 30%;
+  // position: fixed;
+  // bottom:.5rem;
+  // right:.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2.5rem 1rem 1rem 1rem;
+  border-radius: .5rem;
+  background: $white;
+  box-shadow: 0 12px 24px 0px rgba(0, 0, 0, .32); 
+
+  > *:not(button){
+    width: 100%;
+    color: $black;
+  }
+  span{
+    color: $red;
+    font-weight: bold;
+  }
+
+  input{
+    padding: .75rem .75rem;
+    font-size: 1rem;
+    border-radius: .5rem;
+    border: 1px solid #ccc;
+    margin-top: 0.5rem;
+  }
+
+  a{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    padding: .75rem 1rem;
+    background: $red;
+    color: $white;
+    font-weight: bold;
+    border-radius: .5rem;
+    margin-top: 0.5rem;
+  }
+
+  button{
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    opacity: .8;
+    &:hover{
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes hidePopup {
+  from{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to{
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
