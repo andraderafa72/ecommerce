@@ -764,6 +764,12 @@
           transform: translateX(100vw);
 }
 
+@media (max-width: 340px) {
+  .burger-menu {
+    width: 60vw;
+  }
+}
+
 .cart-display {
   position: fixed;
   top: 0;
@@ -3329,6 +3335,20 @@ p.shipping-info-text span {
 }
 
 @media (max-width: 340px) {
+  .header-top .logo {
+    width: 140px;
+  }
+  .header-top .logo img {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .header-top .auth-options img, .header-top .cart-wrapper img {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+  }
+  .header-top .cart-wrapper {
+    margin-left: .5rem;
+  }
   section.product .product-images .slide-preview .swiper-slide {
     width: 50px !important;
   }

@@ -165,3 +165,9 @@
     transform: translateX(100vw);
   }
 }
+
+@media( max-width: 340px){
+  .burger-menu{
+    width: 60vw;
+  }
+}

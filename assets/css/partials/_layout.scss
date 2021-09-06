@@ -1790,6 +1790,24 @@ p.shipping-info-text span {
 }
 
 @media (max-width: 340px) {
+  .header-top{
+    .logo{
+      width: 140px;
+      img{
+        object-fit: contain;
+      }
+    }
+    .auth-options, .cart-wrapper{
+      img{
+        width: 1.5rem!important;
+        height: 1.5rem!important;
+      }
+    }
+
+    .cart-wrapper{
+      margin-left: .5rem;
+    }
+  }
   section.product {
     .product-images {
       .slide-preview {
