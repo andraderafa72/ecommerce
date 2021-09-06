@@ -678,7 +678,7 @@
 }
 
 .burger-menu {
-  width: 70vw;
+  width: 30vw;
   height: 100vh;
   margin-left: -100vw;
   position: fixed;
@@ -768,6 +768,9 @@
 }
 
 @media (max-width: 1368px) {
+  .burger-menu {
+    width: 50vw;
+  }
   .burger-menu ul li a {
     font-size: 1rem;
   }
@@ -777,11 +780,14 @@
   .hamburger {
     left: .5rem;
   }
+  .burger-menu {
+    width: 70vw;
+  }
 }
 
 @media (max-width: 340px) {
   .burger-menu {
-    width: 60vw;
+    width: 70vw;
   }
 }
 
@@ -1079,7 +1085,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   display: none;
-  height: 600px;
+  height: 400px;
 }
 
 .side-categories-menu-toggle .side-categories-menu a {
@@ -1177,7 +1183,7 @@ body > footer {
 
 .header-top .search {
   position: relative;
-  max-width: 600px;
+  width: 100%;
   min-width: 400px;
   margin: 0 4rem;
 }
@@ -1223,13 +1229,17 @@ body > footer {
 }
 
 .header-top .auth-options {
-  margin-left: auto;
+  margin-left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.header-top .auth-options p {
+  min-width: 160px;
 }
 
 .header-top .auth-options img {
@@ -1364,7 +1374,7 @@ body > footer {
 
 .categories .arrow-left,
 .categories .arrow-right {
-  bottom: 3rem;
+  bottom: calc(50% + 1rem);
   top: auto;
 }
 
@@ -2137,8 +2147,10 @@ section.social-media .social-media-footer .register a {
 
 .business-info p {
   line-height: 200%;
+  max-width: 800px;
   font-family: 'Poppins';
   text-align: center;
+  font-size: .75rem;
 }
 
 .business-info .ecomm {
@@ -2916,13 +2928,24 @@ p.shipping-info-text span {
   }
   .header-top .search {
     min-width: 150px;
+    max-width: 375px;
+    width: 100%;
     margin: 0 1rem;
   }
   .header-top .menu {
     left: 1rem;
   }
+  .header-top .auth-options {
+    margin-left: 0;
+  }
   .header-top .auth-options p {
     display: none;
+  }
+  .header-top .auth-options img {
+    margin-left: 0;
+  }
+  .header-top .cart-wrapper {
+    margin-left: 0rem;
   }
   .hero-slider .swiper-slide {
     padding-bottom: 3rem;
@@ -2968,6 +2991,10 @@ p.shipping-info-text span {
   }
   .categories {
     padding: 4rem 0 4rem 0.5rem;
+  }
+  .categories .arrow-left, .categories .arrow-right {
+    bottom: 3rem;
+    opacity: .7;
   }
   .categories .swiper-slide .circle {
     width: 120px;
@@ -3121,13 +3148,21 @@ p.shipping-info-text span {
   .brands .community,
   .links .community {
     margin-left: 0;
+    width: 100%;
+    max-width: 1000px;
   }
   .brands .community h3,
   .links .community h3 {
+    position: relative;
     font-size: 2.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.439);
   }
   .brands .community h3 img,
   .links .community h3 img {
+    margin-left: auto;
+    position: absolute;
+    top: .5rem;
+    right: 1rem;
     opacity: 1;
   }
   .brands .community a,
@@ -3279,11 +3314,16 @@ p.shipping-info-text span {
   }
   .header-top .search {
     padding-top: 1rem;
+    max-width: 600px;
     width: 100%;
     -webkit-box-ordinal-group: 10;
         -ms-flex-order: 9;
             order: 9;
     margin: 0;
+  }
+  .header-top .auth-options {
+    margin-left: auto;
+    margin-right: 1rem;
   }
   .navigation {
     margin-top: 1rem;

@@ -103,7 +103,7 @@
 }
 
 .burger-menu {
-  width: 70vw;
+  width: 30vw;
   height: 100vh;
   margin-left: -100vw;
   position: fixed;
@@ -138,6 +138,11 @@
   > .side-categories-menu-toggle{
     margin-bottom: 2rem;
   }
+
+  // .side-categories-menu{
+  //   height: 400px!important;
+  // }
+
   > .social-media {
     display: flex;
     align-items: center;
@@ -172,6 +177,9 @@
 }
 
 @media(max-width: 1368px){
+  .burger-menu{
+    width: 50vw;
+  }
   .burger-menu ul li a{
     font-size: 1rem;
   }
@@ -181,10 +189,13 @@
   .hamburger{
     left: .5rem;
   }
+  .burger-menu{
+    width: 70vw;
+  }
 }
 
 @media( max-width: 340px){
   .burger-menu{
-    width: 60vw;
+    width: 70vw;
   }
 }

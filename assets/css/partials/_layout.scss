@@ -52,7 +52,7 @@ body > footer {
   }
   .search {
     position: relative;
-    max-width: 600px;
+    width: 100%;
     min-width: 400px;
     margin: 0 4rem;
     input {
@@ -88,9 +88,12 @@ body > footer {
   }
 
   .auth-options {
-    margin-left: auto;
+    margin-left: 0;
     display: flex;
     align-items: center;
+    p{
+      min-width: 160px;
+    }
 
     img {
       margin-left: 1rem;
@@ -209,7 +212,7 @@ body > footer {
 
   .arrow-left,
   .arrow-right {
-    bottom: 3rem;
+    bottom: calc(50% + 1rem);
     top: auto;
   }
   .swiper-slide {
@@ -755,8 +758,10 @@ section.social-media {
 
   p{
     line-height: 200%;
+    max-width: 800px;
     font-family: 'Poppins';
     text-align: center;
+    font-size: .75rem;
   }
 
   .ecomm{
@@ -1358,6 +1363,8 @@ p.shipping-info-text span {
     }
     .search{
       min-width: 150px;
+      max-width: 375px;
+      width: 100%;
       // padding: .5rem 0 0 0 ;
       // width: 100%;
       // order: 9;
@@ -1368,9 +1375,18 @@ p.shipping-info-text span {
     }
 
     .auth-options {
+      margin-left: 0;
       p {
         display: none;
       }
+
+      img{
+        margin-left: 0;
+      }
+    }
+
+    .cart-wrapper{
+      margin-left: 0rem;
     }
   }
   .hero-slider {
@@ -1419,6 +1435,10 @@ p.shipping-info-text span {
   }
   .categories {
     padding: 4rem 0 4rem 0.5rem;
+    .arrow-left, .arrow-right{
+      bottom: 3rem;
+      opacity: .7;
+    }
     .swiper-slide {
       // max-width: 130px;
       .circle {
@@ -1566,10 +1586,18 @@ p.shipping-info-text span {
     align-items: flex-start;
     .community {
       margin-left: 0;
+      width: 100%;
+      max-width: 1000px;
       h3 {
+        position: relative;
         font-size: 2.25rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.439);
         // align-items: center;
         img {
+          margin-left: auto;
+          position: absolute;
+          top: .5rem;
+          right: 1rem;
           opacity: 1;
         }
       }
@@ -1717,9 +1745,14 @@ p.shipping-info-text span {
     height: 10rem;
     .search{
       padding-top: 1rem;
+      max-width: 600px;
       width: 100%;
       order: 9;
       margin: 0;
+    }
+    .auth-options{
+      margin-left: auto;
+      margin-right: 1rem;
     }
   }
   .navigation{
