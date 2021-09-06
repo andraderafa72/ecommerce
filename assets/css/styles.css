@@ -2887,17 +2887,13 @@ p.shipping-info-text span {
             justify-content: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    height: 9rem;
   }
   .header-top nav {
     display: none;
   }
   .header-top .search {
-    padding: .5rem 0 0 0;
-    width: 100%;
-    -webkit-box-ordinal-group: 10;
-        -ms-flex-order: 9;
-            order: 9;
+    min-width: 150px;
+    margin: 0 1rem;
   }
   .header-top .menu {
     left: 1rem;
@@ -3239,9 +3235,6 @@ p.shipping-info-text span {
   .subscription .subscription-input a {
     margin-top: 0.5rem;
   }
-  .navigation {
-    margin-top: 3rem;
-  }
 }
 
 @media (max-width: 767px) {
@@ -3254,6 +3247,23 @@ p.shipping-info-text span {
 }
 
 @media (max-width: 768px) {
+  .header-top {
+    height: 10rem;
+  }
+  .header-top .search {
+    padding-top: 1rem;
+    width: 100%;
+    -webkit-box-ordinal-group: 10;
+        -ms-flex-order: 9;
+            order: 9;
+    margin: 0;
+  }
+  .navigation {
+    margin-top: 1rem;
+  }
+  .header-bottom {
+    margin-top: 9rem;
+  }
   .header-bottom * {
     display: none;
   }
@@ -3287,6 +3297,12 @@ p.shipping-info-text span {
     margin-top: 0.75rem;
     width: 100%;
     border-radius: 3rem;
+  }
+  section.product .product-images {
+    padding: 0;
+  }
+  section.product {
+    padding: 1.25rem;
   }
 }
 
