@@ -1292,7 +1292,7 @@ body > footer {
 .header-bottom {
   position: relative;
   background-color: #000;
-  padding: 0 3rem;
+  padding: 0 2rem;
   border-bottom: 1px solid #000;
   margin-top: 6rem;
 }
@@ -2020,7 +2020,7 @@ section.social-media .social-media-footer .register a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 5rem;
+  margin-top: 4rem;
 }
 
 .links .community {
@@ -2120,7 +2120,6 @@ section.social-media .social-media-footer .register a {
 }
 
 .links .community a {
-  padding-left: 0.5rem;
   display: inline-block;
   color: #fff;
   width: 100%;

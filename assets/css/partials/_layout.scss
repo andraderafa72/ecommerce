@@ -137,7 +137,7 @@ body > footer {
   position: relative;
   // background-color: #2e2e2e;
   background-color: $black;
-  padding: 0 3rem;
+  padding: 0 2rem;
   border-bottom: 1px solid #000;
   margin-top: 6rem;
   > nav {
@@ -656,7 +656,7 @@ section.social-media {
 .links {
   padding: 4rem 4rem;
   display: flex;
-  margin-top: 5rem;
+  margin-top: 4rem;
 
   .community {
     width: 100%;
@@ -733,7 +733,6 @@ section.social-media {
       margin-bottom: 1rem;
     }
     a {
-      padding-left: 0.5rem;
       display: inline-block;
       color: $white;
       width: 100%;
