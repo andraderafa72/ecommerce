@@ -957,7 +957,7 @@
   font-size: 1.5rem;
 }
 
-.cart-display div.total {
+.cart-display .total {
   padding: .75rem 1rem;
   background: #eee;
   display: -webkit-box;
@@ -973,7 +973,7 @@
   margin-bottom: 1.5rem;
 }
 
-.cart-display div.total p.subtotal {
+.cart-display .total p.subtotal {
   font-weight: bold;
   font-size: 1.25rem;
 }
