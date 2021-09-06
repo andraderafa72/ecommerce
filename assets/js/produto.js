@@ -31,7 +31,7 @@ var productSwiper = new Swiper(".product-swiper .swiper", {
 });
 
 var relatedProducts = new Swiper(".related-products .swiper", {
-  loop: true,
+  // loop: true,
   pagination: {
     el: ".sale-items .swiper-pagination",
     clickable: true,
@@ -42,49 +42,22 @@ var relatedProducts = new Swiper(".related-products .swiper", {
   },
   freeMode: true,
   centered: true,
-  slidesPerView: 2,
-  spaceBetween: 10,
+  slidesPerView: 1.25,
+  spaceBetween: 15,
   breakpoints: {
     320: {
-      slidesPerView: 1,
+      slidesPerView: 1.10,
       spaceBetween: 10,
     },
-    768: {
+    375: {
+      slidesPerView: 1.15,
+      spaceBetween: 10,
+    },
+    1080: {
       slidesPerView: 4,
       spaceBetween: 10,
     },
   },
-  // loop: true,
-  // spaceBetween: 30,
-  // breakpoints: {
-  //   // when window width is >= 480px
-  //   520: {
-  //     slidesPerView: 2,
-  //   },
-  //   // when window width is >= 640px
-  //   640: {
-  //     slidesPerView: 2,
-  //   },
-  //   1080: {
-  //     slidesPerView: 3,
-  //   },
-  //   1200: {
-  //     slidesPerView: 4,
-  //     spaceBetween: 10,
-  //   },
-  //   1900: {
-  //     slidesPerView: 4,
-  //     spaceBetween: 10,
-  //   }
-  // },
-  // navigation: {
-  //   nextEl: ".swiper-button-next-related",
-  //   prevEl: ".swiper-button-prev-related",
-  // },
-  // pagination: {
-  //   el: ".swiper-related-pagination",
-  //   clickable: true,
-  // },
 });
 
 var variants = document.querySelectorAll('input[name="variant"]');

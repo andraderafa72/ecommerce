@@ -122,6 +122,7 @@
   ul {
     display: flex;
     flex-direction: column;
+    background-color: #fff;
     li {
       a {
         display: inline-block;
@@ -142,37 +143,9 @@
 
   > .side-categories-menu-toggle{
     margin-bottom: 2rem;
-  }
 
-  // .side-categories-menu{
-  //   height: 400px!important;
-  // }
-
-  > .social-media {
-    display: flex;
-    align-items: center;
-    // flex-direction: column;
-    transition: .2s;
-    position: absolute;
-    bottom: 2rem;
-    left: 1.5rem;
-
-    a:hover{
-      filter: brightness(.8);
-
-      img{
-        filter: brightness(.8) invert(100%)
-      }
-    }
-
-    a + a{
-      margin-left: 2rem;
-    }
-    
-    img {
-      width: 2.5rem;
-      height: 2.5rem;
-      filter: invert(100%)
+    a{
+      background-color: #fff;
     }
   }
 
@@ -182,9 +155,7 @@
 }
 
 @media(max-width: 1368px){
-  .burger-menu{
-    width: 50vw;
-  }
+
   .burger-menu ul li a{
     font-size: 1rem;
 
