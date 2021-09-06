@@ -1796,6 +1796,15 @@ p.shipping-info-text span {
     min-height: 70vh;
     height: 100%;
   }
+  .related-products .swiper .swiper-wrapper .swiper-slide,.sale-items .swiper .swiper-wrapper .swiper-slide{
+    min-width: 200px;
+    max-width: 300px;
+    
+    .product-card{
+      min-width: 280px;
+      max-width: 300px
+    }
+  }
   .hero-slider .swiper .swiper-slide{
     
     img.desktop{
@@ -1872,6 +1881,15 @@ p.shipping-info-text span {
 }
 
 @media (max-width: 405px) {
+  .related-products .swiper .swiper-wrapper .swiper-slide,.sale-items .swiper .swiper-wrapper .swiper-slide{
+    min-width: 180px;
+    max-width: 280px;
+    
+    .product-card{
+      min-width: 260px;
+      max-width: 280px
+    }
+  }
   .business-info{
     font-size: .9rem;
   }
