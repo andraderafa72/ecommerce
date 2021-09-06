@@ -3,7 +3,7 @@
   background: $white;
   border-radius: 1rem;
   color: $black;
-  padding: 2rem 1rem;
+  padding: 1.5rem 2rem;
   &:hover {
     cursor: pointer;
   }
@@ -42,14 +42,19 @@
     flex-direction: column;
     p {
       margin-bottom: 1rem;
+      // font-weight: bold;
+      font-size: 1.2rem;
     }
     span {
-      font-size: 0.8rem;
-      font-weight: bold;
+      font-size: 1rem;
+      // font-weight: bold;
+      color: $red;
+
       &.price {
-        color: $red;
-        font-weight: bold;
-        font-size: 2rem;
+        font-weight: normal;
+        // font-size: 1rem;
+        margin-top: 2rem;
+        color: $black;
         line-height: 2rem;
       }
     }
@@ -73,11 +78,11 @@
 
 @media (max-width: 1080px) {
   .sale-items .swiper .swiper-wrapper .swiper-slide {
-    min-width: 180px;
+    padding: 1rem 0;
   }
   .sale-items .product-card,
   .related-products .product-card {
-    min-width: 180px;
+    min-width: 300px;
     header {
       position: relative;
       margin-bottom: 1rem;
@@ -96,19 +101,11 @@
 @media (max-width: 425px) {
   .sale-items .product-card,
   .related-products .product-card {
-    // width: 200px!important;
     header {
-      height: 8rem;
+      height: 20rem;
       padding-top: 0;
       margin-bottom: 0;
     }
-    main {
-      p {
-        font-size: 0.9rem;
-      }
-      span.price {
-        font-size: 1.5rem !important;
-      }
-    }
+
   }
 }

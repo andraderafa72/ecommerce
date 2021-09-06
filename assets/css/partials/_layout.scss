@@ -213,7 +213,7 @@ body > footer {
 
   .product-card {
     border: 2px dashed rgba(238, 238, 238, 0.234);
-    height: 20rem;
+    height: 16rem;
     border-radius: 1rem;
   }
 }
@@ -696,6 +696,9 @@ section.social-media {
     .link-wrapper-c {
       display: none;
 
+      @media (min-width:1080px){
+        display: block!important;
+      }
       &.visible {
         display: block;
       }
@@ -1448,7 +1451,7 @@ p.shipping-info-text span {
     .product-card {
       width: 100%;
       & + .product-card {
-        margin-top: 7rem;
+        margin-top: 5rem;
       }
     }
   }
