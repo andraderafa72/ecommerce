@@ -22,7 +22,93 @@
 
 <body>
   <!-- MODALS -->
+  <div class="cart-display">
+    <div class="wrapper">
+      <div class="travel">
+        <p>Você ganhou frete GRÁTIS!</p>
+        <div class="car">
+          <img src="assets/img/icons/car.svg" alt="">
+          <div class="bar"></div>
+        </div>
+      </div>
 
+      <ul>
+        <li>
+          <img src="assets/img/watch.png" alt="Relógio">
+          <div class="product-cart-info">
+            <h3 class="producti-cart-title">Watch 13 Max Séries 5 de 44mm</h3>
+            <div class="wrapper">
+              <div class="quantity">
+                <div class="product-cart-input-group">
+                  <input type="number" value="1" min="1">
+                  <button class="minus">
+                    <img src="assets/img/icons/minus.svg" alt="Remover um do carrinho">
+                  </button>
+                  <button class="plus">
+                    <img src="assets/img/icons/plus.svg" alt="Adiciona um ao carrinho">
+                  </button>
+                </div>
+              </div>
+              <p class="price">R$279,90</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <img src="assets/img/watch.png" alt="Relógio">
+          <div class="product-cart-info">
+            <h3 class="producti-cart-title">Watch 13 Max Séries 5 de 44mm</h3>
+            <div class="wrapper">
+              <div class="quantity">
+                <div class="product-cart-input-group">
+                  <input type="number" value="1" min="1">
+                  <button class="minus">
+                    <img src="assets/img/icons/minus.svg" alt="Remover um do carrinho">
+                  </button>
+                  <button class="plus">
+                    <img src="assets/img/icons/plus.svg" alt="Adiciona um ao carrinho">
+                  </button>
+                </div>
+              </div>
+              <p class="price">R$279,90</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <img src="assets/img/watch.png" alt="Relógio">
+          <div class="product-cart-info">
+            <h3 class="producti-cart-title">Watch 13 Max Séries 5 de 44mm</h3>
+            <div class="wrapper">
+              <div class="quantity">
+                <div class="product-cart-input-group">
+                  <input type="number" value="1" min="1">
+                  <button class="minus">
+                    <img src="assets/img/icons/minus.svg" alt="Remover um do carrinho">
+                  </button>
+                  <button class="plus">
+                    <img src="assets/img/icons/plus.svg" alt="Adiciona um ao carrinho">
+                  </button>
+                </div>
+              </div>
+              <p class="price">R$279,90</p>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+
+      <div class="total">
+        <p class="subtotal">Total</p>
+
+        <p class="price">R$839,70</p>
+      </div>
+
+      <a href="#" style="text-align: center; width: 100%;">
+        <img src="assets/img/icons/cart.svg" alt="">
+        Finalizar compra
+      </a>
+    </div>
+
+  </div>
   <div class="fixed-banner">
     <!-- <div class="price">
       <span class="lined-price">R$323,90</span>
@@ -87,17 +173,65 @@
   </div>
 
   <div class="burger-menu">
+    <span class="side-categories-menu-toggle">
+      Categorias
+      <img src="assets/img/icons/down.svg" alt="">
+      <div class="side-categories-menu" data-aos="fade-left" data-aos-duration="700">
+        <ul>
+          <li class="dropdown">
+            <a href="#">
+              Acessórios
+              <img src="assets/img/icons/down.svg" alt="" width="16px" height="16px">
+            </a>
+            <div class="sub-categories-menu">
+              <a href="">Categoria</a>
+              <a href="">Categoria</a>
+              <a href="">Categoria</a>
+              <a href="">Categoria</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">
+              Eletrônicos
+              <img src="assets/img/icons/down.svg" alt="" width="16px" height="16px">
+            </a>
+            <div class="sub-categories-menu">
+              <a href="">Relógio</a>
+              <a href="">Relógio</a>
+              <a href="">Relógio</a>
+              <a href="">Relógio</a>
+            </div>
+          </li>
+          <li>
+            <a href="#">Moda e Saúde</a>
+          </li>
+          <li>
+            <a href="#">Ofertas Relâmpago</a>
+          </li>
+          <li>
+            <a href="#">Smart Phones</a>
+          </li>
+          <li>
+            <a href="#">Smart Watches</a>
+          </li>
+        </ul>
+      </div>
+    </span>
+
     <ul>
-      <li><a href="#">Link</a></li>
-      <li><a href="#">Link</a></li>
-      <li><a href="#">Link</a></li>
-      <li><a href="#">Link</a></li>
-      <li><a href="#">Link</a></li>
+      <li><a href="#">Dúvidas</a></li>
+      <li><a href="#">Cases</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contato</a></li>
     </ul>
 
     <div class="social-media">
-      <a href=""><img src="assets/img/socialmedia/facebook.svg" alt=""></a>
-      <a href=""><img src="assets/img/socialmedia/instagram.svg" alt=""></a>
+      <a href="">
+        <img src="assets/img/socialmedia/facebook.svg" alt="">
+      </a>
+      <a href="">
+        <img src="assets/img/socialmedia/instagram.svg" alt="">
+      </a>
     </div>
   </div>
 
@@ -108,23 +242,21 @@
       </span>
     </button>
   </div>
+
   <header>
     <section class="header-top">
+
       <img class="logo" src="assets/img/logo.png" alt="Orbi Ecom">
 
       <div class="search">
-        <input type="text" name="header-search">
+        <input type="text" placeholder="O que você procura?" name="header-search">
         <img src="assets/img/icons/search.svg" alt="">
       </div>
 
-      <nav>
-        <li>
-          <a href="#">Central de atendimento</a>
-        </li>
-        <li>
-          <a href="#">Rastrear pedido</a>
-        </li>
-      </nav>
+      <div class="auth-options">
+        <p>Bem vindo, faça login<br> ou cadastre-se</p>
+        <img src="assets/img/icons/user.svg" alt="">
+      </div>
 
       <a href="#" class="cart-wrapper">
         <img class="cart" src="assets/img/icons/bag.svg" alt="cart"><span class="items-on-cart">1</span>
@@ -134,27 +266,35 @@
     <section class="header-bottom">
       <nav>
         <li class="toggle-categories-menu">
-          <img src="" alt="">
-          Todas as cartegorias
+          Cartegorias<img src="assets/img/icons/down.svg" alt="">
           <div class="categories-header-menu">
-
             <ul class="header-categories">
-              <p>Grupo 1</p>
-              <li><a href="#">Relógios</a></li>
-              <li><a href="#">Relógios</a></li>
-              <li><a href="#">Relógios</a></li>
-              <li><a href="#">Relógios</a></li>
-              <li><a href="#">Relógios</a></li>
-              <li><a href="#">Relógios</a></li>
-            </ul>
-            <ul class="header-categories">
-              <p>Grupo 2</p>
-              <li><a href="#">Relógios</a></li>
-              <li><a href="#">Relógios</a></li>
-              <li><a href="#">Relógios</a></li>
-              <li><a href="#">Relógios</a></li>
-              <li><a href="#">Relógios</a></li>
-              <li><a href="#">Relógios</a></li>
+              <li class="dropdown">
+                <a href="#">Acessórios
+                  <img src="assets/img/icons/down.svg" alt="" width="16px" height="16px">
+                </a>
+                <div class="sub-categories-menu">
+                  <a href="">Categoria</a>
+                  <a href="">Categoria</a>
+                  <a href="">Categoria</a>
+                  <a href="">Categoria</a>
+                </div>
+              </li>
+              <li class="dropdown">
+                <a href="#">Eletrônicos
+                  <img src="assets/img/icons/down.svg" alt="" width="16px" height="16px">
+                </a>
+                <div class="sub-categories-menu">
+                  <a href="">Relógio</a>
+                  <a href="">Relógio</a>
+                  <a href="">Relógio</a>
+                  <a href="">Relógio</a>
+                </div>
+              </li>
+              <li><a href="#">Moda e Saúde</a></li>
+              <li><a href="#">Ofertas Relâmpago</a></li>
+              <li><a href="#">Smart Phones</a></li>
+              <li><a href="#">Smart Watches</a></li>
             </ul>
             <div class="underlay"></div>
           </div>
@@ -163,7 +303,9 @@
         <li><a href="">Cases</a></li>
         <li><a href="">Blog</a></li>
         <li><a href="">Contato</a></li>
-      </nav>     
+
+
+      </nav>
     </section>
   </header>
 
@@ -315,12 +457,24 @@
 
           <section class="buttons">
             <a href="">
-              <img src="" alt="">
+              <img src="assets/img/icons/credit-card.svg" alt="Comprar agora">
               Comprar agora
             </a>
 
             <a href="">
-              <img src="assets/img/icons/cart-add.svg" alt="">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M21.2922 6L19.9463 14.1627C19.8666 14.6457 19.4491 15 18.9596 15H7.04301C6.55352 15 6.13597 14.6457 6.05633 14.1627L4.84848 6.83731C4.76884 6.35434 4.3513 6 3.8618 6H1.99997"
+                  stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8 20C8.55228 20 9 19.5523 9 19C9 18.4477 8.55228 18 8 18C7.44772 18 7 18.4477 7 19C7 19.5523 7.44772 20 8 20Z"
+                  stroke="#000" stroke-width="1.5" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M18 20C18.5523 20 19 19.5523 19 19C19 18.4477 18.5523 18 18 18C17.4477 18 17 18.4477 17 19C17 19.5523 17.4477 20 18 20Z"
+                  stroke="#000" stroke-width="1.5" />
+                <path d="M16 8H10" stroke="#000" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M13 5V11" stroke="#000" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
               Adicionar ao carrinho
             </a>
           </section>
@@ -363,11 +517,11 @@
     <section class="related-products">
       <div class="swiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="product-card" data-aos="fade-up" data-aos-duration="450">
+          <div class="swiper-slide" data-aos="fade-up" data-aos-duration="450">
+            <div class="product-card">
               <header>
                 <img src="assets/img/watch.png" alt="">
-                <span>34% de desconto <div class="triangle"></div></span>
+                <span>34% <div class="triangle"></div></span>
               </header>
 
               <main>
@@ -383,7 +537,7 @@
             <div class="product-card">
               <header>
                 <img src="assets/img/watch.png" alt="">
-                <span>34% de desconto <div class="triangle"></div></span>
+                <span>34% <div class="triangle"></div></span>
               </header>
 
               <main>
@@ -399,7 +553,7 @@
             <div class="product-card">
               <header>
                 <img src="assets/img/watch.png" alt="">
-                <span>34% de desconto <div class="triangle"></div></span>
+                <span>34% <div class="triangle"></div></span>
               </header>
 
               <main>
@@ -415,7 +569,7 @@
             <div class="product-card">
               <header>
                 <img src="assets/img/watch.png" alt="">
-                <span>34% de desconto <div class="triangle"></div></span>
+                <span>34% <div class="triangle"></div></span>
               </header>
 
               <main>
@@ -431,7 +585,7 @@
             <div class="product-card">
               <header>
                 <img src="assets/img/watch.png" alt="">
-                <span>34% de desconto <div class="triangle"></div></span>
+                <span>34% <div class="triangle"></div></span>
               </header>
 
               <main>
@@ -447,6 +601,7 @@
 
         <div class="swiper-related-pagination"></div>
       </div>
+
       <div class="arrow-left swiper-button-prev-related">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g id="chevron-left">
@@ -508,6 +663,37 @@
     </section>
 
     <section class="links">
+      <div class="community">
+        <h3 class="link-a open">Links Úteis <img src="assets/img/icons/down.svg" alt=""></h3>
+        <div class="link-wrapper-a visible">
+          <a href="#">Política de troca e devolução</a>
+          <a href="#">Política de envio</a>
+          <a href="#">Reembolso</a>
+          <a href="#">Dúvidas frequentes</a>
+          <a href="#">Sobre a loja</a>
+        </div>
+      </div>
+      <div class="community">
+        <h3 class="link-b open">Extra <img src="assets/img/icons/down.svg" alt=""></h3>
+        <div class="link-wrapper-b visible">
+          <a href="#">Política de troca e devolução</a>
+          <a href="#">Política de envio</a>
+          <a href="#">Reembolso</a>
+          <a href="#">Dúvidas frequentes</a>
+          <a href="#">Sobre a loja</a>
+        </div>
+      </div>
+      <div class="community">
+        <h3 class="link-b open">Extra <img src="assets/img/icons/down.svg" alt=""></h3>
+        <div class="link-wrapper-b visible">
+          <a href="#">Política de troca e devolução</a>
+          <a href="#">Política de envio</a>
+          <a href="#">Reembolso</a>
+          <a href="#">Dúvidas frequentes</a>
+          <a href="#">Sobre a loja</a>
+        </div>
+      </div>
+
       <div class="contact">
         <h3>Fale conosco</h3>
 
@@ -525,20 +711,16 @@
           </p>
         </div>
       </div>
+    </section>
 
-      <div class="community">
-        <h3 class="link-a open">Comunidade <img src="assets/img/icons/down.svg" alt=""></h3>
-        <div class="link-wrapper-a visible">
-          <a href="#">Vagas</a>
-          <a href="#">Dúvidas</a>
-        </div>
-      </div>
-      <div class="community">
-        <h3 class="link-b open">Comunidade <img src="assets/img/icons/down.svg" alt=""></h3>
-        <div class="link-wrapper-b visible">
-          <a href="#">Vagas</a>
-          <a href="#">Dúvidas</a>
-        </div>
+    <section class="business-info" style="padding-bottom: 10rem;">
+      <p>
+        Preços e condições de pagamento exclusivos para compras online, com possibilidade de variações nas lojas físicas. Caso haja divergência de valores nos produtos no <br>
+        site, o preço válido é o do carrinho de compras. Vendas sujeias a confirmação de estoque e análise e validação dos dados. Fotos meramente ilustrativas. <br>
+        CNPJ: 00.000.000/0001-0 Orbe ecom LTDA / AV Jk - centro, 100 - Palmas/TO 0000-000
+      </p>
+      <div class="ecomm">
+        <div class="circle"></div>
       </div>
     </section>
   </footer>
@@ -549,6 +731,7 @@
   <script src="assets/js/timer.js"></script>
   <script src="assets/js/footer.js"></script>
   <script src="assets/js/modals.js"></script>
+  <script src="assets/js/cartDisplay.js"></script>
   <script src="assets/js/menus.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>

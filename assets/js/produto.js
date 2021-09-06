@@ -50,7 +50,7 @@ var relatedProducts = new Swiper(".related-products .swiper", {
       spaceBetween: 10,
     },
     768: {
-      slidesPerView: 3,
+      slidesPerView: 4,
       spaceBetween: 10,
     },
   },

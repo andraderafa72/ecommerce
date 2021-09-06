@@ -22,8 +22,8 @@
     max-height: 80vh;
     // overflow: auto;
     background: $white;
-    border-radius: .5rem;
-    padding: 1rem .75rem;
+    border-radius: 1rem;
+    padding: 1.25rem 1rem;
 
   }
 
@@ -85,8 +85,10 @@
     padding: .5rem 1rem;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #eee;
-
+    
+    & + li {
+      border-top: 1px solid #eee;      
+    }
     .wrapper{
       // margin-left: 0.75rem;
       display: flex;
@@ -163,6 +165,19 @@
     color: $red;
     font-weight: bold;
     font-size: 1.5rem;
+  }
+  div.total{
+    padding: .75rem 1rem;
+    background: #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    p.subtotal{
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
   }
 
   p.lined-price{

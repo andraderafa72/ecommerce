@@ -417,8 +417,8 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-shadow: 0 12px 32px 0 rgba(0, 0, 0, 0.679);
-          box-shadow: 0 12px 32px 0 rgba(0, 0, 0, 0.679);
+  -webkit-box-shadow: 0 12px 32px 0 rgba(0, 0, 0, 0.16);
+          box-shadow: 0 12px 32px 0 rgba(0, 0, 0, 0.16);
 }
 
 .categories-header-menu ul.header-categories {
@@ -788,8 +788,8 @@
   max-width: 400px;
   max-height: 80vh;
   background: #fff;
-  border-radius: .5rem;
-  padding: 1rem .75rem;
+  border-radius: 1rem;
+  padding: 1.25rem 1rem;
 }
 
 .cart-display .travel {
@@ -877,7 +877,10 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 1px solid #eee;
+}
+
+.cart-display ul li + li {
+  border-top: 1px solid #eee;
 }
 
 .cart-display ul li .wrapper {
@@ -952,6 +955,27 @@
   color: #CC000B;
   font-weight: bold;
   font-size: 1.5rem;
+}
+
+.cart-display div.total {
+  padding: .75rem 1rem;
+  background: #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cart-display div.total p.subtotal {
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
 .cart-display p.lined-price {
@@ -1091,7 +1115,6 @@ body > main > section {
 }
 
 body > footer {
-  padding: 4rem 4rem 6rem;
   background: #FF0513;
 }
 
@@ -1579,7 +1602,6 @@ section.social-media .social-media-footer .register {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 1000px;
   width: 100%;
 }
 
@@ -1889,6 +1911,7 @@ section.social-media .social-media-footer .register a {
 }
 
 .brands {
+  padding: 4rem 4rem 0;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1939,6 +1962,7 @@ section.social-media .social-media-footer .register a {
 }
 
 .links {
+  padding: 4rem 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1947,11 +1971,13 @@ section.social-media .social-media-footer .register a {
 
 .links .community {
   width: 100%;
+  margin-left: 0;
 }
 
 .links .community h3 {
   width: 100%;
   height: 3rem;
+  font-size: 1.75rem !important;
 }
 
 .links .community h3 img {
@@ -2022,6 +2048,9 @@ section.social-media .social-media-footer .register a {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: 3rem;
+}
+
+.links .community + .community {
   margin-left: 5rem;
 }
 
@@ -2042,6 +2071,51 @@ section.social-media .social-media-footer .register a {
 
 .links .community a + a {
   margin-top: 1rem;
+}
+
+.business-info {
+  padding: 3rem 0;
+  background: #CC000B;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.business-info p {
+  line-height: 200%;
+  font-family: 'Poppins';
+  text-align: center;
+}
+
+.business-info .ecomm {
+  margin-top: 3rem;
+  width: 3rem;
+  height: 3rem;
+  background: transparent;
+  border: 3px solid #fff;
+  padding: .175rem;
+  border-radius: 100%;
+}
+
+.business-info .ecomm .circle {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 100%;
+  background: -webkit-gradient(linear, right top, left top, color-stop(50%, #fff), color-stop(50%, transparent));
+  background: linear-gradient(to left, #fff 50%, transparent 50%);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .arrow-left,
@@ -2428,6 +2502,19 @@ section.product {
           justify-content: center;
 }
 
+.product-info > aside .buttons a img, .product-info > aside .buttons a svg {
+  margin-right: 1.5rem;
+}
+
+.product-info > aside .buttons a img {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+.product-info > aside .buttons a svg path {
+  stroke: #FF0513;
+}
+
 .product-info > aside .buttons a + a {
   border: 1px solid #FF0513;
   background: transparent;
@@ -2436,13 +2523,15 @@ section.product {
   margin-top: 0.5rem;
 }
 
-.product-info > aside .buttons a + a img {
-  margin-right: 0.5rem;
-}
-
 .product-info > aside .buttons a + a:hover {
   background: #FF0513;
   color: #fff;
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+}
+
+.product-info > aside .buttons a + a:hover svg path {
+  stroke: #fff;
 }
 
 .product-info > aside .fire {
@@ -2761,16 +2850,25 @@ p.shipping-info-text span {
 
 @media (max-width: 1080px) {
   body > footer {
-    padding: 4rem 2rem 6rem;
+    padding: 4rem 0 0;
   }
   .header-top {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: 9rem;
   }
-  .header-top .search,
   .header-top nav {
     display: none;
+  }
+  .header-top .search {
+    padding: .5rem 0 0 0;
+    width: 100%;
+    -webkit-box-ordinal-group: 10;
+        -ms-flex-order: 9;
+            order: 9;
   }
   .header-top .menu {
     left: 1rem;
@@ -2950,6 +3048,7 @@ p.shipping-info-text span {
   }
   .brands,
   .links {
+    padding: 4rem 2rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -3097,6 +3196,9 @@ p.shipping-info-text span {
   }
   .subscription .subscription-input a {
     margin-top: 0.5rem;
+  }
+  .navigation {
+    margin-top: 3rem;
   }
 }
 
@@ -3255,13 +3357,13 @@ p.shipping-info-text span {
 }
 
 .cupoms .input {
-  margin-top: 1rem;
+  margin-top: 2rem;
   position: relative;
 }
 
 .cupoms .input img {
   position: absolute;
-  top: 1.05rem;
+  top: 1.15rem;
   left: 1rem;
   opacity: .35;
 }
@@ -3275,8 +3377,12 @@ p.shipping-info-text span {
   margin-top: 0.5rem;
 }
 
+.cupoms input:focus {
+  outline: 0;
+}
+
 .cupoms a {
-  width: 70%;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3291,7 +3397,7 @@ p.shipping-info-text span {
   color: #fff;
   font-weight: bold;
   border-radius: .5rem;
-  margin: 1.5rem auto 0;
+  margin: 1rem auto 0;
   text-transform: uppercase;
 }
 
