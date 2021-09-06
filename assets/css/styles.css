@@ -568,6 +568,12 @@
   overflow: visible;
 }
 
+@media (max-width: 520px) {
+  .hamburger {
+    left: .5rem;
+  }
+}
+
 .hamburger:hover {
   opacity: 0.7;
 }
@@ -2100,7 +2106,7 @@ section.social-media .social-media-footer .register a {
 }
 
 .business-info {
-  padding: 3rem 0;
+  padding: 4rem 3rem;
   background: #CC000B;
   width: 100%;
   display: -webkit-box;
@@ -3313,6 +3319,9 @@ p.shipping-info-text span {
 }
 
 @media (max-width: 520px) {
+  .header-top .logo {
+    margin-left: 2rem;
+  }
   section.social-media ul.social-media li a img.instagram-post {
     width: 11rem;
     height: 11rem;
@@ -3328,9 +3337,15 @@ p.shipping-info-text span {
 }
 
 @media (max-width: 405px) {
+  .business-info {
+    font-size: .9rem;
+  }
   section.social-media ul.social-media li a img.instagram-post {
     width: 9rem;
     height: 9rem;
+  }
+  section.social-media .social-media-footer .register {
+    min-width: 200px;
   }
 }
 
