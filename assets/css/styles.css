@@ -2000,7 +2000,8 @@ section.social-media .social-media-footer .register a {
 
 .links .community {
   width: 100%;
-  margin-left: 0;
+  margin-left: 1rem;
+  max-width: 300px;
 }
 
 .links .community h3 {
@@ -2040,6 +2041,7 @@ section.social-media .social-media-footer .register a {
 }
 
 .links .contact {
+  margin-left: auto;
   margin-bottom: 5rem;
 }
 
@@ -2083,7 +2085,7 @@ section.social-media .social-media-footer .register a {
 }
 
 .links .community + .community {
-  margin-left: 5rem;
+  margin-left: 0rem;
 }
 
 .links .community h3 {
@@ -3122,6 +3124,10 @@ p.shipping-info-text span {
   .brands .community a,
   .links .community a {
     font-size: 1.25rem;
+  }
+  .brands .contact,
+  .links .contact {
+    margin-left: 0;
   }
   section.product {
     margin-top: 0;

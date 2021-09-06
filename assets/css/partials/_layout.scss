@@ -657,7 +657,8 @@ section.social-media {
 
   .community {
     width: 100%;
-    margin-left: 0;
+    margin-left: 1rem;
+    max-width: 300px;
     h3 {
       width: 100%;
       height: 3rem;
@@ -689,6 +690,7 @@ section.social-media {
   }
 
   .contact {
+    margin-left: auto;
     margin-bottom: 5rem;
     h3 {
       font-size: 2.75rem;
@@ -720,7 +722,7 @@ section.social-media {
     margin-bottom: 3rem;
     
     & + .community{
-      margin-left: 5rem;
+      margin-left: 0rem;
     }
     h3 {
       width: 100%;
@@ -1574,6 +1576,10 @@ p.shipping-info-text span {
       a {
         font-size: 1.25rem;
       }
+    }
+
+    .contact{
+      margin-left: 0;
     }
   }
   section.product {
