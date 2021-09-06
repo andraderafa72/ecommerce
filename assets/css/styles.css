@@ -1575,18 +1575,16 @@ section.social-media .social-media-footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 section.social-media .social-media-footer .left {
-  width: 100%;
+  width: 25%;
 }
 
 section.social-media .social-media-footer .left p {
-  text-align: center;
+  text-align: left;
   width: 100%;
   font-size: 1.25rem;
   margin-bottom: 1rem;
@@ -1596,13 +1594,32 @@ section.social-media .social-media-footer .left p span {
   font-weight: bold;
 }
 
+section.social-media .social-media-footer .right {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+section.social-media .social-media-footer .right img {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 2rem;
+}
+
 section.social-media .social-media-footer .register {
   position: relative;
   margin-left: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  width: 50%;
 }
 
 section.social-media .social-media-footer .register input {
@@ -1992,16 +2009,19 @@ section.social-media .social-media-footer .register a {
 }
 
 .links .community .link-wrapper-a,
-.links .community .link-wrapper-b {
+.links .community .link-wrapper-b,
+.links .community .link-wrapper-c {
   display: none;
 }
 
 .links .community .link-wrapper-a.visible,
-.links .community .link-wrapper-b.visible {
+.links .community .link-wrapper-b.visible,
+.links .community .link-wrapper-c.visible {
   display: block;
 }
 
 .links .community .link-a.open img,
+.links .community .link-c.open img,
 .links .community .link-b.open img {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
@@ -2848,6 +2868,15 @@ p.shipping-info-text span {
   }
 }
 
+@media (max-width: 1120px) {
+  footer .links {
+    padding: 4rem 2rem;
+  }
+  footer .links .community + .community {
+    margin-left: 0;
+  }
+}
+
 @media (max-width: 1080px) {
   body > footer {
     padding: 4rem 0 0;
@@ -2999,6 +3028,19 @@ p.shipping-info-text span {
   }
   .product-expiration > div span {
     font-size: 2rem;
+  }
+  section.social-media .social-media-footer .right {
+    margin-top: 2rem;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section.social-media .social-media-footer .right a + a {
+    margin-left: 2rem;
+  }
+  section.social-media .social-media-footer .right img {
+    margin: 0;
   }
   section.social-media .social-media-footer .register {
     -webkit-box-orient: horizontal;

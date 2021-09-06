@@ -354,15 +354,15 @@ section.social-media {
   .social-media-footer {
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
-    flex-wrap: wrap;
+    //flex-wrap: wrap;
 
     
     .left {
-      width: 100%;
+      width: 25%;
       p{
-        text-align: center;
+        text-align: left;
         width: 100%;
         font-size: 1.25rem;
         margin-bottom: 1rem;
@@ -371,12 +371,25 @@ section.social-media {
         font-weight: bold;
       }
     }
+
+    .right{
+      width: 25%;
+      display: flex; 
+      align-items: center;
+      justify-content: flex-end;
+
+      img{
+        width: 2rem;
+        height: 2rem;
+        margin-left: 2rem;
+      }
+    }
     .register {
       position: relative;
       margin-left: 3rem;
       display: flex;
       // max-width: 1000px;
-      width: 100%;
+      width: 50%;
       // min-width: 300px;
       input {
         height: 3rem;
@@ -659,7 +672,8 @@ section.social-media {
     }
 
     .link-wrapper-a,
-    .link-wrapper-b {
+    .link-wrapper-b, 
+    .link-wrapper-c {
       display: none;
 
       &.visible {
@@ -668,6 +682,7 @@ section.social-media {
     }
 
     .link-a.open img,
+    .link-c.open img,
     .link-b.open img {
       transform: rotate(0deg);
     }
@@ -1319,6 +1334,15 @@ p.shipping-info-text span {
   }
 }
 
+@media(max-width: 1120px){
+  footer .links{
+    padding: 4rem 2rem;
+  }
+  footer .links .community + .community{
+    margin-left: 0;
+  }
+}
+
 @media (max-width: 1080px) {
   body > footer {
     padding: 4rem 0 0;
@@ -1475,14 +1499,27 @@ p.shipping-info-text span {
     }
   }
 
-  section.social-media .social-media-footer .register {
-    flex-direction: row;
-    input {
-      width: 70%;
+  section.social-media .social-media-footer {
+    .right{
+      margin-top: 2rem;
+      width: 100%;
+      justify-content: center;
+      a + a{
+        margin-left: 2rem;
+      }
+      img{
+        margin: 0;
+      }
     }
-
-    a {
-      width: 30%;
+    .register {
+      flex-direction: row;
+      input {
+        width: 70%;
+      }
+  
+      a {
+        width: 30%;
+      }
     }
   }
   section.social-media {
