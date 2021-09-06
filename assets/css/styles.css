@@ -1334,20 +1334,38 @@ body > footer {
 .hero-slider {
   position: relative;
   background: #000;
-  min-height: calc(75vh - 8.15rem);
+  height: 60vh;
   padding: 0;
 }
 
 .hero-slider .swiper {
   width: 100%;
-  min-height: calc(75vh - 9.2rem);
-  padding: 2rem 3rem;
+  min-height: calc(75vh - 8.2rem);
 }
 
-.hero-slider .swiper .swiper-slide img {
+.hero-slider .swiper .swiper-slide {
+  display: block;
+}
+
+.hero-slider .swiper .swiper-slide .slide img {
   max-width: 600px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.hero-slider .swiper .swiper-slide > img {
+  width: 100%;
+  height: 60vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.hero-slider .swiper .swiper-slide img.desktop {
+  display: block;
+}
+
+.hero-slider .swiper .swiper-slide img.mobile {
+  display: none;
 }
 
 .selected-products {
@@ -2952,25 +2970,26 @@ p.shipping-info-text span {
   .header-top .cart-wrapper {
     margin-left: 0rem;
   }
-  .hero-slider .swiper-slide {
-    padding-bottom: 3rem;
-  }
-  .hero-slider .swiper-slide .slide .left :not(.buttons) {
+  .hero-slider .swiper .swiper-slide .slide .left :not(.buttons) {
     display: none;
   }
-  .hero-slider .slide-buttons {
+  .hero-slider .swiper .swiper-slide img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .hero-slider .swiper .slide-buttons {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .hero-slider .slide-buttons a {
+  .hero-slider .swiper .slide-buttons a {
     width: 100%;
   }
-  .hero-slider .arrow-left {
+  .hero-slider .swiper .arrow-left {
     left: 0rem;
   }
-  .hero-slider .arrow-right {
+  .hero-slider .swiper .arrow-right {
     right: 0rem;
   }
   .header-bottom nav > li.toggle-categories-menu {
@@ -3327,11 +3346,25 @@ p.shipping-info-text span {
     margin: 0;
   }
   .header-top .auth-options {
+    display: none;
+  }
+  .header-top .cart-wrapper {
     margin-left: auto;
     margin-right: 1rem;
   }
   .navigation {
     margin-top: 1rem;
+  }
+  .hero-slider {
+    min-height: 70vh;
+    height: 100%;
+  }
+  .hero-slider .swiper .swiper-slide img.desktop {
+    display: none;
+  }
+  .hero-slider .swiper .swiper-slide img.mobile {
+    height: 100%;
+    display: block;
   }
   .header-bottom {
     margin-top: 9rem;
