@@ -14,7 +14,7 @@
   z-index: 9999;
   position: fixed;
   top: 1.675rem;
-  left: 2rem;
+  left: 1rem;
   overflow: visible;
 }
 .hamburger:hover {
@@ -26,7 +26,7 @@
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
-  background-color: #fff;
+  background-color: #000;
 }
 
 .hamburger-box {
@@ -66,6 +66,7 @@
 }
 
 .hamburger--collapse .hamburger-inner {
+
   top: auto;
   bottom: 0;
   transition-duration: 0.13s;
@@ -106,15 +107,16 @@
   margin-left: -100vw;
   position: fixed;
   z-index: 9;
-  background-color: #454545;
-  color: $white;
+  background-color: $white;
+  color: $black;
   top: 0;
   left: 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  // align-items: center;
+  justify-content: flex-start;
   flex-direction: column;
   transition: all 0.4s;
+  padding-top: 8rem;
 
   ul {
     display: flex;
@@ -124,7 +126,7 @@
         display: inline-block;
         padding: 1rem 2rem;
         font-size: 2rem;
-        color: $white;
+        color: $black;
         &:hover {
           color: $red-dark;
         }
@@ -144,7 +146,7 @@
       filter: brightness(.8);
 
       img{
-        filter: brightness(.8)
+        filter: brightness(.8) invert(100%)
       }
     }
 
@@ -155,6 +157,7 @@
     img {
       width: 2.5rem;
       height: 2.5rem;
+      filter: invert(100%)
     }
   }
 

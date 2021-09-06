@@ -1,19 +1,20 @@
 .categories-header-menu{
   position: absolute;
-  max-width: 100px;
+  width: 180px;
   top: 100%;
-  left: 4rem;
+  left: 3rem;
   z-index: 9999999;
   background: $white;
+  border-radius:0 0 0 .5rem;
   display: none;
   align-items:center;
   justify-content: space-between;
+  box-shadow: 0 12px 32px 0 rgba(0, 0, 0, 0.679);
 
   ul.header-categories{
     display: flex;
     justify-content:space-between;
     flex-direction: column;
-    padding: 1rem 0.25rem;
 
     &+ ul.header-categories{
       margin-left: 1rem;
@@ -24,7 +25,8 @@
       padding: 0;
       a{
         display: flex;
-        width: 100%;
+        width: 180px;
+        justify-content: space-between;
         padding: .5rem 1rem;
         color: $black;
         font-weight: normal;
@@ -46,13 +48,24 @@
 .toggle-categories-menu{
   cursor: pointer;
   transition: .2s;
+  background: $red-dark;
+  border: none;
+  font-size: 1.1rem;
+  width: 180px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  &:hover{
-    color: $red-dark;
+  > img{
+    margin-left: 1rem;
+    filter: invert(100%);
   }
 }
 
 .dropdown{
+  // position: relative;
   display: flex;
   align-items: center;
 
@@ -69,16 +82,18 @@
 }
 
 .sub-categories-menu{
-  padding-top: 1rem;
+  // padding-top: 1rem;
   position: absolute;
   top: 0;
-  left: 100%;
+  left: 180px;
   height: 100%;
   background: $white;
   align-items: center;
   justify-content: flex-start;
   display: none;
-  max-width: 120px;
+  border-radius: 0 0 .5rem 0;
+  box-shadow: 0 12px 32px 0 rgba(0, 0, 0, 0.16);
+
 
   > a {
     display: inline-block;
