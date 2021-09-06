@@ -406,7 +406,7 @@
   position: absolute;
   width: 180px;
   top: 100%;
-  left: 3rem;
+  left: 0;
   z-index: 9999999;
   background: #fff;
   border-radius: 0 0 0 .5rem;
@@ -471,6 +471,7 @@
 }
 
 .toggle-categories-menu {
+  position: relative;
   cursor: pointer;
   -webkit-transition: .2s;
   transition: .2s;
@@ -495,6 +496,11 @@
   margin-left: 1rem;
   -webkit-filter: invert(100%);
           filter: invert(100%);
+}
+
+.toggle-categories-menu + .toggle-categories-menu {
+  margin-left: 0;
+  background: #CC000B;
 }
 
 .dropdown {
