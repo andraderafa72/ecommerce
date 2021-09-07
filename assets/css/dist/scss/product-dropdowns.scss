@@ -1,0 +1,40 @@
+
+.product-description,
+.product-info {
+  color: $black;
+  width: 100%;
+  padding: 1rem 4rem;
+  .toggle-product-description-visibility,
+  .toggle-product-info-visibility {
+    width: 100%;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    background: #eee;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+      transform: rotate(90deg);
+      transition: 0.2s;
+    }
+    &.open {
+      img {
+        transform: rotate(0deg);
+      }
+    }
+  }
+  .wrapper {
+    display: none;
+    padding: 1.5rem 3rem;
+    &.visible {
+      display: block;
+    }
+  }
+}

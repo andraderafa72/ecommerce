@@ -1,0 +1,35 @@
+.product-description, .product-info {
+  color: #000;
+  width: 100%;
+  padding: 1rem 4rem;
+}
+.product-description .toggle-product-description-visibility, .product-info .toggle-product-description-visibility, .product-description .toggle-product-info-visibility, .product-info .toggle-product-info-visibility {
+  width: 100%;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  background: #eee;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.product-description .toggle-product-description-visibility p, .product-info .toggle-product-description-visibility p, .product-description .toggle-product-info-visibility p, .product-info .toggle-product-info-visibility p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.product-description .toggle-product-description-visibility img, .product-info .toggle-product-description-visibility img, .product-description .toggle-product-info-visibility img, .product-info .toggle-product-info-visibility img {
+  width: 1.5rem;
+  height: 1.5rem;
+  transform: rotate(90deg);
+  transition: 0.2s;
+}
+.product-description .toggle-product-description-visibility.open img, .product-info .toggle-product-description-visibility.open img, .product-description .toggle-product-info-visibility.open img, .product-info .toggle-product-info-visibility.open img {
+  transform: rotate(0deg);
+}
+.product-description .wrapper, .product-info .wrapper {
+  display: none;
+  padding: 1.5rem 3rem;
+}
+.product-description .wrapper.visible, .product-info .wrapper.visible {
+  display: block;
+}

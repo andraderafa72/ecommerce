@@ -1,0 +1,20 @@
+.navigation {
+  width: 100%;
+  padding: 0;
+  color: $black;
+  p {
+    padding: 1rem 0;
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 1px solid #e2e2e2;
+    font-weight: bold;
+    a {
+      font-weight: normal;
+      color: $black;
+    }
+    span.product-code {
+      color: $red;
+      font-weight: bold;
+    }
+  }
+}

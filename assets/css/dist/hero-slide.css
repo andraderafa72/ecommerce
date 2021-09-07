@@ -1,0 +1,95 @@
+.slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 500px;
+  width: 100%;
+}
+.slide .left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.slide .left h1 {
+  font-size: 5rem;
+  font-weight: 900;
+}
+.slide .left p {
+  margin-top: 2rem;
+  font-size: 1.15rem;
+  max-width: 600px;
+}
+.slide .left .slide-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+.slide .left .slide-buttons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  cursor: pointer;
+  height: 3.5rem;
+  border: none;
+  color: white;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: 0.2s;
+  max-width: 300px;
+}
+.slide .left .slide-buttons a.slide-primary-button {
+  background: #cc000b;
+  box-shadow: 0 12px 32px 10px #cc000a 8d;
+}
+.slide .left .slide-buttons a.slide-primary-button:hover {
+  filter: brightness(0.9);
+}
+.slide .left .slide-buttons a.slide-secondary-button {
+  background: #000;
+  border: 1.5px solid #fff;
+}
+.slide .left .slide-buttons a.slide-secondary-button:hover {
+  background: #fff;
+  color: #000;
+}
+.slide .right img {
+  max-width: 600px;
+  width: 100%;
+  margin-right: 5rem;
+}
+@media (max-width: 1080px) {
+  .slide {
+    flex-direction: column-reverse;
+    padding: 2rem 0.5rem;
+ }
+  .slide .left, .slide .right {
+    align-items: center;
+    text-align: left;
+    width: 100%;
+ }
+  .slide .left h1 {
+    font-size: 3rem;
+ }
+  .slide .left p {
+    font-size: 1rem;
+ }
+  .slide .left h1, .slide .left p, .slide .left .slide-buttons {
+    width: 80%;
+ }
+  .slide .left .slide-buttons button {
+    max-width: 50%;
+ }
+  .slide .right {
+    display: flex;
+    justify-content: center;
+ }
+  .slide .right img {
+    margin-right: 0;
+ }
+}

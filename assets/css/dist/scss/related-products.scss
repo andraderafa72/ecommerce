@@ -1,0 +1,20 @@
+.related-products {
+  width: 100%;
+  position: relative;
+  padding: 2rem 4rem;
+  .swiper {
+    width: 100%;
+    .swiper-slide {
+      .product-card{
+        max-width: 340px;
+        border: 1px solid #ccc;
+
+        border-radius: 1rem;
+      }
+    }
+  }
+  .swiper-related-pagination {
+    margin-top: 1rem;
+    text-align: center;
+  }
+}

@@ -1,0 +1,105 @@
+.cupom-popup-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.699);
+}
+.cupom-popup-wrapper.hidden {
+  animation: hidePopup 0.5s ease-out;
+  opacity: 0;
+}
+.cupom-popup-wrapper.negative-index {
+  z-index: -10;
+}
+.cupoms {
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2.5rem 2rem 1.5rem;
+  border-radius: 0.5rem;
+  background: #fff;
+  box-shadow: 0 12px 24px 0px rgba(0, 0, 0, .32);
+}
+.cupoms > *:not(button) {
+  width: 100%;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+}
+.cupoms h2 {
+  color: #ff0513;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: center;
+}
+.cupoms p {
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 200%;
+  opacity: 0.6;
+}
+.cupoms span {
+  font-weight: bold;
+}
+.cupoms .input {
+  margin-top: 2rem;
+  position: relative;
+}
+.cupoms .input img {
+  position: absolute;
+  top: 1.15rem;
+  left: 1rem;
+  opacity: 0.35;
+}
+.cupoms input {
+  width: 100%;
+  padding: 0.75rem 0.75rem 0.75rem 4rem;
+  font-size: 1rem;
+  border-radius: 4rem;
+  border: 1px solid #ccc;
+  margin-top: 0.5rem;
+}
+.cupoms input:focus {
+  outline: 0;
+}
+.cupoms a {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1rem;
+  background: #ff0513;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  margin: 1rem auto 0;
+  text-transform: uppercase;
+}
+.cupoms button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  opacity: 0.8;
+}
+.cupoms button:hover {
+  opacity: 1;
+}
+@keyframes hidePopup {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+ }
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+ }
+}

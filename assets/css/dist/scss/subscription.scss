@@ -1,0 +1,46 @@
+
+.subscription {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $black;
+  padding: 4rem;
+  .subscription-input {
+    display: flex;
+    width: 50%;
+    input {
+      height: 3rem;
+      margin-right: 1rem;
+      // max-width: 600px;
+      width: 100%;
+      font-size: 1.125rem;
+      border-radius: 0.5rem;
+      border: 1px solid #c6c6c6;
+      padding-left: 1rem;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 3rem;
+      padding: 0 2rem;
+      background: $red;
+      color: $white;
+      border-radius: 0.5rem;
+    }
+  }
+  .social-media {
+    display: flex;
+    justify-content: flex-end;
+    width: 25%;
+    img {
+      width: 2rem;
+      height: 2rem;
+      filter: invert(100%);
+      margin-left: 1.5rem;
+    }
+  }
+  p {
+    width: 25%;
+  }
+}

@@ -1,0 +1,147 @@
+.brands {
+  padding: 4rem 4rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brands .methods {
+  display: flex;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+.brands .methods img {
+  width: 3rem;
+  height: 3rem;
+}
+.brands .methods img + img {
+  margin-left: 1rem;
+}
+.brands > div p {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.brands .security img {
+  width: 8rem;
+}
+.links {
+  padding: 4rem 4rem;
+  display: flex;
+  margin-top: 4rem;
+}
+.links .community {
+  width: 100%;
+  margin-left: 1rem;
+  max-width: 300px;
+}
+.links .community h3 {
+  width: 100%;
+  height: 3rem;
+  font-size: 1.75rem !important;
+}
+.links .community h3 img {
+  margin-left: auto;
+  filter: invert(100%);
+  transition: 0.2s;
+  transform: rotate(90deg);
+  opacity: 0;
+}
+.links .community .link-wrapper-a, .links .community .link-wrapper-b, .links .community .link-wrapper-c {
+  display: none;
+}
+@media (min-width: 1080px) {
+  .links .community .link-wrapper-a, .links .community .link-wrapper-b, .links .community .link-wrapper-c {
+    display: block !important;
+ }
+}
+.links .community .link-wrapper-a.visible, .links .community .link-wrapper-b.visible, .links .community .link-wrapper-c.visible {
+  display: block;
+}
+.links .community .link-a.open img, .links .community .link-c.open img, .links .community .link-b.open img {
+  transform: rotate(0deg);
+}
+.links .contact {
+  margin-left: auto;
+  margin-bottom: 5rem;
+}
+.links .contact h3 {
+  font-size: 2.75rem;
+}
+.links .contact .contact-method {
+  margin-top: 1rem;
+  display: flex;
+}
+.links .contact .contact-method + .contact-method {
+  margin-top: 3rem;
+}
+.links .contact .contact-method img {
+  width: 3rem;
+  height: 3rem;
+  background: #ccc;
+  padding: 0.35rem;
+  border-radius: 100%;
+  margin-right: 0.75rem;
+}
+.links .contact .contact-method p span {
+  font-size: 1.5rem;
+}
+.links .community {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+.links .community + .community {
+  margin-left: 0rem;
+}
+.links .community h3 {
+  width: 100%;
+  font-size: 2.75rem;
+  margin-bottom: 1rem;
+}
+.links .community a {
+  display: inline-block;
+  color: #fff;
+  width: 100%;
+  font-size: 1.15rem;
+  height: 2rem;
+}
+.links .community a + a {
+  margin-top: 1rem;
+}
+.business-info {
+  padding: 4rem 3rem;
+  background: #cc000b;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.business-info p {
+  line-height: 200%;
+  max-width: 800px;
+  font-family: 'Poppins';
+  text-align: center;
+  font-size: 0.75rem;
+}
+.business-info .ecomm {
+  margin-top: 3rem;
+  width: 3rem;
+  height: 3rem;
+  background: transparent;
+  border: 3px solid #fff;
+  padding: 0.175rem;
+  border-radius: 100%;
+}
+.business-info .ecomm .circle {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 100%;
+  background: linear-gradient(to left, #fff 50%, transparent 50%);
+  transform: rotate(45deg);
+}

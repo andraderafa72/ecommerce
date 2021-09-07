@@ -1,0 +1,123 @@
+.hot-product {
+  background: #fff;
+  color: #000;
+  padding: 6rem 4rem;
+  display: flex;
+  align-items: center;
+}
+.hot-product > .left {
+  width: calc(50% - 1rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+.hot-product > .left img {
+  width: 100%;
+  object-fit: cover;
+}
+.hot-product .right {
+  width: calc(50% - 1rem);
+}
+.hot-product .right header {
+  display: flex;
+  flex-wrap: wrap;
+}
+.hot-product .right header h2 {
+  width: 100%;
+  text-align: left;
+  margin-top: 1rem;
+  font-weight: normal;
+  font-family: "Poppins", "Roboto", sans-serif;
+  font-size: 2rem;
+}
+.hot-product .right header span {
+  padding: 0.25rem 1rem;
+  background: #cc000b;
+  color: white;
+  font-weight: bold;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+}
+.hot-product .right header span + span {
+  margin-left: 0.5rem;
+  background: #000;
+}
+.hot-product .right main {
+  margin-top: 2rem;
+}
+.hot-product .right main .sliced-price {
+  text-decoration: line-through;
+  color: #454545;
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+.hot-product .right main .price {
+  color: #cc000b;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.hot-product .right main .small-text {
+  color: #454545;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.hot-product .right footer {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.hot-product .right footer p {
+  width: 100%;
+}
+.hot-product .right footer .left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  min-width: 280px;
+}
+.hot-product .right footer .right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.hot-product .right footer .right a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 280px;
+  height: 4rem;
+  color: #fff;
+  background: #ff0513;
+  border-radius: 1rem;
+  transition: 0.2s;
+  font-weight: bold;
+}
+.hot-product .right footer .right a:first-child img {
+  filter: invert(100%);
+}
+.hot-product .right footer .right a img, .hot-product .right footer .right a svg {
+  margin-right: 1rem;
+}
+.hot-product .right footer .right a svg path {
+  stroke: #ff0513;
+}
+.hot-product .right footer .right a + a {
+  background: transparent;
+  border: 1px solid #ff0513;
+  color: #ff0513;
+  margin-top: 1rem;
+}
+.hot-product .right footer .right a + a:hover {
+  background-color: red;
+  color: #fff;
+  filter: none;
+}
+.hot-product .right footer .right a + a:hover svg path {
+  stroke: #fff;
+}

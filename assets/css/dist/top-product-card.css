@@ -1,0 +1,65 @@
+.selected-products .product-card {
+  max-width: 800px;
+  width: 30%;
+  transition: 0.4s;
+}
+.selected-products .product-card:hover {
+  transform: scale(1.02) translate3d(1px, 5px, 0);
+}
+.selected-products .product-card a {
+  color: #fff;
+}
+.selected-products .product-card header {
+  display: flex;
+  border: 2px dashed #454545 ac;
+  z-index: 1;
+  border-radius: 1rem;
+  height: 12rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+.selected-products .product-card header img {
+  width: 250px;
+  transform: scale(1.05);
+}
+.selected-products .product-card header span {
+  margin: 6rem 1rem 0 0;
+}
+.selected-products .product-card main {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.selected-products .product-card main .left, .selected-products .product-card main .right {
+  display: flex;
+  flex-direction: column;
+}
+.selected-products .product-card main .left span, .selected-products .product-card main .right span {
+  color: lightgray;
+  font-size: 1rem;
+}
+.selected-products .product-card main .left span.price, .selected-products .product-card main .right span.price {
+  color: #cc000b;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+.selected-products .product-card main .right {
+  margin-top: 0.5rem;
+  align-items: flex-end;
+}
+.selected-products .product-card main .right span {
+  text-align: right;
+}
+.selected-products .product-card main .left h4 {
+  font-weight: normal;
+  font-size: 1.875rem;
+  margin-bottom: 0.5rem;
+}
+.selected-products .product-card main .left span {
+  margin-top: 0.5rem;
+}
+.selected-products .product-card main .left span + span {
+  margin-top: 0;
+}

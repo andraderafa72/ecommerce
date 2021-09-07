@@ -1,0 +1,315 @@
+section.product {
+  width: 100%;
+  padding: 1rem 4rem;
+  display: flex;
+  color: #000;
+  justify-content: space-between;
+}
+.triangle {
+  clip-path: polygon(50% 50%, 0 0, 100% 0);
+  width: 1.35rem;
+  height: 1.35rem;
+  display: block;
+  background-color: #fff;
+  margin-left: 0.5rem;
+  transform: translateY(25%);
+}
+.product-images {
+  width: calc(45% - 1rem);
+  padding: 1rem;
+}
+.product-images header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.product-images header span {
+  color: #fff;
+  background: #cc000b;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.product-images header .icons {
+  display: flex;
+  align-items: center;
+}
+.product-images header .icons a + a {
+  margin-left: 1rem;
+}
+.product-images header .icons img {
+  width: 2rem;
+  height: 2rem;
+}
+.product-images main {
+  margin-top: 3rem;
+  width: 100%;
+}
+.product-images main .product-swiper {
+  width: 100%;
+}
+.product-images main .product-swiper .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-images main .product-swiper .swiper-slide img {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  padding: 0.25rem;
+  object-fit: cover;
+}
+.product-images footer {
+  margin-top: 2rem;
+}
+.product-images footer .swiper-thumbs {
+  overflow: hidden;
+  justify-content: flex-start !important;
+}
+.product-images footer .swiper-thumbs .swiper-slide {
+  width: 100px !important;
+}
+.product-images footer .swiper-thumbs .swiper-slide img {
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  padding: 0.25rem;
+  object-fit: cover;
+}
+.product-info {
+  width: calc(55% - 1rem);
+  display: flex;
+  flex-wrap: wrap;
+}
+.product-info > main, .product-info > aside {
+  width: 50%;
+}
+.product-info > header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4.5rem;
+}
+.product-info > header .product-timer {
+  width: 100%;
+  background-color: #f2f2f2;
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product-info > header .product-timer h4 {
+  font-size: 1.5rem;
+  max-width: 60%;
+  color: #000;
+}
+.product-info > header .product-timer .product-expiration strong {
+  color: #cc000b;
+  transform: translateY(-50%);
+  font-size: 1.5rem !important;
+}
+.product-info > header .product-timer .product-expiration > div:last-child {
+  transform: translateX(-5px);
+}
+.product-info > header .product-timer .product-expiration > div span, .product-info > header .product-timer .product-expiration > div p {
+  color: #cc000b;
+}
+.product-info > header .product-timer .product-expiration > div span {
+  background: transparent;
+  font-weight: bold;
+  padding: 0;
+  font-size: 1.75rem !important;
+}
+.product-info > header .product-timer .product-expiration > div p {
+  font-size: 0.9rem !important;
+}
+.product-info > header > h2 {
+  width: 100%;
+  text-align: left;
+  margin-top: 1rem;
+  font-weight: normal;
+  font-family: "Poppins", "Roboto", sans-serif;
+  font-size: 2rem;
+}
+.product-info > header > p {
+  margin-top: 0.5rem;
+  color: #454545;
+  font-size: 1rem;
+}
+.product-info > header > p span {
+  color: #000;
+}
+.product-info > header > p span + span {
+  color: green;
+}
+.product-info > main .product-main-info .price-info {
+  margin: -3rem 0 3.5rem;
+}
+.product-info > main .product-main-info p.line-price {
+  text-decoration: line-through;
+  color: #454545;
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+.product-info > main .product-main-info p.current-price {
+  font-size: 3rem;
+  color: #cc000b;
+  font-weight: bold;
+}
+.product-info > main .product-main-info > span, .product-info > main .product-main-info a {
+  color: #454545;
+  font-size: 1.1rem;
+}
+.product-info > main .product-main-info a {
+  font-weight: bold;
+  transition: 0.2s;
+}
+.product-info > main .product-main-info a:hover {
+  color: #000;
+}
+.product-info > aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1rem;
+}
+.product-info > aside .buttons {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 0.5rem;
+}
+.product-info > aside .buttons a {
+  height: 4rem;
+  padding: 1.5rem 1rem;
+  color: #fff;
+  background: #ff0513;
+  border-radius: 1rem;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-info > aside .buttons a img, .product-info > aside .buttons a svg {
+  margin-right: 1.5rem;
+}
+.product-info > aside .buttons a img {
+  filter: invert(100%);
+}
+.product-info > aside .buttons a svg path {
+  stroke: #ff0513;
+}
+.product-info > aside .buttons a + a {
+  border: 1px solid #ff0513;
+  background: transparent;
+  color: #cc000b;
+  padding: 1.5rem 0.5rem;
+  margin-top: 0.5rem;
+}
+.product-info > aside .buttons a + a:hover {
+  background: #ff0513;
+  color: #fff;
+  filter: brightness(1);
+}
+.product-info > aside .buttons a + a:hover svg path {
+  stroke: #fff;
+}
+.product-info > aside .fire {
+  display: flex;
+  align-items: center;
+}
+.product-info > aside .fire p {
+  margin-left: 0.5rem;
+  font-size: 0.9rem !important;
+}
+.product-info > aside .fire p span {
+  color: #cc000b;
+  font-weight: bold;
+}
+.product-form {
+  margin: 1rem 0;
+}
+.product-form .variant-input-group {
+  margin-bottom: 1rem;
+}
+.product-form .variant-input-group span {
+  font-size: 1rem !important;
+}
+.product-form .variant-input-group label {
+  padding: 0.75rem 1rem;
+  background: #eee;
+  transition: 0.2s;
+  border: 2px solid transparent;
+  border-radius: 0.5rem;
+}
+.product-form .variant-input-group label.active {
+  background: #020024;
+  background: radial-gradient(circle, rgba(2, 0, 36, 0) 0%, rgba(255, 6, 19, 0.159) 65%);
+  border: 2px solid #cc000b;
+}
+.product-form .variant-input-group input[type="radio"] {
+  opacity: 0;
+}
+.product-form .quantity {
+  max-width: 9rem;
+  position: relative;
+}
+.product-form .quantity input {
+  width: 9rem;
+  height: 3rem;
+  padding: 0.275rem 0 0.275rem 4.15rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+}
+.product-form .quantity button {
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-family: "Roboto";
+  position: absolute;
+  bottom: 0;
+  width: 3rem;
+  height: 3rem;
+  font-weight: 900;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 1rem;
+}
+.product-form .quantity button.plus {
+  right: 0;
+}
+.product-form .quantity button.minus {
+  left: 0;
+}
+.product-form .shipping-info .time {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 0.75rem;
+}
+.product-form .shipping-info .time img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1rem;
+}
+.product-form .shipping-info .time h5 {
+  color: #454545;
+  font-size: 1.125rem;
+}
+p.shipping-info-text, p.shipping-info-text span {
+  font-size: 0.9rem !important;
+  width: 100%;
+}
+p.shipping-info-text span {
+  color: #cc000b;
+  font-weight: bold;
+}
+.product-description {
+  margin-top: 3rem;
+}

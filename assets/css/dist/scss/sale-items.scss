@@ -1,0 +1,24 @@
+.sale-items {
+  padding: 2rem 4rem 4rem;
+  position: relative;
+  background: $blue;
+  display: flex;
+  justify-content: space-between;
+  .swiper-pagination {
+    bottom: 0rem !important;
+    z-index: 3;
+    .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+      background: $blue !important;
+      width: 1.25rem !important;
+      height: 1.25rem !important;
+      border: 3px solid $red;
+    }
+    .swiper-pagination-bullet-active {
+      background: $blue !important;
+      width: 1.35rem !important;
+      height: 1.35rem !important;
+      border: 0.45rem solid $red;
+      transform: translate3d(0, 0.035rem, 0);
+    }
+  }
+}

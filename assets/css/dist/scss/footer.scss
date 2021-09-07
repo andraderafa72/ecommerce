@@ -1,0 +1,167 @@
+.brands {
+  padding: 4rem 4rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .methods {
+    display: flex;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+    img {
+      width: 3rem;
+      height: 3rem;
+      & + img {
+        margin-left: 1rem;
+      }
+    }
+  }
+  > div {
+    p {
+      margin-bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+  }
+  .security {
+    img {
+      width: 8rem;
+    }
+  }
+}
+
+.links {
+  padding: 4rem 4rem;
+  display: flex;
+  margin-top: 4rem;
+
+  .community {
+    width: 100%;
+    margin-left: 1rem;
+    max-width: 300px;
+    h3 {
+      width: 100%;
+      height: 3rem;
+      font-size: 1.75rem!important;
+      img {
+        margin-left: auto;
+        filter: invert(100%);
+        transition: 0.2s;
+        transform: rotate(90deg);
+        opacity: 0;
+      }
+    }
+
+    .link-wrapper-a,
+    .link-wrapper-b, 
+    .link-wrapper-c {
+      display: none;
+
+      @media (min-width:1080px){
+        display: block!important;
+      }
+      &.visible {
+        display: block;
+      }
+    }
+
+    .link-a.open img,
+    .link-c.open img,
+    .link-b.open img {
+      transform: rotate(0deg);
+    }
+  }
+
+  .contact {
+    margin-left: auto;
+    margin-bottom: 5rem;
+    h3 {
+      font-size: 2.75rem;
+    }
+    .contact-method {
+      margin-top: 1rem;
+      display: flex;
+      & + .contact-method {
+        margin-top: 3rem;
+      }
+      img {
+        width: 3rem;
+        height: 3rem;
+        background: #ccc;
+        padding: 0.35rem;
+        border-radius: 100%;
+        margin-right: 0.75rem;
+      }
+      p {
+        span {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+  .community {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    
+    & + .community{
+      margin-left: 0rem;
+    }
+    h3 {
+      width: 100%;
+      font-size: 2.75rem;
+      margin-bottom: 1rem;
+    }
+    a {
+      display: inline-block;
+      color: $white;
+      width: 100%;
+      font-size: 1.15rem;
+      height: 2rem;
+      & + a {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+.business-info{
+  padding: 4rem 3rem;
+  background: $red;
+  width: 100%;
+  // height: 15rem;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  p{
+    line-height: 200%;
+    max-width: 800px;
+    font-family: 'Poppins';
+    text-align: center;
+    font-size: .75rem;
+  }
+
+  .ecomm{
+    margin-top: 3rem;
+    width: 3rem;
+    height: 3rem;
+    background: transparent;
+    border: 3px solid #fff;
+    padding: .175rem;
+    border-radius: 100%;
+
+    .circle{
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 100%;
+      background: linear-gradient(to left,#fff 50%, transparent 50%);
+      transform: rotate(45deg);
+    }
+  }
+}

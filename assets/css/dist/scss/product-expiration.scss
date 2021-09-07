@@ -1,0 +1,32 @@
+.product-expiration {
+  display: flex;
+  align-items: center;
+  max-width: 220px;
+  strong {
+    transform: translateY(-25%);
+    font-size: 2rem;
+    color: #454545;
+    margin: 0 0.5rem;
+  }
+  > div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    span {
+      padding: 0.5rem 0.75rem;
+      font-size: 2rem;
+      background-color: #cecece;
+      color: #454545;
+      border-radius: 0.5rem;
+      & + span {
+        margin-left: 0.5rem;
+      }
+    }
+    p {
+      font-family: "Poppins";
+      font-size: 0.9rem;
+      color: #777;
+      font-weight: 500;
+    }
+  }
+}

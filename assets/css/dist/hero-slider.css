@@ -1,0 +1,28 @@
+.hero-slider {
+  position: relative;
+  background: #000;
+  height: calc(100vh - 9rem);
+  padding: 0;
+}
+.hero-slider .swiper {
+  width: 100%;
+  height: calc(100vh - 9rem);
+}
+.hero-slider .swiper .swiper-slide {
+  display: block;
+}
+.hero-slider .swiper .swiper-slide .slide img {
+  max-width: 600px;
+  object-fit: cover;
+}
+.hero-slider .swiper .swiper-slide > img {
+  width: 100%;
+  height: calc(100vh - 9rem);
+  object-fit: cover;
+}
+.hero-slider .swiper .swiper-slide img.desktop {
+  display: block;
+}
+.hero-slider .swiper .swiper-slide img.mobile {
+  display: none;
+}

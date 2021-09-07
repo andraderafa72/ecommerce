@@ -1,0 +1,12 @@
+.selected-products {
+  padding: 7rem 2rem;
+  background: #010417;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+}
+.selected-products .product-card {
+  border: 2px dashed rgba(238, 238, 238, 0.234);
+  height: 16rem;
+  border-radius: 1rem;
+}

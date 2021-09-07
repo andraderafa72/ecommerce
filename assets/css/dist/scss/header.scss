@@ -1,0 +1,140 @@
+.header-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  padding: 2rem 2rem 1rem;
+  background: $black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 6rem;
+  .menu {
+    position: fixed;
+    top: 1.675rem;
+    left: 21.4rem;
+    z-index: 9999;
+  }
+  .logo {
+    max-width: 150px;
+    margin-left: 4rem;
+    img {
+      object-fit: cover;
+    }
+  }
+  .search {
+    position: relative;
+    width: 100%;
+    min-width: 400px;
+    margin: 0 4rem;
+    input {
+      width: 100%;
+      padding: 0.75rem 1.5rem;
+      background: $white;
+      border-radius: 3rem;
+      border: 0;
+      font-size: 1rem;
+      &:focus {
+        outline: 0;
+      }
+    }
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+      position: absolute;
+      display: block;
+      right: 0.5rem;
+      bottom: 0.65rem;
+    }
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+    li a {
+      color: $white;
+    }
+    li + li{
+      margin-left: 1rem;
+    }
+  }
+
+  .auth-options {
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+    p{
+      min-width: 160px;
+    }
+
+    img {
+      margin-left: 1rem;
+      width: 2.25rem;
+      height: 2.25rem;
+    }
+  }
+
+  .cart-wrapper {
+    position: relative;
+    margin-left: 2rem;
+    .cart {
+      width: 2.25rem;
+      height: 2.25rem;
+      display: block;
+      filter: invert(100%);
+    }
+    .items-on-cart {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background: $red;
+      color: $white;
+      font-size: 0.8rem;
+      font-weight: bold;
+      padding: 0.1rem 0.35rem;
+      border-radius: 100%;
+    }
+    &:hover {
+      filter: brightness(1.15);
+    }
+  }
+}
+
+.categories-header-menu ul.header-categories p {
+  color: $red;
+  font-weight: bold;
+}
+
+.header-bottom {
+  position: relative;
+  // background-color: #2e2e2e;
+  background-color: $black;
+  padding: 0 2rem;
+  border-bottom: 1px solid #000;
+  margin-top: 6rem;
+  > nav {
+    display: flex;
+    align-items: center;
+    > li {
+      padding: 0.5rem;
+      & + li {
+        margin-left: 2rem;
+      }
+      &.toggle-categories-menu:hover {
+        .categories-header-menu {
+          display: flex;
+        }
+      }
+    }
+    > li a {
+      font-family: "Poppins", "Open Sans", "Roboto", sans-serif;
+      color: $white;
+      transition: 0.2s;
+      &:hover {
+        color: $red-dark;
+      }
+    }
+  }
+}
+

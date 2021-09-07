@@ -1,0 +1,100 @@
+.fixed-banner {
+  width: 100vw;
+  height: 8rem;
+  display: none;
+  padding: 2rem;
+  background: #2e2e2e;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 9;
+  justify-content: space-between;
+  align-items: center;
+}
+.fixed-banner a {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  background: #ff0513;
+  color: #fff;
+  transition: 0.2s;
+}
+.fixed-banner a:hover {
+  filter: brightness(0.9);
+}
+.fixed-banner.fixed {
+  display: flex;
+  animation: gainVisibility 0.2s ease;
+  opacity: 1;
+}
+.fixed-banner .wrapper {
+  display: flex;
+}
+.fixed-banner .fixed-product-info h3 {
+  color: #fff;
+  font-size: 1.75rem;
+  font-weight: normal;
+}
+.fixed-banner .fixed-product-info p.price {
+  color: #ff0513;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.fixed-banner .fixed-product-info p.lined {
+  color: #ccc;
+  font-size: 0.8rem;
+  text-decoration: line-through;
+}
+.fixed-banner .fixed-product-image {
+  margin-right: 1rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  width: 5rem;
+  height: 5rem;
+}
+.fixed-banner .fixed-product-image img {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+}
+@media (max-width: 767px) {
+  .fixed-banner {
+    padding: 1rem;
+ }
+  .fixed-banner .fixed-product-info h3 {
+    font-size: 1.1rem !important;
+    max-width: 130px;
+ }
+  .fixed-banner .fixed-product-info p.price {
+    font-size: 1.25rem !important;
+ }
+  .fixed-banner .fixed-product-info p.lined {
+    font-size: 0.7rem !important;
+ }
+}
+@media (max-width: 375px) {
+  .fixed-banner {
+    padding: 1rem 0.5rem;
+    flex-direction: column;
+    height: 11rem;
+ }
+  .fixed-banner #product {
+    margin-bottom: 1rem;
+ }
+  .fixed-banner .fixed-product-info {
+    width: 100%;
+    max-width: 100%;
+ }
+  .fixed-banner .fixed-product-info h3 {
+    font-size: 1rem !important;
+    max-width: 220px;
+ }
+  .fixed-banner .fixed-product-info p.price {
+    font-size: 1.15rem !important;
+ }
+  .fixed-banner .fixed-product-info p.lined {
+    font-size: 0.7rem !important;
+ }
+}

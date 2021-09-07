@@ -1,0 +1,43 @@
+.categories {
+  position: relative;
+  padding: 4rem;
+  background: #010417;
+}
+.categories .swiper-pagination-categories {
+  text-align: center;
+}
+.categories .arrow-left, .categories .arrow-right {
+  bottom: calc(50% + 1rem);
+  top: auto;
+}
+.categories .swiper-slide {
+  padding: 0 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.categories .swiper-slide div {
+  display: block;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 1.5em;
+}
+.categories .swiper-slide div.circle {
+  border-radius: 100%;
+}
+.categories .swiper-slide div img {
+  object-fit: contain;
+  transform: translate3d(-1px, -1px, 0);
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+}
+.categories .swiper-slide a {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.15rem;
+  color: #fff;
+}
