@@ -16,7 +16,7 @@
 
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-  <!-- <link rel="stylesheet" href="assets/css/dist/burger.css">
+  <link rel="stylesheet" href="assets/css/dist/burger.css">
   <link rel="stylesheet" href="assets/css/dist/cart-display.css">
   <link rel="stylesheet" href="assets/css/dist/categories.css">
   <link rel="stylesheet" href="assets/css/dist/cupom.css">
@@ -28,28 +28,38 @@
   <link rel="stylesheet" href="assets/css/dist/hero-slider.css">
   <link rel="stylesheet" href="assets/css/dist/hot-product-card.css">
   <link rel="stylesheet" href="assets/css/dist/hot-product.css">
-  <link rel="stylesheet" href="assets/css/dist/modals.css">
-  <link rel="stylesheet" href="assets/css/dist/navigation.css">
-  <link rel="stylesheet" href="assets/css/dist/product-dropdowns.css">
   <link rel="stylesheet" href="assets/css/dist/product-expiration.css">
-  <link rel="stylesheet" href="assets/css/dist/product.css">
-  <link rel="stylesheet" href="assets/css/dist/related-products.css">
   <link rel="stylesheet" href="assets/css/dist/remaining-items.css">
   <link rel="stylesheet" href="assets/css/dist/sale-items.css">
   <link rel="stylesheet" href="assets/css/dist/selected-products.css">
   <link rel="stylesheet" href="assets/css/dist/side-categories-menu.css">
   <link rel="stylesheet" href="assets/css/dist/social-media-section.css">
-  <link rel="stylesheet" href="assets/css/dist/subscription.css">
   <link rel="stylesheet" href="assets/css/dist/top-product-card.css">
   <link rel="stylesheet" href="assets/css/dist/two-empty-cards.css">
-  <link rel="stylesheet" href="assets/css/dist/media-queries.css"> -->
 
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <!-- CSS DA PÁGINA DE PRODUTO -->
+  <!-- <link rel="stylesheet" href="assets/css/dist/modals.css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/dist/navigation.css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/dist/product-dropdowns.css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/dist/product.css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/dist/related-products.css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/dist/subscription.css"> -->
+
+  <!-- É IMPORTANTE QUE A IMPORTAÇÃO DE 'media-queries.css' SEJA A ULTIMA -->
+  <link rel="stylesheet" href="assets/css/dist/media-queries.css">
+
+  <!-- ARQUIVO CSS COMPLETO MINIFICADO-->
+  <!-- <link rel="stylesheet" href="assets/css/styles.min.css"> -->
+  
+  <!-- ARQUIVO CSS COMPLETO -->
+  <!-- <link rel="stylesheet" href="assets/css/styles.css"> -->
 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
+
+  <!-- DISPLAY DO CARRINHO -> cart-display.css -->
   <div class="cart-display">
     <div class="wrapper">
       <div class="travel">
@@ -121,7 +131,7 @@
             </div>
           </div>
         </li>
-                
+
       </ul>
 
       <div class="total">
@@ -138,7 +148,7 @@
 
   </div>
 
-
+  <!-- POPUP DE CUPOM -> cupom.css -->
   <div class="cupom-popup-wrapper">
     <div class="cupoms" data-aos="fade-down" data-aos-duration="500">
       <h2>VOCÊ GANHOU <span>10% DE DESCONTO</span></h2>
@@ -154,6 +164,7 @@
     </div>
   </div>
 
+  <!-- MENU LATERAL (BURGER) -> burger.css -->
   <div class="burger-menu">
     <span class="side-categories-menu-toggle">
       Categorias
@@ -198,7 +209,7 @@
           </li>
         </ul>
       </div>
-    </span>  
+    </span>
 
     <ul>
       <li><a href="#">Dúvidas</a></li>
@@ -212,7 +223,8 @@
 
   </div>
 
-  <div class="menu">    
+  <!-- ÍCONE DO BURGER -> burger.css -->
+  <div class="menu">
     <button class="hamburger hamburger--collapse" type="button">
       <span class="hamburger-box">
         <span class="hamburger-inner"></span>
@@ -220,7 +232,9 @@
     </button>
   </div>
 
+  <!-- HEADER -> header.css -->
   <header>
+    <!-- SEÇÃO SUPERIOR DO HEADER, BURGER, PESQUISA E CARRINHO -->
     <section class="header-top">
 
       <img class="logo" src="assets/img/logo.png" alt="Orbi Ecom">
@@ -231,7 +245,7 @@
       </div>
 
       <div class="auth-options">
-        <p>Bem vindo, faça login<br>  ou cadastre-se</p>
+        <p>Bem vindo, faça login<br> ou cadastre-se</p>
         <img src="assets/img/icons/user.svg" alt="">
       </div>
 
@@ -240,6 +254,7 @@
       </a>
     </section>
 
+    <!-- SEÇÃO INFERIOR: MENUS DE CATEGORIAS -->
     <section class="header-bottom">
       <nav>
         <li class="toggle-categories-menu">
@@ -321,10 +336,12 @@
   </header>
 
   <main>
+    <!-- SWIPER DA PÁGINA INICIAL -> hero-slider.css -->
     <section class="hero-slider">
       <div class="swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
+            <!-- SLIDE INICIAL -> hero-slide.css -->
             <div class="slide">
               <section class="left">
                 <h1>Black</h1>
@@ -372,7 +389,10 @@
       </div>
     </section>
 
+    <!-- TRÊS CONTAINERS ABAIXO DO SLIDER -> selected-products.css -->
     <section class="selected-products">
+
+      <!-- CARD DE PRODUTO -> top-product-cart.css -->
       <div class="product-card" data-aos="fade-up" data-aos-duration="500">
         <!-- <a href="#LINK-DO-PRODUTO">
           <header>
@@ -395,6 +415,7 @@
           </main>
         </a> -->
       </div>
+      <!-- CARD DE PRODUTO -> top-product-cart.css -->
       <div class="product-card" data-aos="fade-up" data-aos-duration="600">
         <!-- <a href="#LINK-DO-PRODUTO">
           <header>
@@ -417,6 +438,7 @@
           </main>
         </a> -->
       </div>
+      <!-- CARD DE PRODUTO -> top-product-cart.css -->
       <div class="product-card" data-aos="fade-up" data-aos-duration="700">
         <!-- <a href="#LINK-DO-PRODUTO">
           <header>
@@ -441,7 +463,7 @@
       </div>
     </section>
 
-
+    <!-- SLIDER DE CATEGORIAS -> categories.css -->
     <section class="categories">
       <div class="swiper">
         <div class="swiper-wrapper">
@@ -559,11 +581,13 @@
       </a>
     </section>
 
+    <!-- SWIPER DE PRODUTOS -> sale-items.css -->
     <section class="sale-items">
       <div class="swiper">
         <div class="swiper-wrapper">
 
           <div class="swiper-slide">
+            <!-- CARD -> hot-product-card.css -->
             <div class="product-card" data-aos="fade-up" data-aos-duration="600">
               <header>
                 <img src="assets/img/watch.png" alt="">
@@ -571,16 +595,16 @@
               </header>
 
               <main>
-                <span>Frete grátis</span>
                 <p>Promoção imperdivel SmartWatch iwo W46 Series 6</p>
 
-                <!-- <span>por apenas</span> -->
+                <span>por apenas</span>
                 <span class="price">R$279,90</span>
-                <!-- <span>ou em até 6x de R$49,90</span> -->
+                <span>ou em até 6x de R$49,90</span>
               </main>
             </div>
           </div>
           <div class="swiper-slide">
+            <!-- CARD -> hot-product-card.css -->
             <div class="product-card" data-aos="fade-up" data-aos-duration="650">
               <header>
                 <img src="assets/img/smartwatch.png" alt="">
@@ -588,14 +612,16 @@
               </header>
 
               <main>
-                <span>por apenas</span>
                 <p>Promoção imperdivel SmartWatch iwo W46 Series 6</p>
 
+                <span>por apenas</span>
                 <span class="price">R$279,90</span>
+                <span>ou em até 6x de R$49,90</span>
               </main>
             </div>
           </div>
           <div class="swiper-slide">
+            <!-- CARD -> hot-product-card.css -->
             <div class="product-card" data-aos="fade-up" data-aos-duration="700">
               <header>
                 <img src="assets/img/watch.png" alt="">
@@ -603,14 +629,16 @@
               </header>
 
               <main>
-                <span>por apenas</span>
                 <p>Promoção imperdivel SmartWatch iwo W46 Series 6</p>
 
+                <span>por apenas</span>
                 <span class="price">R$279,90</span>
+                <span>ou em até 6x de R$49,90</span>
               </main>
             </div>
           </div>
           <div class="swiper-slide">
+            <!-- CARD -> hot-product-card.css -->
             <div class="product-card" data-aos="fade-up" data-aos-duration="750">
               <header>
                 <img src="assets/img/smartwatch.png" alt="">
@@ -618,30 +646,34 @@
               </header>
 
               <main>
-                <span>por apenas</span>
                 <p>Promoção imperdivel SmartWatch iwo W46 Series 6</p>
 
+                <span>por apenas</span>
                 <span class="price">R$279,90</span>
+                <span>ou em até 6x de R$49,90</span>
               </main>
             </div>
           </div>
 
           <div class="swiper-slide">
+            <!-- CARD -> hot-product-card.css -->
             <div class="product-card" data-aos="fade-up" data-aos-duration="600">
               <header>
                 <img src="assets/img/watch.png" alt="">
-                <span>34%  <div class="triangle"></div></span>
+                <span>34% <div class="triangle"></div></span>
               </header>
 
               <main>
-                <span>por apenas</span>
                 <p>Promoção imperdivel SmartWatch iwo W46 Series 6</p>
 
+                <span>por apenas</span>
                 <span class="price">R$279,90</span>
+                <span>ou em até 6x de R$49,90</span>
               </main>
             </div>
           </div>
           <div class="swiper-slide">
+            <!-- CARD -> hot-product-card.css -->
             <div class="product-card" data-aos="fade-up" data-aos-duration="650">
               <header>
                 <img src="assets/img/smartwatch.png" alt="">
@@ -649,14 +681,16 @@
               </header>
 
               <main>
-                <span>por apenas</span>
                 <p>Promoção imperdivel SmartWatch iwo W46 Series 6</p>
 
+                <span>por apenas</span>
                 <span class="price">R$279,90</span>
+                <span>ou em até 6x de R$49,90</span>
               </main>
             </div>
           </div>
           <div class="swiper-slide">
+            <!-- CARD -> hot-product-card.css -->
             <div class="product-card" data-aos="fade-up" data-aos-duration="700">
               <header>
                 <img src="assets/img/watch.png" alt="">
@@ -664,14 +698,16 @@
               </header>
 
               <main>
-                <span>por apenas</span>
                 <p>Promoção imperdivel SmartWatch iwo W46 Series 6</p>
 
+                <span>por apenas</span>
                 <span class="price">R$279,90</span>
+                <span>ou em até 6x de R$49,90</span>
               </main>
             </div>
           </div>
           <div class="swiper-slide">
+            <!-- CARD -> hot-product-card.css -->
             <div class="product-card" data-aos="fade-up" data-aos-duration="750">
               <header>
                 <img src="assets/img/smartwatch.png" alt="">
@@ -679,10 +715,11 @@
               </header>
 
               <main>
-                <span>por apenas</span>
                 <p>Promoção imperdivel SmartWatch iwo W46 Series 6</p>
 
+                <span>por apenas</span>
                 <span class="price">R$279,90</span>
+                <span>ou em até 6x de R$49,90</span>
               </main>
             </div>
           </div>
@@ -690,6 +727,7 @@
         </div>
       </div>
 
+      <!-- SETAS DO SWIPER -> global.css -->
       <a href="" class="arrow-left swiper-button-prev-sale">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g id="chevron-left">
@@ -714,6 +752,7 @@
 
     </section>
 
+    <!-- ESPAÇO PARA BANNERS -> two-empty-cards.css -->
     <section class="two-empty-cards">
       <div class="empty-card" data-aos="fade-up" data-aos-duration="600">
         Black Friday
@@ -724,6 +763,7 @@
       </div>
     </section>
 
+    <!-- PRODUTO DESTAQUE -> hot-product.css -->
     <section class="hot-product">
       <div class="left" data-aos="fade-up" data-aos-duration="600">
         <img src="assets/img/watch.png" alt="">
@@ -785,12 +825,18 @@
             </a>
             <a href="#">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21.2922 6L19.9463 14.1627C19.8666 14.6457 19.4491 15 18.9596 15H7.04301C6.55352 15 6.13597 14.6457 6.05633 14.1627L4.84848 6.83731C4.76884 6.35434 4.3513 6 3.8618 6H1.99997" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 20C8.55228 20 9 19.5523 9 19C9 18.4477 8.55228 18 8 18C7.44772 18 7 18.4477 7 19C7 19.5523 7.44772 20 8 20Z" stroke="#000" stroke-width="1.5"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M18 20C18.5523 20 19 19.5523 19 19C19 18.4477 18.5523 18 18 18C17.4477 18 17 18.4477 17 19C17 19.5523 17.4477 20 18 20Z" stroke="#000" stroke-width="1.5"/>
-                <path d="M16 8H10" stroke="#000" stroke-width="1.5" stroke-linecap="round"/>
-                <path d="M13 5V11" stroke="#000" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
+                <path
+                  d="M21.2922 6L19.9463 14.1627C19.8666 14.6457 19.4491 15 18.9596 15H7.04301C6.55352 15 6.13597 14.6457 6.05633 14.1627L4.84848 6.83731C4.76884 6.35434 4.3513 6 3.8618 6H1.99997"
+                  stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8 20C8.55228 20 9 19.5523 9 19C9 18.4477 8.55228 18 8 18C7.44772 18 7 18.4477 7 19C7 19.5523 7.44772 20 8 20Z"
+                  stroke="#000" stroke-width="1.5" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M18 20C18.5523 20 19 19.5523 19 19C19 18.4477 18.5523 18 18 18C17.4477 18 17 18.4477 17 19C17 19.5523 17.4477 20 18 20Z"
+                  stroke="#000" stroke-width="1.5" />
+                <path d="M16 8H10" stroke="#000" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M13 5V11" stroke="#000" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
               Adicionar ao carrinho
             </a>
           </div>
@@ -798,6 +844,7 @@
       </div>
     </section>
 
+    <!-- SEÇÃO DE POSTS DO INSTA -> socail-media-section.css -->
     <section class="social-media">
       <h2 data-aos="fade-in" data-aos-duration="500">Acompanhe <span>@orbiecom</span> no Instagram</h2>
 
@@ -831,7 +878,7 @@
 
       <div class="social-media-footer">
         <div class="left">
-          <p><span>Promoção imperdível</span><br> Ganhe 12%  no cadastro
+          <p><span>Promoção imperdível</span><br> Ganhe 12% no cadastro
           </p>
         </div>
 
@@ -849,6 +896,7 @@
     </section>
   </main>
 
+  <!-- RODAPÉ -> footer.css -->
   <footer>
     <section class="brands">
       <div class="payment-methods">
@@ -922,8 +970,10 @@
 
     <section class="business-info">
       <p>
-        Preços e condições de pagamento exclusivos para compras online, com possibilidade de variações nas lojas físicas. Caso haja divergência de valores nos produos no
-        site, o preço válido é o do carrinho de compras. Vendas sujeias a confirmação de estoque e análise e validação dos dados. Fotos meramente ilustrativas.
+        Preços e condições de pagamento exclusivos para compras online, com possibilidade de variações nas lojas
+        físicas. Caso haja divergência de valores nos produos no
+        site, o preço válido é o do carrinho de compras. Vendas sujeias a confirmação de estoque e análise e validação
+        dos dados. Fotos meramente ilustrativas.
         CNPJ: 00.000.000/0001-0 Orbe ecom LTDA / AV Jk - centro, 100 - Palmas/TO 0000-000
       </p>
       <div class="ecomm">

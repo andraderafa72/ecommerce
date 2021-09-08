@@ -327,22 +327,22 @@
 
 .sale-items .product-card main p,
 .related-products .product-card main p {
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   font-size: 1.2rem;
 }
 
-.sale-items .product-card main span,
-.related-products .product-card main span {
-  font-size: 1rem;
-  color: #CC000B;
+.sale-items .product-card main > span,
+.related-products .product-card main > span {
+  font-size: .9rem;
+  color: #000;
+  line-height: 100%;
 }
 
-.sale-items .product-card main span.price,
-.related-products .product-card main span.price {
-  font-weight: normal;
-  font-size: 1.25rem;
-  margin-top: 2rem;
-  color: #000;
+.sale-items .product-card main > span.price,
+.related-products .product-card main > span.price {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #CC000B;
   line-height: 2rem;
 }
 
