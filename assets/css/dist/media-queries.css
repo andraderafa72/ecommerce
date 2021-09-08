@@ -325,8 +325,9 @@
     max-width: 70%;
     font-size: 1.25rem;
  }
-  .product-description, .product-info {
+ body main .product-description, body main .product-info {
     padding: 1rem 2rem;
+    width: 100%;
  }
   .related-products {
     padding: 4rem 2rem;
