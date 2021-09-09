@@ -85,6 +85,22 @@ var saleItems = new Swiper(".sale-items .swiper", {
       slidesPerView: 1.15,
       spaceBetween: 10,
     },
+    425: {
+      slidesPerView: 1.25,
+      spaceBetween: 10,
+    },
+    520: {
+      slidesPerView: 1.75,
+      spaceBetween: 10,
+    },
+    620: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    700: {
+      slidesPerView: 2.2,
+      spaceBetween: 10,
+    },
     768: {
       slidesPerView: 2.5,
       spaceBetween: 10,
