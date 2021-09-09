@@ -3737,7 +3737,7 @@ p.shipping-info-text span {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  z-index: 99;
+  z-index: 9999999;
   background: rgba(0, 0, 0, 0.699);
 }
 
