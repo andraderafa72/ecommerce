@@ -125,15 +125,18 @@
     background-color: #fff;
     li {
       a {
-        display: inline-block;
         padding: 1rem 2rem;
         font-size: 2rem;
         color: $black;
+        display: flex;
+        align-items: center;
+
         &:hover {
           color: $red-dark;
         }
-
+        
         img{
+          margin-right: 0.75em;
           width: 2rem;
           height: 2rem;
         }

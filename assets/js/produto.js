@@ -46,7 +46,7 @@ var relatedProducts = new Swiper(".related-products .swiper", {
   spaceBetween: 15,
   breakpoints: {
     320: {
-      slidesPerView: 1.15,
+      slidesPerView: 1.05,
       spaceBetween: 10,
     },
     375: {

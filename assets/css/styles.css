@@ -718,10 +718,15 @@
 }
 
 .burger-menu ul li a {
-  display: inline-block;
   padding: 1rem 2rem;
   font-size: 2rem;
   color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .burger-menu ul li a:hover {
@@ -729,6 +734,7 @@
 }
 
 .burger-menu ul li a img {
+  margin-right: 0.75em;
   width: 2rem;
   height: 2rem;
 }
@@ -1107,6 +1113,236 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@-webkit-keyframes showPaymentModal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes showPaymentModal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.payment-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(0, 0, 0, 0.33);
+  z-index: 9999999999;
+  opacity: 0;
+}
+
+.payment-modal.visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: showPaymentModal .4s ease;
+          animation: showPaymentModal .4s ease;
+  opacity: 1;
+}
+
+.payment-modal .wrapper {
+  max-width: 600px;
+  width: 100%;
+  border-radius: 1rem;
+  background: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #000;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+}
+
+.payment-modal .wrapper header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2rem;
+}
+
+.payment-modal .wrapper header > img {
+  margin-right: 2rem;
+}
+
+.payment-modal .wrapper header button {
+  margin-left: auto;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.payment-modal .wrapper main .method {
+  margin: 1rem 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.payment-modal .wrapper main .method label {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.payment-modal .wrapper main .method input {
+  display: none;
+}
+
+.payment-modal .wrapper main .method input#card:checked ~ label[for="card"] {
+  color: #FF0513;
+}
+
+.payment-modal .wrapper main .method input#card:checked ~ label[for="card"] svg path, .payment-modal .wrapper main .method input#card:checked ~ label[for="card"] svg rect {
+  stroke: #FF0513;
+}
+
+.payment-modal .wrapper main .method input#card:checked ~ label[for="card"] .content {
+  display: none;
+}
+
+.payment-modal .wrapper main .method input#pix:checked ~ label[for="pix"] {
+  color: #FF0513;
+}
+
+.payment-modal .wrapper main .method input#pix:checked ~ label[for="pix"] svg path, .payment-modal .wrapper main .method input#pix:checked ~ label[for="pix"] svg rect {
+  stroke: #FF0513;
+}
+
+.payment-modal .wrapper main .method input#boleto:checked ~ label[for="boleto"] {
+  color: #FF0513;
+}
+
+.payment-modal .wrapper main .method input#boleto:checked ~ label[for="boleto"] svg path, .payment-modal .wrapper main .method input#boleto:checked ~ label[for="boleto"] svg rect {
+  stroke: #FF0513;
+}
+
+.payment-modal .wrapper main .content-pix, .payment-modal .wrapper main .content-boleto, .payment-modal .wrapper main .content-card {
+  display: none;
+}
+
+.payment-modal .wrapper main .content-pix.visible, .payment-modal .wrapper main .content-boleto.visible, .payment-modal .wrapper main .content-card.visible {
+  display: block;
+}
+
+.payment-modal .wrapper main .content-pix .value, .payment-modal .wrapper main .content-boleto .value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 3rem;
+  border-radius: .5rem;
+  border-bottom: 3px solid #CC000B;
+}
+
+.payment-modal .wrapper main .content-pix .value p.price, .payment-modal .wrapper main .content-boleto .value p.price {
+  color: #CC000B;
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+}
+
+.payment-modal .wrapper main .content-pix .value p.price > span, .payment-modal .wrapper main .content-boleto .value p.price > span {
+  margin-left: 0.5rem;
+  font-weight: bold;
+  font-size: 3.5rem;
+}
+
+.payment-modal .wrapper main .content-pix .value p, .payment-modal .wrapper main .content-boleto .value p {
+  font-weight: normal;
+  opacity: .9;
+  margin-top: 1rem;
+}
+
+.payment-modal .wrapper main .content-pix .info-despacho, .payment-modal .wrapper main .content-boleto .info-despacho {
+  margin: 3rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.payment-modal .wrapper main .content-pix .info-despacho p, .payment-modal .wrapper main .content-boleto .info-despacho p {
+  max-width: 260px;
+}
+
+.payment-modal .wrapper main .content-pix .info-despacho img, .payment-modal .wrapper main .content-boleto .info-despacho img {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 2rem;
+}
+
+.payment-modal .wrapper main .content-card {
+  width: 100%;
+  overflow: auto;
+}
+
+.payment-modal .wrapper main .content-card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.payment-modal .wrapper main .content-card table tr:nth-child(2), .payment-modal .wrapper main .content-card table tr:nth-child(4), .payment-modal .wrapper main .content-card table tr:nth-child(6), .payment-modal .wrapper main .content-card table tr:nth-child(8), .payment-modal .wrapper main .content-card table tr:nth-child(10), .payment-modal .wrapper main .content-card table tr:nth-child(12) {
+  background: #f7f5f5;
+}
+
+.payment-modal .wrapper main .content-card table tr td {
+  padding: .75rem 1rem;
 }
 
 body > header,
@@ -2301,7 +2537,7 @@ section.product {
   color: #fff;
   background: #CC000B;
   border-radius: 1rem;
-  padding: 0.5rem 1rem;
+  padding: 0.35rem 1rem;
   font-weight: bold;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2942,7 +3178,7 @@ p.shipping-info-text span {
     left: 1rem;
   }
   .header-top .auth-options {
-    margin-left: 0;
+    margin-left: auto;
   }
   .header-top .auth-options p {
     display: none;

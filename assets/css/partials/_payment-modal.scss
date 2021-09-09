@@ -1,0 +1,176 @@
+@keyframes showPaymentModal{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+.payment-modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content:center;
+  background: rgba(0, 0, 0, 0.33);
+  z-index: 9999999999;
+  opacity: 0;
+  
+  &.visible{
+    display: flex;
+    animation: showPaymentModal .4s ease;
+    opacity: 1;
+  }
+  
+  .wrapper{
+    max-width: 600px;
+    width: 100%;
+    border-radius: 1rem;
+    background: #FFF;
+    display: flex;
+    color: #000;
+    flex-direction: column;
+    padding: 2rem;
+    
+    header{
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+      > img{
+        margin-right: 2rem;
+      }
+
+
+      button{
+        margin-left: auto;
+        display: inline-block;
+        cursor: pointer; 
+        border: none;
+        background: transparent;
+      }
+    }
+
+    main {
+      
+      .method{
+        margin: 1rem 0 2rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+        label{
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+          align-items: center; 
+        }
+        input{
+          display: none;
+        }
+
+        input#card:checked ~ label[for="card"]{
+          color: $red-dark;         
+
+          svg path, svg rect{
+            stroke: $red-dark;
+          }          
+          .content{
+            display: none;
+          }
+        }
+        input#pix:checked ~ label[for="pix"]{
+          color: $red-dark;          
+          svg path, svg rect{
+            stroke: $red-dark;
+          }          
+        }
+        input#boleto:checked ~ label[for="boleto"]{
+          color: $red-dark;          
+          svg path, svg rect{
+            stroke: $red-dark;
+          }
+        }
+      }
+      
+      .content-pix, .content-boleto, .content-card{
+        display: none;
+
+        &.visible{
+          display: block;
+        }
+      }
+
+      .content-pix, .content-boleto{
+        .value {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding-bottom: 3rem;
+          border-radius: .5rem;
+          border-bottom:3px solid $red;
+          p.price{
+            color: $red;
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            > span{
+              margin-left: 0.5rem;
+              font-weight: bold;
+              font-size: 3.5rem;
+            }
+          }
+
+          p{
+            font-weight: normal;
+            opacity: .9;
+            margin-top: 1rem;
+          } 
+        }
+
+        .info-despacho{
+          margin: 3rem 0;
+          display: flex;
+          align-items: center;
+          justify-content:center;
+          
+          p{
+            max-width: 260px;
+          }
+
+          img{
+            width: 3rem;
+            height: 3rem;
+            margin-right: 2rem;
+          }
+        }
+      }
+
+      .content-card{
+        width: 100%;
+        overflow: auto;
+        table{
+          width: 100%;
+          border-collapse: collapse;
+          tr{
+            &:nth-child(2),
+            &:nth-child(4),
+            &:nth-child(6),
+            &:nth-child(8),
+            &:nth-child(10),
+            &:nth-child(12){
+              background: rgb(247, 245, 245);
+            }
+            td{
+              padding: .75rem 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

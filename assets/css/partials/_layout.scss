@@ -5,6 +5,7 @@
 @import "./_burger";
 @import "./_cart-display";
 @import "./_side-categories-menu";
+@import './_payment-modal';
 
 // body > header {
 //   // height: 8.15rem;
@@ -894,7 +895,7 @@ section.product {
       color: $white;
       background: $red;
       border-radius: 1rem;
-      padding: 0.5rem 1rem;
+      padding: 0.35rem 1rem;
       font-weight: bold;
       display: flex;
       align-items: center;
@@ -1393,7 +1394,7 @@ p.shipping-info-text span {
     }
 
     .auth-options {
-      margin-left: 0;
+      margin-left: auto;
       p {
         display: none;
       }

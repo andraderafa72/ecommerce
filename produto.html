@@ -15,7 +15,7 @@
 
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-  <link rel="stylesheet" href="assets/css/dist/burger.css">
+  <!-- <link rel="stylesheet" href="assets/css/dist/burger.css">
   <link rel="stylesheet" href="assets/css/dist/cart-display.css">
   <link rel="stylesheet" href="assets/css/dist/categories.css">
   <link rel="stylesheet" href="assets/css/dist/footer.css">
@@ -31,7 +31,7 @@
   <link rel="stylesheet" href="assets/css/dist/related-products.css">
   <link rel="stylesheet" href="assets/css/dist/remaining-items.css">
   <link rel="stylesheet" href="assets/css/dist/side-categories-menu.css">
-  <link rel="stylesheet" href="assets/css/dist/subscription.css">
+  <link rel="stylesheet" href="assets/css/dist/subscription.css"> -->
 
   <!-- CSS DA PÁGINA INICIAL -->
   <!-- <link rel="stylesheet" href="assets/css/dist/cupom.css"> -->
@@ -45,19 +45,152 @@
   <!-- <link rel="stylesheet" href="assets/css/dist/two-empty-cards.css"> -->
 
   <!-- É IMPORTANTE QUE A IMPORTAÇÃO DE 'media-queries.css' SEJA A ULTIMA -->
-  <link rel="stylesheet" href="assets/css/dist/media-queries.css">
+  <!-- <link rel="stylesheet" href="assets/css/dist/media-queries.css"> -->
 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <!-- ARQUIVO CSS COMPLETO MINIFICADO-->
   <!-- <link rel="stylesheet" href="assets/css/styles.min.css"> -->
-  
+
   <!-- ARQUIVO CSS COMPLETO -->
-  <!-- <link rel="stylesheet" href="assets/css/styles.css"> -->
+  <link rel="stylesheet" href="assets/css/styles.css">
 
 </head>
 
 <body>
+  <div class="payment-modal">
+    <div class="wrapper">
+      <header>
+        <img src="assets/img/icons/credit-card.svg" alt="">
+        <h2>Formas de pagamento</h2>
+
+        <button class="close-payment-modal">
+          <img src="assets/img/icons/close.svg" alt="">
+        </button>
+      </header>
+
+      <main>
+        <section class="method">
+          <input type="radio" checked name="payment" id="card">
+          <input type="radio" name="payment" id="pix">
+          <input type="radio" name="payment" id="boleto">
+          <label for="card">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="credit-card">
+                <rect id="Rectangle 2" x="2" y="5" width="20" height="14" rx="2" stroke="black" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
+                <path id="Path 2" d="M2 14H22" stroke="black" stroke-width="1.5" stroke-linecap="round" />
+              </g>
+            </svg>
+
+            <span>Cartão de crédito</span>
+          </label>
+          <label for="pix">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="credit-card">
+                <rect id="Rectangle 2" x="2" y="5" width="20" height="14" rx="2" stroke="black" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
+                <path id="Path 2" d="M2 14H22" stroke="black" stroke-width="1.5" stroke-linecap="round" />
+              </g>
+            </svg>
+            <span>PIX</span>
+          </label>
+          <label for="boleto">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="credit-card">
+                <rect id="Rectangle 2" x="2" y="5" width="20" height="14" rx="2" stroke="black" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
+                <path id="Path 2" d="M2 14H22" stroke="black" stroke-width="1.5" stroke-linecap="round" />
+              </g>
+            </svg>
+            <span>Boleto bancário</span>
+          </label>
+
+        </section>
+
+        <section class="content-card visible">
+          <table>
+            <tbody>
+              <tr>
+                <td>À vista - até 10% de desconto</td>
+                <td>Total: R$ 279,90</td>
+              </tr>
+              <tr>
+                <td>2x sem juros de R$139,95</td>
+                <td>Total: R$ 279,90</td>
+              </tr>
+              <tr>
+                <td>3x sem juros de R$93,30</td>
+                <td>Total: R$ 279,90</td>
+              </tr>
+              <tr>
+                <td>4x sem juros de R$69,98</td>
+                <td>Total: R$ 279,90</td>
+              </tr>
+              <tr>
+                <td>5x sem juros de R$55,98</td>
+                <td>Total: R$ 279,90</td>
+              </tr>
+              <tr>
+                <td>6x sem juros de R$46,65</td>
+                <td>Total: R$ 279,90</td>
+              </tr>
+              <tr>
+                <td>7x sem juros de R$46,65</td>
+                <td>Total: R$ 279,90</td>
+              </tr>
+              <tr>
+                <td>8x sem juros de R$46,65</td>
+                <td>Total: R$ 279,90</td>
+              </tr>
+              <tr>
+                <td>9x sem juros de R$46,65</td>
+                <td>Total: R$ 279,90</td>
+              </tr>
+              <tr>
+                <td>10x sem juros de R$46,65</td>
+                <td>Total: R$ 279,90</td>
+              </tr>
+              <tr>
+                <td>11x sem juros de R$46,65</td>
+                <td>Total: R$ 279,90</td>
+              </tr>
+              <tr>
+                <td>12x sem juros de R$46,65</td>
+                <td>Total: R$ 279,90</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="content-pix">
+          <div class="value">
+            <p class="price">R$ <span>279,90</span></p>
+            <p>À vista no PIX com <strong>15% OFF</strong></p>
+          </div>
+
+          <div class="info-despacho">
+            <img src="" alt="">
+            <p>Pague com o PIX e prioziramos o despacho em 1 hora!</p>
+          </div>
+        </section>
+
+        <section class="content-boleto">
+          <div class="value">
+            <p class="price">R$ <span>279,90</span></p>
+            <p>À vista no Boleto com <strong>15% OFF</strong></p>
+          </div>
+
+          <div class="info-despacho">
+            <img src="" alt="">
+            <p>Pague com o Boleto e prioziramos o despacho em 1 hora!</p>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
   <!-- DISPLAY DO CARRINHO -> cart-display.css -->
   <div class="cart-display">
     <div class="wrapper">
@@ -213,16 +346,16 @@
           </li>
         </ul>
       </div>
-    </span>  
+    </span>
 
     <ul>
       <li><a href="#">Dúvidas</a></li>
       <li><a href="#">Cases</a></li>
       <li><a href="#">Blog</a></li>
       <li><a href="#">Contato</a></li>
-      <li><a href="#"><img src="assets/img/icons/favourite.svg" alt=""></a></li>
-      <li><a href="#"><img style="filter: invert(100%)" src="assets/img/icons/user.svg" alt=""></a></li>
-      <li><a href="#"><img src="assets/img/icons/transport.svg" alt=""></a></li>
+      <li><a href="#"><img src="assets/img/icons/favourite.svg" alt=""> Favoritos</a></li>
+      <li><a href="#"><img style="filter: invert(100%)" src="assets/img/icons/user.svg" alt=""> Minha conta</a></li>
+      <li><a href="#"><img src="assets/img/icons/transport.svg" alt=""> Rastrear Pedido</a></li>
     </ul>
 
   </div>
@@ -439,7 +572,7 @@
               <p class="line-price">R$329,39</p>
               <p class="current-price">R$279,90</p>
               <span>À vista no PIX com até 10% OFF</span><br />
-              <a href="#">Ver mais opções de pagamento</a>
+              <a href="#" class="open-payment-modal">Ver mais opções de pagamento</a>
             </div>
 
             <form action="/" method="post" class="product-form">
@@ -749,8 +882,10 @@
 
     <section class="business-info" style="padding-bottom: 10rem;">
       <p>
-        Preços e condições de pagamento exclusivos para compras online, com possibilidade de variações nas lojas físicas. Caso haja divergência de valores nos produtos no <br>
-        site, o preço válido é o do carrinho de compras. Vendas sujeias a confirmação de estoque e análise e validação dos dados. Fotos meramente ilustrativas. <br>
+        Preços e condições de pagamento exclusivos para compras online, com possibilidade de variações nas lojas
+        físicas. Caso haja divergência de valores nos produtos no <br>
+        site, o preço válido é o do carrinho de compras. Vendas sujeias a confirmação de estoque e análise e validação
+        dos dados. Fotos meramente ilustrativas. <br>
         CNPJ: 00.000.000/0001-0 Orbe ecom LTDA / AV Jk - centro, 100 - Palmas/TO 0000-000
       </p>
       <div class="ecomm">
@@ -767,6 +902,7 @@
   <script src="assets/js/modals.js"></script>
   <script src="assets/js/cartDisplay.js"></script>
   <script src="assets/js/menus.js"></script>
+  <script src="assets/js/paymentMethods.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
