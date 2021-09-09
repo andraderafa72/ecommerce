@@ -681,6 +681,21 @@
   transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
+.burger-underlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  margin-left: -100vw;
+  background: rgba(0, 0, 0, 0.46);
+}
+
+.burger-underlay.visible {
+  margin-left: 0;
+}
+
 .burger-menu {
   width: 30vw;
   height: 100vh;
@@ -739,6 +754,12 @@
   height: 2rem;
 }
 
+.burger-menu .side-categories-menu.open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .burger-menu > .side-categories-menu-toggle {
   margin-bottom: 2rem;
 }
@@ -748,8 +769,7 @@
 }
 
 .burger-menu.visible {
-  -webkit-transform: translateX(100vw);
-          transform: translateX(100vw);
+  margin-left: 0;
 }
 
 @media (max-width: 1368px) {
@@ -764,7 +784,7 @@
 
 @media (max-width: 520px) {
   .hamburger {
-    left: .5rem;
+    left: 0.5rem;
   }
   .burger-menu {
     width: 70vw;
@@ -1342,7 +1362,32 @@
 }
 
 .payment-modal .wrapper main .content-card table tr td {
-  padding: .75rem 1rem;
+  padding: .75rem .5rem;
+}
+
+@media (max-width: 768px) {
+  .payment-modal .wrapper {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 375px) {
+  .payment-modal .wrapper {
+    max-width: 375px;
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+}
+
+@media (max-width: 320px) {
+  .payment-modal .wrapper {
+    max-width: 320px;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  .payment-modal .wrapper main .method label + label {
+    margin-left: 1rem;
+  }
 }
 
 body > header,
