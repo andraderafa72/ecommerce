@@ -19,6 +19,7 @@
 }
 .cupoms {
   min-width: 300px;
+  position: fixed;
   display: flex;
   align-items: center;
   flex-direction: column;
